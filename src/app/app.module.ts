@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './modules/home/home.module';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { LoaderComponent } from './shared/loader/loader.component';
+import { MainTopHeaderComponent } from './shared/main-top-header/main-top-header.component';
 import { LoaderInterceptorService } from './shared/services/loader-interceptor.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
@@ -31,7 +32,8 @@ export class MyHammerConfig extends HammerGestureConfig {
 @NgModule({
   declarations: [
     AppComponent,
-    LoaderComponent
+    LoaderComponent,
+    MainTopHeaderComponent
   ],
   imports: [
     BrowserModule,

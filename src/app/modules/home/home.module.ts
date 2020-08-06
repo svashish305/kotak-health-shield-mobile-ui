@@ -6,7 +6,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 
 @NgModule({
   declarations: [
-    LandingPageComponent
+    LandingPageComponent,
   ],
   imports: [
     CommonModule,

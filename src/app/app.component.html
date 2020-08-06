@@ -1,5 +1,8 @@
 <app-loader></app-loader>
 
 <div *ngIf="!showLoader">
+    <div class="main-header">
+        <app-main-top-header></app-main-top-header>        
+    </div>
     <router-outlet></router-outlet>
 </div>

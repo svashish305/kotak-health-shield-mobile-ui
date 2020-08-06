@@ -1,0 +1,16 @@
+.navbar {
+    width: 100vw;
+    padding: 3.65px 1rem !important;
+    border-bottom: solid 1px var(--gray-border-color);
+}
+
+.kotak-logo {
+    width: 90px;
+    height: 30px;
+    margin: 0;
+}
+
+.navbar-item-text {
+    color: var(--blue-text-color);
+    font-size: 0.875rem;
+}
