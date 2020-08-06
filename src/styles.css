@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
+    --light-accent: #F5EAE6;
+    --dark-accent: #FFCCB9;
     --blue-text-color: #003366;
+    --alt-blue-text: #000137;
+    --red-bg: #FF0000;
     --gray-border-color: #00000029;
 }

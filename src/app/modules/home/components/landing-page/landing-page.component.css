@@ -1,0 +1,61 @@
+.msg-on-top {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    background-color: var(--light-accent);
+}
+
+pre {
+    color: var(--alt-blue-text);
+    font-size: 1rem;
+}
+
+.sm-font {
+    font-size: 1.5rem;
+}
+
+.md-font {
+    font-size: 1.313rem;
+}
+
+.lg-font {
+    font-size: 1.563rem;
+}
+
+.content-container {
+    margin: 1.5rem 1.75rem 0 1.75rem;
+    height: 100%;
+}
+
+.cropped-img-wrapper, img {
+    width: 100%;
+}
+
+.cropped-image {
+    margin: 0;
+    transform: scale(1.25);
+    position: relative;
+    top: 4px;
+}
+
+.card {
+    background-color: var(--dark-accent);
+    border: none;
+    border-radius: 1rem;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 4.5rem;
+    background-color: #fff;
+}
+
+.footer-btn {
+    color: #fff;
+    background-color: var(--red-bg);
+    width: -webkit-fill-available;
+    height: 2.75rem;
+    margin: 0.875rem 1.5rem;
+    border-radius: 1.875rem;
+}
