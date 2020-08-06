@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63.519" height="63.204" viewBox="0 0 63.519 63.204">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #19b95c;
+      }
+
+      .cls-2 {
+        fill: #ed1d25;
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4 {
+        fill: #d41920;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <path id="Path_334" data-name="Path 334" class="cls-1" d="M-26.907,5.173-16.045-5.2,4.73-26.063,20.453-10.319s-.846,12.613-8.984,21.676a28.832,28.832,0,0,1-19.2,9.279Z" transform="translate(29.368 23.808)"/>
+    </clipPath>
+  </defs>
+  <g id="Group_260" data-name="Group 260" transform="translate(-69 -306)">
+    <circle id="Ellipse_48" data-name="Ellipse 48" class="cls-2" cx="31.5" cy="31.5" r="31.5" transform="translate(69 306)"/>
+    <g id="Mask_Group_1" data-name="Mask Group 1" class="cls-3" transform="translate(82.697 324.759)">
+      <path id="Path_339" data-name="Path 339" class="cls-4" d="M31.5,0A31.5,31.5,0,1,1,0,31.5,31.5,31.5,0,0,1,31.5,0Z" transform="translate(-13.697 -18.759)"/>
+    </g>
+    <path id="Path_337" data-name="Path 337" class="cls-5" d="M41.16,9.688a2.345,2.345,0,0,0-3.33,0L25.423,22.118,13.016,9.688a2.355,2.355,0,0,0-3.33,3.33l12.43,12.407L9.686,37.832a2.355,2.355,0,0,0,3.33,3.33l12.407-12.43L37.83,41.163a2.355,2.355,0,1,0,3.33-3.33L28.73,25.425,41.16,13.018a2.345,2.345,0,0,0,0-3.33Z" transform="translate(75.46 312.462)"/>
+  </g>
+</svg>

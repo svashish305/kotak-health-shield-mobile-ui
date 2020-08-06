@@ -1,4 +1,4 @@
 <div class="customLoader" *ngIf='showLoader'>
-    <lottie-animation-view [options]="lottieConfig" [width]="100" [height]="100" (animCreated)="handleAnimation($event)">
-    </lottie-animation-view>
+    <ng-lottie [options]="lottieConfig" [width]="100" [height]="100" (animationCreated)="handleAnimation($event)">
+    </ng-lottie>
 </div>

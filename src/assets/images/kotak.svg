@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="50"
+   height="49"
+   viewBox="0 0 28 28"
+   version="1.1"
+   id="svg35855"
+   inkscape:version="0.92.0 r15299"
+   sodipodi:docname="kotak mutual fund.svg">
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-103.82487,-145.8338)">
+    <g
+       id="g35952"
+       transform="translate(0.26458193,-0.26457991)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path33091"
+         style="fill:#1f4578;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.35277778"
+         d="m 103.82487,157.28214 c 0,-6.03074 5.68396,-10.91918 12.69648,-10.91918 7.01287,0 12.69682,4.88844 12.69682,10.91918 0,6.03144 -5.68395,10.92024 -12.69682,10.92024 -7.01252,0 -12.69648,-4.8888 -12.69648,-10.92024" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path33093"
+         style="fill:#ed3338;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.35277778"
+         d="m 114.98006,149.86887 2.94922,-0.97473 0.0145,15.94697 -2.97427,0.9966 z" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path33095"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.35277778"
+         d="m 116.7309,159.81438 c -1.282,1.54446 -2.52095,3.12349 -4.84188,3.12349 -3.27871,0 -4.83164,-3.16935 -4.83164,-5.81907 0,-2.54564 1.21461,-5.55942 4.4069,-5.55942 1.38536,0 2.72027,0.84737 3.51366,1.74307 l -0.002,2.16147 c -0.66322,-0.44732 -2.15089,-0.88617 -3.12209,-0.9017 -2.02494,-0.0342 -3.81105,0.84314 -3.77895,2.84233 0.0208,1.37619 1.38359,2.31246 2.74038,2.31246 2.07821,0 3.33622,-1.89829 4.3889,-3.33939 0.29316,-0.37606 1.12149,-1.48308 1.25025,-1.66017 1.16875,-1.63231 2.5213,-3.12385 4.84187,-3.12385 2.73297,0 4.2672,2.20415 4.70183,4.47287 h -1.2326 c -0.49601,-0.73554 -1.45063,-1.18569 -2.3922,-1.18569 -2.14771,0 -3.43076,1.97556 -4.50426,3.43006 0,0 -0.83573,1.13947 -1.13806,1.50354 z m 9.33874,-1.43157 c -0.27694,2.28141 -1.55575,4.5847 -4.35011,4.58964 -1.63019,0.003 -2.90513,-1.11408 -3.78813,-2.48038 v -1.58221 c 1.1049,0.54857 2.13677,1.13559 3.38914,1.15464 1.54234,0.0229 2.93687,-0.5708 3.51367,-1.68169 z" />
+    </g>
+  </g>
+</svg>

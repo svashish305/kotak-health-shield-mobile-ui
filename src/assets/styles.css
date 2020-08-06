@@ -4,22 +4,22 @@
 
 @font-face {
   font-family: RobotoRegular;
-  src: url(./fonts/Roboto-Regular.ttf);
+  src: url('~src/assets/fonts/Roboto-Regular.ttf');
 }
 
 @font-face {
   font-family: RobotoMedium;
-  src: url(./fonts/Roboto-Medium.ttf);
+  src: url('~src/assets/fonts/Roboto-Medium.ttf');
 }
 
 @font-face {
   font-family: RobotoBold;
-  src: url(./fonts/Roboto-Bold.ttf);
+  src: url('~src/assets/fonts/Roboto-Bold.ttf');
 }
 
 @font-face {
   font-family: RobotoItalic;
-  src: url(./fonts/Roboto-Italic.ttf);
+  src: url('~src/assets/fonts/Roboto-Italic.ttf');
 }
 
 body {
@@ -273,11 +273,11 @@ ngb-typeahead-window {
 }
 
 .formField.edit::after {
-  background-image: url(./images/edit.svg);
+  background-image: url('~src/assets/images/edit.svg');
 }
 
 .formField.calendar span.icon:after {
-  background-image: url(./images/calandar.svg);
+  background-image: url('~src/assets/images/calandar.svg');
 }
 
 .formField.weight::after {
@@ -381,7 +381,7 @@ input.dropdown-toggle+span:after,
 .intl-tel-input.separate-dial-code .selected-flag:before {
   display: block;
   position: absolute;
-  background: url(./images/dropdown.svg) center no-repeat;
+  background: url('~src/assets/images/dropdown.svg') center no-repeat;
   width: 16px;
   height: 16px;
   content: '';
@@ -553,7 +553,7 @@ button.download span::before {
 }
 
 button.back::before {
-  background-image: url(./images/back.svg);
+  background-image: url('~src/assets/images/back.svg');
   left: 0;
 }
 
@@ -1018,7 +1018,7 @@ p.fs15Ter {
 }
 
 .download span::before {
-  background-image: url(./images/download.svg);
+  background-image: url('~src/assets/images/download.svg');
   left: 36px;
 }
 
@@ -1031,7 +1031,7 @@ p.fs15Ter {
 }
 
 .proposalConfirm::before {
-  background-image: url(./images/tag-icon.png);
+  background-image: url('~src/assets/images/tag-icon.png');
   left: 16px;
   top: 18px;
   background-size: 21px 14px;
@@ -1260,7 +1260,7 @@ a {
 
 .paymentSuccess::before {
   content: '';
-  background-image: url(./images/secure-pay.svg);
+  background-image: url('~src/assets/images/secure-pay.svg');
   position: absolute;
   left: 15px;
   background-repeat: no-repeat;
@@ -1318,12 +1318,12 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .button-text.minus {
-  background-image: url(./images/minus.svg);
+  background-image: url('~src/assets/images/minus.svg');
   left: 2px;
 }
 
 .button-text.plus {
-  background-image: url(./images/plus.svg);
+  background-image: url('~src/assets/images/plus.svg');
   right: 2px;
 }
 
@@ -1429,7 +1429,7 @@ input[type=number]::-webkit-outer-spin-button {
   opacity: 0.5;
 } */
 
-.customLoader lottie-animation-view div canvas {
+.customLoader ng-lottie div canvas {
   width: auto !important;
   height: 100px !important;
   margin: auto;
@@ -1440,7 +1440,7 @@ input[type=number]::-webkit-outer-spin-button {
   top: 0;
 }
 
-.customLoader lottie-animation-view div {
+.customLoader ng-lottie div {
   width: 100vw !important;
   min-height: 100vh !important;
   min-height: -webkit-fill-available !important;
@@ -1599,7 +1599,7 @@ ul.country-list>li.divider {
     overflow: auto;
   }
 
-  .customLoader lottie-animation-view div canvas {
+  .customLoader ng-lottie div canvas {
     width: 120px !important;
     height: auto !important;
     margin: auto;
@@ -1649,7 +1649,7 @@ ul.country-list>li.divider {
     padding: 24px 8px;
     margin-top: 0;
     height: 100%;
-    background-image: url(./images/brochure-bg-color.png);
+    background-image: url('~src/assets/images/brochure-bg-color.png');
     background-repeat: repeat-x;
     background-size: auto 55%;
     background-color: transparent;
