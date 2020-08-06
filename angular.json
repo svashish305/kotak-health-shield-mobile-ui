@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "kotak-shield-ui"
+    }
+  },
+  "defaultProject": "kotak-shield-ui",
+  "cli": {
+    "analytics": false
+  }
 }
