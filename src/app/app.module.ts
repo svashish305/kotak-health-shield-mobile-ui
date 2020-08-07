@@ -17,7 +17,6 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { LottieModule } from 'ngx-lottie';
-import { FooterComponent } from './shared/footer/footer.component';
  
 export function playerFactory() {
   return import(/* webpackChunkName: 'lottie-web' */ 'lottie-web');
@@ -34,8 +33,7 @@ export class MyHammerConfig extends HammerGestureConfig {
   declarations: [
     AppComponent,
     LoaderComponent,
-    HeaderComponent,
-    FooterComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

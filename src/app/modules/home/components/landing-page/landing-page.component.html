@@ -76,7 +76,8 @@
     </div>
 </div>
 
-<footer>
-    <button type="button" class="btn footer-btn">PROCEED</button>
-</footer>
-
+<app-footer>
+    <ng-container ngProjectAs='[footer]'>
+        <button type="button" class="btn footer-btn">PROCEED</button>
+    </ng-container>
+</app-footer>
