@@ -11,12 +11,13 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './modules/home/home.module';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { LoaderComponent } from './shared/loader/loader.component';
-import { MainTopHeaderComponent } from './shared/main-top-header/main-top-header.component';
+import { HeaderComponent } from './shared/header/header.component';
 import { LoaderInterceptorService } from './shared/services/loader-interceptor.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { LottieModule } from 'ngx-lottie';
+import { FooterComponent } from './shared/footer/footer.component';
  
 export function playerFactory() {
   return import(/* webpackChunkName: 'lottie-web' */ 'lottie-web');
@@ -33,7 +34,8 @@ export class MyHammerConfig extends HammerGestureConfig {
   declarations: [
     AppComponent,
     LoaderComponent,
-    MainTopHeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
