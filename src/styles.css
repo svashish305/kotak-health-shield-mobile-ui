@@ -7,3 +7,9 @@
     --red-bg: #FF0000;
     --gray-border-color: #00000029;
 }
+
+html, body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
