@@ -3,7 +3,7 @@
     --light-accent: #F5EAE6;
     --dark-accent: #FFCCB9;
     --blue-bg-1: #F4F6FA;
-    --blue-text-color: #003366;
+    --blue-theme-color: #003366;
     --alt-blue-text: #000137;
     --red-bg: #FF0000;
     --gray-border-color: #00000029;
@@ -18,6 +18,13 @@ html, body{
 .btn:focus,.btn:active {
     outline: none !important;
     box-shadow: none;
+}
+
+/* flex-center */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* common font-sizes */

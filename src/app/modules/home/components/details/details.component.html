@@ -1,14 +1,53 @@
 <div class="container">
     <div class="form-container padding-1rem">
         <span class="ff-bold smd-font">Welcome! Give us your basic details to start with.</span>
-        <form class="padding-1rem tm-1rem">
-            <!-- form content -->
+        <form class="padding-1rem tm-1rem" [formGroup]="detailsForm">
+            <div class="row">
+                <div class="col">
+                    <div class="formField">
+                        <input type="text" placeholder="Enter your Name" value="reshma.w@gmail.com" formControlName="name"
+                          [ngClass]="{'errorInput': formSubmitted && detailsForm.get('name').hasError('required') }">
+                        <label class="input_label">Name</label>
+                    </div>
+                    <p class='errorMsg' *ngIf="formSubmitted && detailsForm.get('name').hasError('required')">
+                    Name field is required </p>
+
+                    <div class="formField">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn gender-btns active">
+                              <input type="radio" name="options" id="option1"> Male
+                            </label>
+                            <label class="btn gender-btns">
+                              <input type="radio" name="options" id="option2"> Female
+                            </label>
+                            <label class="btn gender-btns">
+                              <input type="radio" name="options" id="option3"> Transgender
+                            </label>
+                        </div>
+                        <label class="input_label">My Gender</label>
+                    </div>
+
+                    <div class="formField">
+                        <!-- dob -->
+                    </div>
+
+                    <div class="formField">
+                        <input type="email" placeholder="Enter your Email ID" value="reshma.w@gmail.com" formControlName="emailId"
+                          [ngClass]="{'errorInput': formSubmitted && detailsForm.get('emailId').hasError('email') || formSubmitted && detailsForm.get('emailId').hasError('required') }">
+                        <label class="input_label">Email ID</label>
+                    </div>
+                    <p class='errorMsg' *ngIf="formSubmitted && detailsForm.get('emailId').hasError('required')">
+                    Email ID field is required </p>
+                    <p class='errorMsg' *ngIf="formSubmitted && detailsForm.get('emailId').hasError('email')">
+                    Please enter valid Email ID </p>
+                </div>
+            </div>            
         </form>
     </div>
 </div>
 
 <app-footer>
     <ng-container ngProjectAs='[footer]'>
-        <button type="button" class="btn footer-btn">PROCEED</button>
+        <button type="button" class="btn footer-btn" (click)="goToDetailsTwo()">PROCEED</button>
     </ng-container>
 </app-footer>

@@ -153,13 +153,16 @@ input {
   width: 344px;
   max-width: 100%;
   border-radius: 3px;
-  border: solid 1px #9f9f9f;
+  /* border: solid 1px #9f9f9f; */
+  border: solid 1px #CCCCCC;
   background-color: #ffffff;
   padding: 14px 16px;
   outline: 0;
-  margin-top: 28px;
+  /* margin-top: 28px; */
+  margin: 20px 0 26px 0;
   position: relative;
   text-transform: initial;
+  font-family: RobotoMedium;
   font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
@@ -205,11 +208,13 @@ label.input_label {
   margin: 0;
   /* width: 52px; */
   height: 19px;
-  font-family: RobotoBold;
+  /* font-family: RobotoBold; */
+  font-family: RobotoRegular;
   font-size: 14px;
   letter-spacing: normal;
   text-align: left;
-  color: #2d2d2d;
+  /* color: #2d2d2d; */
+  color: #000;
 }
 
 label.input_label+p {

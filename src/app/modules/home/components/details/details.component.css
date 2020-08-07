@@ -12,6 +12,33 @@ form {
     background-color: #fff;
 }
 
+.btn-group {
+    margin: 20px 0 26px 0;
+}
+
+.gender-btns {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    margin: 0 8px 0 0;
+    border-radius: 55px !important;
+    font-size: 14px;
+    color: var(--blue-theme-color);
+    background-color: #fff;
+}
+
+.gender-btns:active {
+    color: #fff;
+    background-color: var(--blue-theme-color);
+}
+
+.active {
+    color: #fff;
+    background-color: var(--blue-theme-color);
+    outline: none !important;
+    box-shadow: none;
+}
+
 .footer-btn {
     float: right;
     color: #fff;
