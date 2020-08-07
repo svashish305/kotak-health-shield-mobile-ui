@@ -40,3 +40,13 @@ html, body{
 .lg-font {
     font-size: 1.563rem;
 }
+
+/* common margin styles */
+.tm-1rem {
+    margin-top: 1rem;
+}
+
+/* common padding styles */
+.padding-1rem {
+    padding: 1rem;
+}
