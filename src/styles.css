@@ -2,6 +2,7 @@
 :root {
     --light-accent: #F5EAE6;
     --dark-accent: #FFCCB9;
+    --blue-bg-1: #F4F6FA;
     --blue-text-color: #003366;
     --alt-blue-text: #000137;
     --red-bg: #FF0000;
@@ -17,4 +18,25 @@ html, body{
 .btn:focus,.btn:active {
     outline: none !important;
     box-shadow: none;
+}
+
+/* common font-sizes */
+.font-1rem {
+    font-size: 1rem;
+}
+
+.sm-font {
+    font-size: 1.25rem;
+}
+
+.smd-font {
+    font-size: 1.313rem;
+}
+
+.md-font {
+    font-size: 1.5rem;
+}
+
+.lg-font {
+    font-size: 1.563rem;
 }

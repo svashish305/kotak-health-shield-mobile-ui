@@ -5,11 +5,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    border-bottom: solid 1px var(--gray-border-color);
 }
 
 .content {
-    border-top: solid 1px var(--gray-border-color);
-    border-bottom: solid 1px var(--gray-border-color);
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .footer {

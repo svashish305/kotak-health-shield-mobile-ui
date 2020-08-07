@@ -1,13 +1,13 @@
 <div class="parallax">
     <div class="parallax__layer--back">
         <div class="msg-on-top">
-            <span class="ff-medium">
+            <span class="ff-medium top-msg font-1rem">
                 Do you know medical costs in India are
                 increasing by 20% per year?
                 <p></p><p></p>
                 <span class="ff-bold lg-font">Don't wait,</span><br>
-                <span class="ff-medium md-font">secure your family health with</span><br>
-                <span class="ff-bold sm-font">Kotak Health Shield !!</span>
+                <span class="ff-medium smd-font">secure your family health with</span><br>
+                <span class="ff-bold md-font">Kotak Health Shield !!</span>
             </span>
         
             <div class="cropped-img-wrapper">
@@ -78,6 +78,6 @@
 
 <app-footer>
     <ng-container ngProjectAs='[footer]'>
-        <button type="button" class="btn footer-btn">PROCEED</button>
+        <button type="button" class="btn footer-btn" (click)="goToDetails()">PROCEED</button>
     </ng-container>
 </app-footer>

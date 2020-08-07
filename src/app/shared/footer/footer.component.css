@@ -5,4 +5,5 @@ footer {
     width: 100vw;
     height: 4.5rem;
     background-color: #fff;
+    border-top: solid 1px var(--gray-border-color);
 }
