@@ -13,3 +13,8 @@ html, body{
     padding: 0;
     margin: 0;
 }
+
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+}
