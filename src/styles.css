@@ -53,7 +53,19 @@ html, body{
     margin-top: 1rem;
 }
 
+.mb-26 {
+    margin-bottom: 26px;
+}
+
+.mb-48 {
+    margin-bottom: 48px;
+}
+
 /* common padding styles */
 .padding-1rem {
     padding: 1rem;
+}
+
+.pt-20 {
+    padding-top: 20px;
 }

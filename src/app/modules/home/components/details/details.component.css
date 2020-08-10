@@ -39,6 +39,11 @@ form {
     box-shadow: none;
 }
 
+.age {
+    position: absolute;
+    top: 15.375rem;
+}
+
 .footer-btn {
     float: right;
     color: #fff;

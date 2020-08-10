@@ -233,11 +233,11 @@ input:disabled+label.input_label {
 
 .formField.edit::after,
 .formField.calendar span.icon:after {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   content: '';
   background-size: 16px;
-  top: 42px;
+  top: 32px;
   right: 16px;
   padding: 8px;
   position: absolute;
@@ -282,7 +282,7 @@ ngb-typeahead-window {
 }
 
 .formField.calendar span.icon:after {
-  background-image: url('~src/assets/images/calandar.svg');
+  background-image: url('~src/assets/images/calendar-icon.svg');
 }
 
 .formField.weight::after {

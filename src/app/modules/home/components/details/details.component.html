@@ -27,8 +27,23 @@
                         <label class="input_label">My Gender</label>
                     </div>
 
+                    <div class="formField calendar pt-20" [ngClass]="{'mb-48': ageCalc(), 'mb-26': !ageCalc()}">
+                        <input [ngClass]="{'errorInput': formSubmitted && detailsForm.get('birthdate').hasError('dateVaidator') || formSubmitted && detailsForm.get('birthdate').hasError('required') }" class="m-0" readonly placeholder="10/07/1975" formControlName="birthdate"
+                            ngbDatepicker autocomplete="off" #datePicker="ngbDatepicker" (click)="datePicker.toggle()" (ngModelChange)='ageCalc()' [minDate]="minDate">
+                        <span class="icon" (click)="datePicker.toggle()"></span>
+                        <p class='errorMsg' *ngIf="formSubmitted && detailsForm.get('birthdate').hasError('required')">Date of birth field is required
+                        </p>
+                        <p class='errorMsg' *ngIf="formSubmitted && detailsForm.get('birthdate').hasError('dateVaidator')">Please enter a valid date</p>
+                        <label class="input_label">Date Of Birth</label>
+                    </div>
+                    <p *ngIf="ageCalc()" class="ff-medium fs-14 age"> {{ageCalc()}} years </p>
+
                     <div class="formField">
-                        <!-- dob -->
+                        <!-- income -->
+                    </div>
+
+                    <div class="formField">
+                        <!-- mobile -->
                     </div>
 
                     <div class="formField">
