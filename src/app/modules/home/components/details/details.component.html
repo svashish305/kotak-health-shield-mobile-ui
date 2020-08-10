@@ -38,7 +38,7 @@
                     </div>
                     <span *ngIf="ageCalc()" class="ff-medium fs-14 age"> {{ageCalc()}} years </span>
 
-                    <span class="ff-regular fs-14">Annual Income <span class="ff-italic">(in lacs)</span></span>
+                    <span class="ff-regular fs-14">Annual Income <span class="gray-text ff-italic">(in lacs)</span></span>
                     <div class="formField">
                         <div ngbDropdown>
                             <input [ngClass]="{'errorInput': formSubmitted && detailsForm.get('income').hasError('required') }" class="dropdown-toggle mt-0" readonly ngbDropdownToggle formControlName="income" placeholder="Select range" required><span ngbDropdownToggle></span>

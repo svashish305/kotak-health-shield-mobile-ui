@@ -45,6 +45,10 @@ form {
     top: 15.375rem;
 }
 
+.gray-text {
+    color: var(--gray-text);
+}
+
 .footer-btn {
     float: right;
     color: #fff;
