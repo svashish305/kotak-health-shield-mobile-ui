@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-details-two',
@@ -9,10 +10,14 @@ import { FormGroup } from '@angular/forms';
 export class DetailsTwoComponent implements OnInit {
 
   detailsTwoForm: FormGroup;
+  formSubmitted = false;
 
-  constructor() { }
+  constructor(private fb: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
+    this.detailsTwoForm = this.fb.group({
+      policyDuration: ['', Validators.required],
+    });
   }
 
   goToStepOne() {
