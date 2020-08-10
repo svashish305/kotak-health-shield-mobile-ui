@@ -236,7 +236,7 @@ input:disabled+label.input_label {
   width: 24px;
   height: 24px;
   content: '';
-  background-size: 16px;
+  /* background-size: 16px; */
   top: 32px;
   right: 16px;
   padding: 8px;
@@ -347,7 +347,7 @@ ngb-typeahead-window {
 
 .dropdown-toggle {
   border-radius: 3px;
-  border: solid 1px #9f9f9f;
+  border: solid 1px var(--gray-border-color);
   background-color: #ffffff;
   padding: 13px;
   line-height: 20px;
@@ -718,6 +718,10 @@ hr {
 
 .mt-md-32 {
   margin-top: 32px;
+}
+
+.mt-26 {
+  margin-top: 26px;
 }
 
 .mt-32 {
@@ -1513,7 +1517,7 @@ ol>li:before {
 .intl-tel-input.allow-dropdown.separate-dial-code {
   display: flex;
   border-radius: 3px;
-  border: solid 1px #9f9f9f;
+  border: solid 1px var(--gray-border-color);
   background-color: #ffffff;
 }
 

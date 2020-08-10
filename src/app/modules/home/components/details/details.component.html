@@ -31,22 +31,46 @@
                         <input [ngClass]="{'errorInput': formSubmitted && detailsForm.get('birthdate').hasError('dateVaidator') || formSubmitted && detailsForm.get('birthdate').hasError('required') }" class="m-0" readonly placeholder="10/07/1975" formControlName="birthdate"
                             ngbDatepicker autocomplete="off" #datePicker="ngbDatepicker" (click)="datePicker.toggle()" (ngModelChange)='ageCalc()' [minDate]="minDate">
                         <span class="icon" (click)="datePicker.toggle()"></span>
-                        <p class='errorMsg' *ngIf="formSubmitted && detailsForm.get('birthdate').hasError('required')">Date of birth field is required
+                        <p class='errorMsg' *ngIf="formSubmitted && detailsForm.get('birthdate').hasError('required')">Date Of Birth field is required
                         </p>
                         <p class='errorMsg' *ngIf="formSubmitted && detailsForm.get('birthdate').hasError('dateVaidator')">Please enter a valid date</p>
                         <label class="input_label">Date Of Birth</label>
                     </div>
-                    <p *ngIf="ageCalc()" class="ff-medium fs-14 age"> {{ageCalc()}} years </p>
+                    <span *ngIf="ageCalc()" class="ff-medium fs-14 age"> {{ageCalc()}} years </span>
 
+                    <span class="ff-regular fs-14">Annual Income <span class="ff-italic">(in lacs)</span></span>
                     <div class="formField">
-                        <!-- income -->
+                        <div ngbDropdown>
+                            <input [ngClass]="{'errorInput': formSubmitted && detailsForm.get('income').hasError('required') }" class="dropdown-toggle mt-0" readonly ngbDropdownToggle formControlName="income" placeholder="Select range" required><span ngbDropdownToggle></span>
+                            <div ngbDropdownMenu>
+                                <button ngbDropdownItem *ngFor="let inc of incomes" value="inc.value" (click)="assignDropdownVal('income', inc.label)">{{ inc.label }}</button>
+                            </div>
+                        </div>
+                        <p class='errorMsg' *ngIf="formSubmitted && detailsForm.get('income').hasError('required')">Annual income field is required
+                        </p>
                     </div>
 
+                    <span class="ff-regular fs-14">Mobile Number</span>
                     <div class="formField">
-                        <!-- mobile -->
+                        <div
+                            [ngClass]="{'errorInput': formSubmitted && detailsForm.get('phoneNumber').hasError('required') || formSubmitted && detailsForm.get('phoneNumber').hasError('validatePhoneNumber') }">
+                            <ngx-intl-tel-input [cssClass]="'custom'" [preferredCountries]="preferredCountries"
+                                [enableAutoCountrySelect]="false" [enablePlaceholder]="true" [searchCountryFlag]="true"
+                                [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
+                                [selectFirstCountry]="false" [selectedCountryISO]="CountryISO.India" [maxLength]="15"
+                                [tooltipField]="TooltipLabel.Name" [phoneValidation]="true" [separateDialCode]="true"
+                                name="phoneNumber" formControlName="phoneNumber">
+                            </ngx-intl-tel-input>
+                        </div>
                     </div>
+                    <p class='errorMsg' *ngIf="formSubmitted && detailsForm.get('phoneNumber').hasError('required')">
+                        Mobile Number field is required </p>
+        
+                    <p class='errorMsg'
+                        *ngIf="formSubmitted && (!detailsForm.get('phoneNumber').hasError('required') && detailsForm.get('phoneNumber').hasError('validatePhoneNumber'))">
+                        Please enter a valid Mobile Number </p>
 
-                    <div class="formField">
+                    <div class="mt-26 formField">
                         <input type="email" placeholder="Enter your Email ID" value="reshma.w@gmail.com" formControlName="emailId"
                           [ngClass]="{'errorInput': formSubmitted && detailsForm.get('emailId').hasError('email') || formSubmitted && detailsForm.get('emailId').hasError('required') }">
                         <label class="input_label">Email ID</label>
