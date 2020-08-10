@@ -1,1 +1,28 @@
-<p>details-two works!</p>
+<div class="container">
+    <div class="form-container padding-1rem">
+        <span class="ff-bold smd-font">Choose a plan</span><br>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn badge-btns active">
+              <input type="radio" name="options" id="option1"> For Me
+            </label>
+            <label class="btn badge-btns">
+              <input type="radio" name="options" id="option2"> Me & Spouse
+            </label>
+        </div>
+
+        <!-- <form class="padding-1rem tm-1rem" [formGroup]="detailsTwoForm">
+            <div class="row">
+                <div class="col">
+                    
+                </div>
+            </div>            
+        </form> -->
+    </div>
+</div>
+
+<app-footer>
+    <ng-container ngProjectAs='[footer]'>
+        <!-- display amount on left -->
+        <button type="button" class="btn footer-btn" (click)="goToStepOne()">PROCEED</button>
+    </ng-container>
+</app-footer>
