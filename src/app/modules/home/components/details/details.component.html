@@ -46,7 +46,7 @@
                                 <button ngbDropdownItem *ngFor="let inc of incomes" value="inc.value" (click)="assignDropdownVal('income', inc.label)">{{ inc.label }}</button>
                             </div>
                         </div>
-                        <p class='errorMsg' *ngIf="formSubmitted && detailsForm.get('income').hasError('required')">Annual income field is required
+                        <p class='errorMsg income-err' *ngIf="formSubmitted && detailsForm.get('income').hasError('required')">Annual income field is required
                         </p>
                     </div>
 

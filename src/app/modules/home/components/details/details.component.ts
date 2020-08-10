@@ -59,6 +59,7 @@ export class DetailsComponent implements OnInit {
 
   goToDetailsTwo() {
     this.formSubmitted = true;
+    this.router.navigate(['details-two']);
   }
 
 }

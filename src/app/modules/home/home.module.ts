@@ -10,12 +10,14 @@ import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DetailsTwoComponent } from './components/details-two/details-two.component';
 
 @NgModule({
   declarations: [
     FooterComponent,
     LandingPageComponent,
     DetailsComponent,
+    DetailsTwoComponent,
   ],
   imports: [
     CommonModule,

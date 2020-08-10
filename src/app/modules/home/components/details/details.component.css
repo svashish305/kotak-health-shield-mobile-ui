@@ -40,6 +40,11 @@ form {
     box-shadow: none;
 }
 
+.income-err {
+    position: absolute;
+    top: 3rem;
+}
+
 .age {
     position: absolute;
     top: 15.375rem;
