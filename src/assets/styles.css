@@ -353,7 +353,7 @@ ngb-typeahead-window {
   line-height: 20px;
   width: 100%;
   text-align: left;
-  color: #6f6f6f;
+  color: #000;
   font-size: 16px;
   font-family: RobotoRegular;
   cursor: pointer;

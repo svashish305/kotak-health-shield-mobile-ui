@@ -10,24 +10,51 @@
             </label>
         </div>
 
-        <form class="padding-1rem tm-1rem" [formGroup]="detailsTwoForm">
+        <form class="padding-1rem mt-1rem" [formGroup]="detailsTwoForm">
             <div class="row">
                 <div class="col">
                     <div class="formField mb-1rem">
                         <div class="policy-bg">
                             <span class="fs-14 ff-bold">Policy covered till age</span>
-                            <input class="age-text fs-14 ff-regular" type="text" formControlName="policyDuration" value="75">
+                            <input class="age-text fs-14 ff-regular" type="text" formControlName="policyDuration" placeholder="75">
                             <span class="fs-14"> years</span>
                         </div>
                     </div>
 
                     <!-- cards -->
                     <div class="card">
-                        <div class="card-body">
-                            <h6 class="card-title">
-                                Cancer Shield
-                                <!-- info icon -->
-                            </h6>
+                        <div class="card-body row">
+                            <div class="card-text col-6">
+                                <h6 class="card-title">
+                                    Cancer Shield <img class="info-icon" src="assets/images/info-icon.svg" alt="info">
+                                </h6>
+                                <span class="subtitle gray-text ff-regular fs-12">Average cost of cancer can go upto 20 lacs</span>
+                            </div>
+                            <div class="col-6 years-input-container">
+                                <img class="minus-img" src="assets/images/minus.svg" alt="minus" (click)="dec(shields[0].id)">
+                                <input readonly class="years-input" type="text" value="0" formControlName="shieldTypeDuration" [(ngModel)]="shields[0].duration">
+                                <span class="L-text">L</span>
+                                <img class="plus-img" src="assets/images/plus.svg" alt="plus" (click)="inc(shields[0].id)">
+                                <span class="fs-12 caption">Just &#x20B9; 5 per day</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-1rem" *ngFor="let shield of shields | slice: 1; let i=index">
+                        <div class="card-body row">
+                            <div class="card-text col-6">
+                                <h6 class="card-title">
+                                    {{shield.title}} <img class="info-icon" src="assets/images/info-icon.svg" alt="info">
+                                </h6>
+                                <span class="subtitle gray-text ff-regular fs-12">{{shield.desc}}</span>
+                            </div>
+                            <div class="col-6 years-input-container">
+                                <img class="minus-img" src="assets/images/minus.svg" alt="minus" (click)="dec(shield.id)">
+                                <input readonly class="years-input" type="text" value="0" formControlName="shieldTypeDuration" [(ngModel)]="shield.duration">
+                                <span class="L-text">L</span>
+                                <img class="plus-img" src="assets/images/plus.svg" alt="plus" (click)="inc(shield.id)">
+                                <span class="fs-12 caption">Just &#x20B9; 5 per day</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -39,6 +66,14 @@
 <app-footer>
     <ng-container ngProjectAs='[footer]'>
         <!-- display amount on left -->
+        <span class="amount-text ff-bold">{{totalAmount}}</span>
+        <div ngbDropdown class="d-inline-block">
+            <button class="button-text ff-bold text-left" ngbDropdownToggle class="ftr-dd-btn"><span class="fs-14 ff-regular">{{annual}}</span></button>
+            <div ngbDropdownMenu>
+                <button ngbDropdownItem *ngFor="let val of annualValues" (click)="changeAnnual(val)">{{ val }}</button>
+            </div>
+        </div>
+        <span class="amount-subtitle ff-regular fs-10">Inclusive of tax</span>
         <button type="button" class="btn footer-btn" (click)="goToStepOne()">PROCEED</button>
     </ng-container>
 </app-footer>

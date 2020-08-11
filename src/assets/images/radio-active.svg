@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="Group_2941" data-name="Group 2941" transform="translate(-87 -2)">
+    <g id="filler-radio-button" transform="translate(87 2)">
+      <g id="Ellipse_2" data-name="Ellipse 2" fill="none" stroke="#036" stroke-width="1">
+        <circle cx="8" cy="8" r="8" stroke="none"/>
+        <circle cx="8" cy="8" r="7.5" fill="none"/>
+      </g>
+    </g>
+    <circle id="Ellipse_194" data-name="Ellipse 194" cx="5" cy="5" r="5" transform="translate(90 5)" fill="#036"/>
+  </g>
+</svg>

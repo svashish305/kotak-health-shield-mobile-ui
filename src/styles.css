@@ -7,7 +7,11 @@
     --alt-blue-text: #000137;
     --red-bg: #FF0000;
     --gray-text: #5C5D73;
+    --alt-gray-text: #909090;
+    --alt-gray-text-1: #919191;
     --gray-border-color: #00000029;
+    --light-gray-border: #ccc;
+    --med-gray-border: #9F9F9F;
 }
 
 html, body{
@@ -29,6 +33,14 @@ html, body{
 }
 
 /* common font-sizes */
+.fs-10 {
+    font-size: 10px;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
 .font-1rem {
     font-size: 1rem;
 }
@@ -50,7 +62,7 @@ html, body{
 }
 
 /* common margin styles */
-.tm-1rem {
+.mt-1rem {
     margin-top: 1rem;
 }
 
