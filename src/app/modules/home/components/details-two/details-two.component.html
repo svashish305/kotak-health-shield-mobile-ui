@@ -35,7 +35,7 @@
                                 <input readonly class="years-input" type="text" value="0" formControlName="shieldTypeDuration" [(ngModel)]="shields[0].duration">
                                 <span class="L-text">L</span>
                                 <img class="plus-img" src="assets/images/plus.svg" alt="plus" (click)="inc(shields[0].id)">
-                                <span class="fs-12 caption">Just &#x20B9; 5 per day</span>
+                                <span class="fs-12 caption">Just &#x20B9; <strong>{{shields[0].perDayCharge}}</strong> per day</span>
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                                 <input readonly class="years-input" type="text" value="0" formControlName="shieldTypeDuration" [(ngModel)]="shield.duration">
                                 <span class="L-text">L</span>
                                 <img class="plus-img" src="assets/images/plus.svg" alt="plus" (click)="inc(shield.id)">
-                                <span class="fs-12 caption">Just &#x20B9; 5 per day</span>
+                                <span class="fs-12 caption">Just &#x20B9; <strong>{{shield.perDayCharge}}</strong> per day</span>
                             </div>
                         </div>
                     </div>

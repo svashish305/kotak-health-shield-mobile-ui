@@ -72,6 +72,8 @@ form {
     width: 13.41px;
     height: 13.41px;
     margin: 0;
+    position: relative;
+    bottom: 1px;
 }
 
 .gray-text {
