@@ -450,8 +450,8 @@ input.dropdown-toggle+span:after,
 .health-details ul.nav-tabs {
   border-bottom: 0;
   padding: 10px 30px;
-  border: solid 1px #fffced;
-  background-color: #fffced;
+  border: solid 1px var(--blue-bg-1);
+  background-color: var(--blue-bg-1);
 }
 
 .health-details ul.nav-tabs li {
@@ -463,17 +463,19 @@ input.dropdown-toggle+span:after,
 
 .health-details ul.nav-tabs li a.nav-link div div.title {
   position: absolute;
-  width: 14px;
-  height: 14px;
+  /* width: 14px;
+  height: 14px; */
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  border: solid 1px #cfcfcf;
+  border: solid 1px var(--light-gray-border);
   display: table-cell;
   padding: 0;
   font-size: 0;
-  margin: 4px;
+  /* margin: 4px; */
   vertical-align: middle;
   z-index: 2;
-  background-color: #fffced;
+  background-color: var(--light-gray-border);
 }
 
 .health-details ul.nav-tabs li a.nav-link {
@@ -1681,9 +1683,11 @@ ul.country-list>li.divider {
   }
 
   .health-details ul.nav-tabs li a.nav-link.active div div.title {
-    width: 16px;
-    height: 16px;
-    margin: 3px 0;
+    /* width: 16px;
+    height: 16px; */
+    width: 24px;
+    height: 24px;
+    /* margin: 3px 0; */
     line-height: 16px;
     font-size: 10px;
     padding: 0;
@@ -1694,9 +1698,11 @@ ul.country-list>li.divider {
   }
 
   .health-details ul.nav-tabs li a.nav-link div div.title {
-    width: 10px;
+    /* width: 10px;
     height: 10px;
-    margin: 6px 0;
+    margin: 6px 0; */
+    width: 24px;
+    height: 24px;
   }
 
   .formField,
@@ -1750,7 +1756,8 @@ ul.country-list>li.divider {
     vertical-align: middle;
     display: inline-flex;
     position: relative;
-    width: 18%;
+    /* width: 18%; */
+    width: 23%;
     max-width: 50%;
   }
 
