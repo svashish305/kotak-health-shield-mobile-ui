@@ -12,6 +12,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DetailsTwoComponent } from './components/details-two/details-two.component';
 import { StepOneComponent } from './components/step-one/step-one.component';
+import { HealthDetailsComponent } from './components/health-details/health-details.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { StepOneComponent } from './components/step-one/step-one.component';
     LandingPageComponent,
     DetailsComponent,
     DetailsTwoComponent,
+    HealthDetailsComponent,
     StepOneComponent,
   ],
   imports: [

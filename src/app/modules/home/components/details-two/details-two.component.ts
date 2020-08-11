@@ -76,7 +76,7 @@ export class DetailsTwoComponent implements OnInit {
   }
 
   goToStepOne() {
-    this.router.navigate(['step-one']);
+    this.router.navigate(['health-details']);
   }
 
 }

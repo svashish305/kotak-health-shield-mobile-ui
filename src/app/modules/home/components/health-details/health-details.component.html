@@ -1,0 +1,56 @@
+<div class="health-details">
+    <p class="proposalId d-md-inline-block d-none mb-0">Your Proposal ID: <span class="ff-bold"> 34126 </span></p>
+    <ngb-tabset #healthTabRef="ngbTabset">
+      <ngb-tab id="1">
+        <ng-template ngbTabTitle>
+          <div [class.completed]="completed(1)">
+            <div class="title"> 1</div>
+          </div>
+        </ng-template>
+        <ng-template ngbTabContent>
+          <app-step-one [healthTabRef]="healthTabRef"></app-step-one>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab id='2'>
+        <ng-template ngbTabTitle>
+          <div [class.completed]="completed(2)">
+            <div class="title"> 2</div>
+          </div>
+        </ng-template>
+        <ng-template ngbTabContent>
+          <app-step-two [healthTabRef]="healthTabRef"></app-step-two>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab id='3'>
+        <ng-template ngbTabTitle>
+          <div [class.completed]="completed(3)">
+            <div class="title"> 3</div>
+          </div>
+        </ng-template>
+        <ng-template ngbTabContent>
+          <app-step-three [healthTabRef]="healthTabRef"></app-step-three>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab id="4">
+        <ng-template ngbTabTitle>
+          <div [class.completed]="completed(4)">
+            <div class="title"> 4</div>
+          </div>
+        </ng-template>
+        <ng-template ngbTabContent>
+          <app-step-four [healthTabRef]="healthTabRef"></app-step-four>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab id="5">
+        <ng-template ngbTabTitle>
+          <div [class.completed]="completed(5)">
+            <div class="title"> 5</div>
+          </div>
+        </ng-template>
+        <ng-template ngbTabContent>
+          <app-step-five [healthTabRef]="healthTabRef"></app-step-five>
+        </ng-template>
+      </ngb-tab>
+    </ngb-tabset>
+  
+  </div>
