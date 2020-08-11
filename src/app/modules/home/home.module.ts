@@ -11,6 +11,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DetailsTwoComponent } from './components/details-two/details-two.component';
+import { StepOneComponent } from './components/step-one/step-one.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { DetailsTwoComponent } from './components/details-two/details-two.compon
     LandingPageComponent,
     DetailsComponent,
     DetailsTwoComponent,
+    StepOneComponent,
   ],
   imports: [
     CommonModule,
