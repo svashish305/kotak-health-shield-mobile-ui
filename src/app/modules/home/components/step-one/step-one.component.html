@@ -1,8 +1,82 @@
 <div class="container">
     <span class="ff-bold sm-font alt-blacken">Personal details</span>
     <div class="form-container">
-        <form class="padding-1rem mt-1rem">
-            abc
+        <form class="padding-1rem mt-1rem" [formGroup]="personalDetailsForm">
+            <div class="row">
+                <div class="col">
+                    <span class="ff-regular fs-14">Residential Status</span>
+                    <div class="formField">
+                        <div ngbDropdown>
+                            <input [ngClass]="{'errorInput': formSubmitted && personalDetailsForm.get('residentialStatus').hasError('required') }" class="dropdown-toggle mt-0" readonly ngbDropdownToggle formControlName="residentialStatus" placeholder="Select residential status" required><span ngbDropdownToggle></span>
+                            <div ngbDropdownMenu>
+                                <button ngbDropdownItem *ngFor="let residentialStatus of resiStatuses" value="residentialStatus.value" (click)="assignDropdownVal('residentialStatus', residentialStatus.label)">{{ residentialStatus.label }}</button>
+                            </div>
+                        </div>
+                        <p class='errorMsg residentialStatus-err' *ngIf="formSubmitted && personalDetailsForm.get('residentialStatus').hasError('required')">Residential Status field is required
+                        </p>
+                    </div>
+
+                    <div class="formField">
+                        <input type="text" placeholder="Enter your PIN" formControlName="currentPin"
+                        [ngClass]="{'errorInput': formSubmitted && personalDetailsForm.get('currentPin').hasError('required') }">
+                        <label class="input_label">Current Pincode</label>
+                    </div>
+                    <p class='errorMsg' *ngIf="formSubmitted && personalDetailsForm.get('currentPin').hasError('required')">
+                    Current Pincode field is required </p>
+
+                    <div class="formField">
+                        <input type="text" placeholder="Enter your Mother's Name" formControlName="mothersName"
+                        [ngClass]="{'errorInput': formSubmitted && personalDetailsForm.get('mothersName').hasError('required') }">
+                        <label class="input_label">Mother's Name</label>
+                    </div>
+                    <p class='errorMsg' *ngIf="formSubmitted && personalDetailsForm.get('mothersName').hasError('required')">
+                    Mother's Name field is required </p>
+
+                    <span class="ff-regular fs-14">Marital Status</span>
+                    <div class="formField">
+                        <div ngbDropdown>
+                            <input [ngClass]="{'errorInput': formSubmitted && personalDetailsForm.get('maritalStatus').hasError('required') }" class="dropdown-toggle mt-0" readonly ngbDropdownToggle formControlName="maritalStatus" placeholder="Select marital status" required><span ngbDropdownToggle></span>
+                            <div ngbDropdownMenu>
+                                <button ngbDropdownItem *ngFor="let maritalStatus of maritalStatuses" value="maritalStatus.value" (click)="assignDropdownVal('maritalStatus', maritalStatus.label)">{{ maritalStatus.label }}</button>
+                            </div>
+                        </div>
+                        <p class='errorMsg maritalStatus-err' *ngIf="formSubmitted && personalDetailsForm.get('maritalStatus').hasError('required')">Marital Status field is required
+                        </p>
+                    </div>
+
+                    <span class="ff-regular fs-14">Education</span>
+                    <div class="formField">
+                        <div ngbDropdown>
+                            <input [ngClass]="{'errorInput': formSubmitted && personalDetailsForm.get('education').hasError('required') }" class="dropdown-toggle mt-0" readonly ngbDropdownToggle formControlName="education" placeholder="Select range" required><span ngbDropdownToggle></span>
+                            <div ngbDropdownMenu>
+                                <button ngbDropdownItem *ngFor="let education of eduStatuses" value="education.value" (click)="assignDropdownVal('education', education.label)">{{ education.label }}</button>
+                            </div>
+                        </div>
+                        <p class='errorMsg education-err' *ngIf="formSubmitted && personalDetailsForm.get('education').hasError('required')">Education field is required
+                        </p>
+                    </div>
+
+                    <span class="ff-regular fs-14">Occupation</span>
+                    <div class="formField">
+                        <div ngbDropdown>
+                            <input [ngClass]="{'errorInput': formSubmitted && personalDetailsForm.get('occupation').hasError('required') }" class="dropdown-toggle mt-0" readonly ngbDropdownToggle formControlName="occupation" placeholder="Select range" required><span ngbDropdownToggle></span>
+                            <div ngbDropdownMenu>
+                                <button ngbDropdownItem *ngFor="let occupation of occuStatuses" value="occupation.value" (click)="assignDropdownVal('occupation', occupation.label)">{{ occupation.label }}</button>
+                            </div>
+                        </div>
+                        <p class='errorMsg occupation-err' *ngIf="formSubmitted && personalDetailsForm.get('occupation').hasError('required')">Occupation field is required
+                        </p>
+                    </div>
+
+                    <div class="formField">
+                        <input type="text" placeholder="Enter your PAN Number" formControlName="panNo"
+                        [ngClass]="{'errorInput': formSubmitted && personalDetailsForm.get('panNo').hasError('required') }">
+                        <label class="input_label">PAN</label>
+                    </div>
+                    <p class='errorMsg' *ngIf="formSubmitted && personalDetailsForm.get('panNo').hasError('required')">
+                    PAN Number field is required </p>
+                </div>
+            </div>
         </form>
     </div>
 </div>
