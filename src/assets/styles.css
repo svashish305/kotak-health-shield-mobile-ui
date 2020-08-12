@@ -448,10 +448,12 @@ input.dropdown-toggle+span:after,
 }
 
 .health-details ul.nav-tabs {
-  border-bottom: 0;
   padding: 10px 30px;
-  border: solid 1px var(--blue-bg-1);
   background-color: var(--blue-bg-1);
+  /* border-bottom: 0;
+  border: solid 1px var(--blue-bg-1); */
+  border-top: solid 1px var(--blue-bg-1);
+  border-bottom: none !important;
 }
 
 .health-details ul.nav-tabs li {
