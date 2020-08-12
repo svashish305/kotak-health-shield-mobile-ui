@@ -11,6 +11,7 @@ import { SearchCountryField, TooltipLabel, CountryISO } from 'ngx-intl-tel-input
 })
 export class DetailsComponent implements OnInit {
 
+  acceptPolicy;
   detailsForm: FormGroup;
   formSubmitted = false;
   showMinor = false;
@@ -59,7 +60,9 @@ export class DetailsComponent implements OnInit {
 
   goToDetailsTwo() {
     this.formSubmitted = true;
-    this.router.navigate(['details-two']);
+    if(this.acceptPolicy) {
+      this.router.navigate(['details-two']);
+    }
   }
 
 }

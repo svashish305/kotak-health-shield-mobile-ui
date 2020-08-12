@@ -1,1 +1,8 @@
 <p>step-four works!</p>
+
+<app-footer>
+    <ng-container ngProjectAs='[footer]'>
+        <button type="button" class="btn back-btn mt-12" (click)="navigateBack()"><img class="ftr-back-img" src="assets/images/back.svg" alt="back">Back</button>
+        <button type="button" class="btn footer-btn" (click)="navigate()">PROCEED</button>
+    </ng-container>
+</app-footer>

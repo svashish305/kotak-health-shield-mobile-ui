@@ -1,12 +1,10 @@
 .container {
-    min-height: 86vh;
+    height: 86vh;
     margin: 0;
     padding: 0;
     background-color: var(--blue-bg-1);
-}
-
-.form-container {
-    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 form {
@@ -53,14 +51,4 @@ form {
 
 .gray-text {
     color: var(--gray-text);
-}
-
-.footer-btn {
-    float: right;
-    color: #fff;
-    background-color: var(--red-bg);
-    width: 8.875rem;
-    height: 2.75rem;
-    margin: 0.875rem 1.5rem;
-    border-radius: 1.875rem;
 }

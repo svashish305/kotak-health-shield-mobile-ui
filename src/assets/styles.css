@@ -88,7 +88,7 @@ h6,
 
 ::selection {
   color: #ffffff;
-  background-color: #0271e0;
+  background-color: #003366;
 }
 
 .custom-container {
@@ -318,7 +318,7 @@ ngb-typeahead-window {
 .health-tab-content .sumAssured .button-text {
   border: 0;
   padding: 0;
-  color: #0271e0;
+  color: #003366;
   text-align: right;
   padding-right: 24px;
   min-width: 0;
@@ -631,7 +631,7 @@ label.checkbox>div {
   top: 0;
   height: 16px;
   width: 16px;
-  border: 1px solid #0271e0;
+  border: 1px solid #003366;
   background: transparent;
   border-radius: 50%;
 }
@@ -644,11 +644,11 @@ label.checkbox>div {
   top: 3px;
   width: 8px;
   height: 8px;
-  background: #0271e0;
+  background: #003366;
 }
 
 .radioTick.small input:checked~div {
-  border-color: #0271e0;
+  border-color: #003366;
 }
 
 .checkbox input:checked~.tick::after {
@@ -665,13 +665,13 @@ label.checkbox>div {
 }
 
 .checkbox input:checked~.tick {
-  background: #0271e0;
+  background: #003366;
 }
 
 .checkbox .tick {
   position: absolute;
   top: 0;
-  border: 1px solid #0271e0;
+  border: 1px solid #003366;
   width: 18px;
   height: 18px;
   border-radius: 3px;
@@ -735,7 +735,7 @@ hr {
 }
 
 .health-tab-content a {
-  color: #0271e0 !important;
+  color: #003366 !important;
   text-decoration: underline !important;
   cursor: pointer;
 }
@@ -1202,7 +1202,7 @@ p.fs15Ter {
 }
 
 .blue {
-  color: #0271e0 !important;
+  color: #003366 !important;
 }
 
 .health-details ul.nav-tabs::before {
@@ -1247,7 +1247,7 @@ button:disabled {
 a {
   outline: none !important;
   text-decoration: none !important;
-  color: #0271e0;
+  color: #003366;
 }
 
 .show.dark-backdrop {

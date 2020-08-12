@@ -5,7 +5,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { DetailsComponent } from './components/details/details.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ScrollingModule } from '@angular/cdk/scrolling';
@@ -17,9 +17,11 @@ import { StepTwoComponent } from './components/step-two/step-two.component';
 import { StepThreeComponent } from './components/step-three/step-three.component';
 import { StepFourComponent } from './components/step-four/step-four.component';
 import { StepFiveComponent } from './components/step-five/step-five.component';
+import { HeaderComponent } from 'src/app/shared/header/header.component';
 
 @NgModule({
   declarations: [
+    HeaderComponent,
     FooterComponent,
     LandingPageComponent,
     DetailsComponent,
@@ -36,6 +38,7 @@ import { StepFiveComponent } from './components/step-five/step-five.component';
     HomeRoutingModule,
     ScrollingModule,
     NgbModule,
+    FormsModule,
     ReactiveFormsModule,
     NgxIntlTelInputModule,
     BsDropdownModule.forRoot(),

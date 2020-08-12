@@ -1,9 +1,0 @@
-footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 4.5rem;
-    background-color: #fff;
-    border-top: solid 1px var(--gray-border-color);
-}

@@ -9,6 +9,7 @@
     --gray-text: #5C5D73;
     --alt-gray-text: #909090;
     --alt-gray-text-1: #919191;
+    --alt-gray-text-2: #6C6C6C;
     --gray-border-color: #00000029;
     --light-gray-border: #ccc;
     --med-gray-border: #9F9F9F;
@@ -34,11 +35,11 @@ html, body{
 
 /* common font-sizes */
 .fs-10 {
-    font-size: 10px;
+    font-size: 10px !important;
 }
 
 .fs-12 {
-    font-size: 12px;
+    font-size: 12px !important;
 }
 
 .font-1rem {
@@ -62,8 +63,16 @@ html, body{
 }
 
 /* common margin styles */
+.mt-12 {
+    margin-top: 12px;
+}
+
 .mt-1rem {
     margin-top: 1rem;
+}
+
+.mr-24 {
+    margin-right: 24px;
 }
 
 .mb-1rem {
@@ -85,4 +94,68 @@ html, body{
 
 .pt-20 {
     padding-top: 20px;
+}
+
+/* common header and footer styles */
+.header {
+    z-index: 2;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: solid 1px var(--gray-border-color);
+}
+
+.navbar {
+    width: 100vw;
+    padding: 3.65px 1rem !important;
+}
+
+.kotak-logo {
+    width: 90px;
+    height: 30px;
+    margin: 0;
+}
+
+.navbar-item-gray-text {
+    color: var(--alt-gray-text-2);
+    font-size: 0.875rem;
+}
+
+.navbar-item-blue-text {
+    color: var(--blue-theme-color);
+    font-size: 0.875rem;
+}
+
+.ftr-back-img {
+    width: 7px;
+    height: 1rem;
+}
+
+.back-btn {
+    float: left;
+    color: darkgray !important;
+    font-family: RobotoRegular;
+    font-size: 1rem !important;
+}
+
+.footer-btn {
+    float: right;
+    color: #fff !important;
+    background-color: var(--red-bg) !important;
+    width: 8.875rem;
+    height: 2.75rem;
+    margin: 0.875rem 1.5rem;
+    border-radius: 1.875rem !important;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 4.5rem;
+    background-color: #fff;
+    border-top: solid 1px var(--gray-border-color);
 }

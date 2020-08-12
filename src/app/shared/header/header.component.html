@@ -1,15 +1,10 @@
-<nav class="navbar">
-
-    <!-- logo -->
+<div class="header">
+  <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item">
-        <img class="kotak-logo" src="assets/images/kotak-logo.svg">
+          <img class="kotak-logo" src="assets/images/kotak-logo.svg">
       </a>
     </div>
-
-    <div class="my-2 my-sm-0">
-        <a class="navbar-item align-right">
-            <span class="navbar-item-text">Contact Us</span>
-        </a>
-    </div>
+    <ng-content select="[header]"></ng-content>
   </nav>
+</div>

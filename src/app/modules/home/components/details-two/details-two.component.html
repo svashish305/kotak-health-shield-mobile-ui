@@ -1,3 +1,13 @@
+<app-header>
+    <ng-container ngProjectAs='[header]'>
+        <div class="my-2 my-sm-0">
+            <a class="navbar-item align-right">
+                <span class="fs-12 navbar-item-blue-text">Quote ID: 134723455</span>
+            </a>
+        </div>
+    </ng-container>
+</app-header>
+
 <div class="container">
     <div class="form-container padding-1rem">
         <span class="ff-bold smd-font">Choose a plan</span><br>
@@ -65,7 +75,6 @@
 
 <app-footer>
     <ng-container ngProjectAs='[footer]'>
-        <!-- display amount on left -->
         <span class="amount-text ff-bold">{{totalAmount}}</span>
         <div ngbDropdown class="d-inline-block">
             <button class="button-text ff-bold text-left" ngbDropdownToggle class="ftr-dd-btn"><span class="fs-14 ff-regular">{{annual}}</span></button>
