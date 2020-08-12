@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Location } from '@angular/common';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-step-one',
@@ -9,6 +9,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class StepOneComponent implements OnInit {
   @Input() healthTabRef;
+  personalFilled = false;
   formSubmitted = false;
   personalDetailsForm: FormGroup;
   resiStatuses = [
@@ -34,18 +35,24 @@ export class StepOneComponent implements OnInit {
     { label: 'Salaried (Private)', value: 'Salaried (Private)' },
     { label: 'Own Business', value: 'Own Business' }
   ];
+  additionalDetailsForm: FormGroup;
 
   constructor(private location: Location, private fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.personalDetailsForm = this.fb.group({
       residentialStatus: ['Resident Individual', Validators.required],
-      currentPin: ['400 607', Validators.required],
+      currentPin: new FormControl('400 607', [Validators.required, Validators.minLength(6)]),
       mothersName: ['Sushmita', Validators.required],
       maritalStatus: ['Married', Validators.required],
       education: [`Bachelor's Degree`, Validators.required],
       occupation: [`Salaried (Private)`, Validators.required],
       panNo: ['AWPRGH9378', Validators.required]
+    });
+
+    this.additionalDetailsForm = this.fb.group({
+      height: ['000', Validators.required],
+      weight: ['00', Validators.required],
     });
   }
 
@@ -54,8 +61,13 @@ export class StepOneComponent implements OnInit {
   }
 
   navigate() {
-    this.formSubmitted = true;
-    this.healthTabRef.select('2');
+    if(!this.personalFilled) {
+      this.personalFilled = true;
+      this.formSubmitted = false;
+    } else {
+      this.formSubmitted = true;
+      this.healthTabRef.select('2');
+    }
   }
 
 }

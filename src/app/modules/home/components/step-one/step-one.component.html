@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="!personalFilled; else additionalFill">
     <span class="ff-bold sm-font alt-blacken">Personal details</span>
     <div class="form-container">
         <form class="padding-1rem mt-1rem" [formGroup]="personalDetailsForm">
@@ -80,6 +80,21 @@
         </form>
     </div>
 </div>
+
+<ng-template #additionalFill>
+    <div class="container">
+        <span class="ff-bold sm-font alt-blacken">Additional details</span>
+        <div class="form-container">
+            <form class="padding-1rem mt-1rem" [formGroup]="additionalDetailsForm">
+                <div class="row">
+                    <div class="col">
+                        <!-- additional form -->
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</ng-template>
 
 <app-footer>
     <ng-container ngProjectAs='[footer]'>
