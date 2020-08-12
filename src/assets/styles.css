@@ -487,8 +487,10 @@ input.dropdown-toggle+span:after,
 }
 
 .health-details ul.nav-tabs li a.nav-link div.completed div.title {
-  border-color: #ee1d24;
-  background-color: #ee1d24;
+  /* border-color: #ee1d24;
+  background-color: #ee1d24; */
+  background-image: url('~src/assets/images/green-tick.svg');
+  background-size: 24px 24px;
   border-radius: 50%;
 }
 
@@ -505,12 +507,12 @@ input.dropdown-toggle+span:after,
   padding: 3px 0;
 }
 
-.health-details ul.nav-tabs li a.nav-link>div.completed::before {
+/* .health-details ul.nav-tabs li a.nav-link>div.completed::before {
   background-color: #ee1d24;
-}
+} */
 
 .health-details ul.nav-tabs li a.nav-link>div::before {
-  position: absolute;
+  /* position: absolute;
   height: 1px;
   width: 100%;
   display: block;
@@ -518,7 +520,18 @@ input.dropdown-toggle+span:after,
   content: '';
   bottom: 12px;
   z-index: 1;
+  right: calc(-50% + 16px); */
+
+  position: absolute;
+  height: 1px;
+  width: 30%;
+  display: block;
+  background-color: #cfcfcf;
+  content: '';
+  bottom: 12px;
+  z-index: 1;
   right: calc(-50% + 16px);
+  left: 36px;
 }
 
 .health-details ul.nav-tabs li:last-child a.nav-link>div::before {
