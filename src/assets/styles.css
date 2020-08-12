@@ -471,10 +471,11 @@ input.dropdown-toggle+span:after,
   border: solid 1px var(--light-gray-border);
   display: table-cell;
   padding: 0;
-  font-size: 0;
+  /* font-size: 0; */
   /* margin: 4px; */
   vertical-align: middle;
   z-index: 2;
+  color: #fff;
   background-color: var(--light-gray-border);
 }
 
@@ -489,6 +490,7 @@ input.dropdown-toggle+span:after,
 .health-details ul.nav-tabs li a.nav-link div.completed div.title {
   /* border-color: #ee1d24;
   background-color: #ee1d24; */
+  font-size: 0;
   background-image: url('~src/assets/images/green-tick.svg');
   background-size: 24px 24px;
   border-radius: 50%;
@@ -1702,7 +1704,8 @@ ul.country-list>li.divider {
     height: 24px;
     /* margin: 3px 0; */
     line-height: 16px;
-    font-size: 10px;
+    /* font-size: 10px; */
+    font-size: 14px;
     padding: 0;
   }
 
