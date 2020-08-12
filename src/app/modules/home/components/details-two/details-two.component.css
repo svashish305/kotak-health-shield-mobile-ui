@@ -33,6 +33,7 @@
 .policy-bg {
     padding: 1rem;
     background-color: var(--blue-bg-1);
+    border-radius: 0 0 5px 5px;
 }
 
 .age-text {

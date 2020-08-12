@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Location } from '@angular/common';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-step-one',
@@ -9,10 +10,14 @@ import { Location } from '@angular/common';
 export class StepOneComponent implements OnInit {
   @Input() healthTabRef;
   formSubmitted = false;
+  personalDetailsForm: FormGroup;
 
-  constructor(private location: Location) { }
+  constructor(private location: Location, private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.personalDetailsForm = this.fb.group({
+      
+    });
   }
 
   navigateBack() {
