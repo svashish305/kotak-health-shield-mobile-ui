@@ -1664,7 +1664,7 @@ ul.country-list>li.divider {
   }
 
   .health-details .tab-content {
-    padding-top: 36px;
+    padding-top: 56px;
   }
 
   .health-details ul.nav-tabs {
@@ -1710,7 +1710,8 @@ ul.country-list>li.divider {
   }
 
   .health-details ul.nav-tabs {
-    padding: 5px 30px;
+    /* padding: 5px 30px; */
+    padding: 16px 30px;
   }
 
   .health-details ul.nav-tabs li a.nav-link div div.title {
