@@ -9,7 +9,7 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
 })
 export class StepOneComponent implements OnInit {
   @Input() healthTabRef;
-  personalFilled = false;
+  firstFormSubmitted = false;
   formSubmitted = false;
   personalDetailsForm: FormGroup;
   resiStatuses = [
@@ -61,8 +61,8 @@ export class StepOneComponent implements OnInit {
   }
 
   navigate() {
-    if(!this.personalFilled) {
-      this.personalFilled = true;
+    if(!this.firstFormSubmitted) {
+      this.firstFormSubmitted = true;
       this.formSubmitted = false;
     } else {
       this.formSubmitted = true;

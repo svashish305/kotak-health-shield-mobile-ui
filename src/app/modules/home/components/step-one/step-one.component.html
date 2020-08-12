@@ -1,4 +1,4 @@
-<div class="container" *ngIf="!personalFilled; else additionalFill">
+<div class="container" *ngIf="!firstFormSubmitted; else additionalFill">
     <span class="ff-bold sm-font alt-blacken">Personal details</span>
     <div class="form-container">
         <form class="padding-1rem mt-1rem" [formGroup]="personalDetailsForm">
@@ -89,6 +89,27 @@
                 <div class="row">
                     <div class="col">
                         <!-- additional form -->
+                        <div class="heightBlock">
+                        <div class="d-flex relative mr-2">
+                            <p class="fs-14 ff-regular"> Height (in cms) </p>
+                            <button class="button-text minus" (click)="decreaseHeight('height')"></button>
+                            <input
+                            [ngClass]="{'errorInput': firstFormSubmitted && (additionalDetailsForm.get('height').hasError('required')) }"
+                            readonly type="text" class="m-0" formControlName="height">
+                            <button class="button-text plus" (click)="increaseHeight('height')"></button>
+                        </div>
+                        <div class="d-flex relative ml-2">
+                            <p class="fs-14 ff-regular"> Weight (in kgs) </p>
+                            <button class="button-text minus" (click)="decreaseWeight('weight')"></button>
+                            <input
+                            [ngClass]="{'errorInput': firstFormSubmitted && (additionalDetailsForm.get('weight').hasError('required')) }"
+                            readonly type="text" class="m-0" formControlName="weight">
+                            <button class="button-text plus" (click)="increaseWeight('weight')"></button>
+                        </div>
+                        </div>
+                        <p class='errorMsg'
+                        *ngIf="firstFormSubmitted && (additionalDetailsForm.get('height').hasError('required') || additionalDetailsForm.get('weight').hasError('required'))">
+                        Height/Weight fields are required</p>
                     </div>
                 </div>
             </form>

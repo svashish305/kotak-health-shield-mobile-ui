@@ -81,24 +81,18 @@
     height: 14px;
 }
 
-.minus-img {
-    position: absolute;
-    top: 8px;
-    left: 36px;
-    z-index: 2;
+.button-text.minus {
+    left: 33px;
+}
+
+.button-text.plus {
+    right: 17px;
 }
 
 .L-text {
     position: absolute;
     top: 13px;
-    right: 50px;
-}
-
-.plus-img {
-    position: absolute;
-    top: 8px;
-    right: 16px;
-    z-index: 2;
+    right: 57px;
 }
 
 .caption {

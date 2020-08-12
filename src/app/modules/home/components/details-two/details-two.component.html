@@ -41,10 +41,10 @@
                                 <span class="subtitle gray-text ff-regular fs-12">Average cost of cancer can go upto 20 lacs</span>
                             </div>
                             <div class="col-6 years-input-container">
-                                <img class="minus-img" src="assets/images/minus.svg" alt="minus" (click)="dec(shields[0].id)">
+                                <button class="button-text minus" (click)="dec(shields[0].id)"></button>
                                 <input readonly class="years-input" type="text" value="0" formControlName="shieldTypeDuration">
                                 <span class="L-text ff-bold">{{shields[0].duration}} L</span>
-                                <img class="plus-img" src="assets/images/plus.svg" alt="plus" (click)="inc(shields[0].id)">
+                                <button class="button-text plus" (click)="inc(shields[0].id)"></button>
                                 <span class="fs-12 caption">Just &#x20B9; <strong>{{shields[0].perDayCharge}}</strong> per day</span>
                             </div>
                         </div>
@@ -59,10 +59,10 @@
                                 <span class="subtitle gray-text ff-regular fs-12">{{shield.desc}}</span>
                             </div>
                             <div class="col-6 years-input-container">
-                                <img class="minus-img" src="assets/images/minus.svg" alt="minus" (click)="dec(shield.id)">
+                                <button class="button-text minus" (click)="dec(shield.id)"></button>
                                 <input readonly class="years-input" type="text" value="0" formControlName="shieldTypeDuration">
                                 <span class="L-text ff-bold">{{shield.duration}} L</span>
-                                <img class="plus-img" src="assets/images/plus.svg" alt="plus" (click)="inc(shield.id)">
+                                <button class="button-text plus" (click)="inc(shield.id)"></button>
                                 <span class="fs-12 caption">Just &#x20B9; <strong>{{shield.perDayCharge}}</strong> per day</span>
                             </div>
                         </div>
