@@ -23,10 +23,10 @@ export class StepOneComponent implements OnInit {
     { label: 'Widow', value: 'Widow' }
   ];
   eduStatuses = [
-    { label: 'Associate', value: 'Associate' },
-    { label: `Bachelor's`, value: `Bachelor's` },
-    { label: `Master's`, value: `Master's` },
-    { label: 'Doctorate', value: 'Doctorate' }
+    { label: `Associate's Degree`, value: 'Associate' },
+    { label: `Bachelor's Degree`, value: `Bachelor's` },
+    { label: `Master's Degree`, value: `Master's` },
+    { label: 'Doctorate Degree', value: 'Doctorate' }
   ];
   occuStatuses = [
     { label: 'Unemployed', value: 'Unemployed' },
