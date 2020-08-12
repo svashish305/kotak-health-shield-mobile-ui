@@ -89,27 +89,32 @@
                 <div class="row">
                     <div class="col">
                         <!-- additional form -->
-                        <div class="heightBlock">
-                        <div class="d-flex relative mr-2">
-                            <p class="fs-14 ff-regular"> Height (in cms) </p>
-                            <button class="button-text minus" (click)="decreaseHeight('height')"></button>
-                            <input
-                            [ngClass]="{'errorInput': firstFormSubmitted && (additionalDetailsForm.get('height').hasError('required')) }"
-                            readonly type="text" class="m-0" formControlName="height">
-                            <button class="button-text plus" (click)="increaseHeight('height')"></button>
-                        </div>
-                        <div class="d-flex relative ml-2">
-                            <p class="fs-14 ff-regular"> Weight (in kgs) </p>
-                            <button class="button-text minus" (click)="decreaseWeight('weight')"></button>
-                            <input
-                            [ngClass]="{'errorInput': firstFormSubmitted && (additionalDetailsForm.get('weight').hasError('required')) }"
-                            readonly type="text" class="m-0" formControlName="weight">
-                            <button class="button-text plus" (click)="increaseWeight('weight')"></button>
-                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="fs-14 ff-regular"> Height (In cms) </p>
+                                <button class="button-text minus" (click)="dec('height')"></button>
+                                <input class="hw-input m-0" value="000"
+                                [ngClass]="{'errorInput': firstFormSubmitted && (additionalDetailsForm.get('height').hasError('required')) }"
+                                readonly type="text" formControlName="height">
+                                <span class="L-text ff-bold">{{height}}</span>
+                                <button class="button-text plus" (click)="inc('height')"></button>
+                            </div>
+                            <div class="col-6">
+                                <p class="fs-14 ff-regular"> Weight (In kgs) </p>
+                                <button class="button-text minus" (click)="dec('weight')"></button>
+                                <input class="hw-input m-0" value="00"
+                                [ngClass]="{'errorInput': firstFormSubmitted && (additionalDetailsForm.get('weight').hasError('required')) }"
+                                readonly type="text" formControlName="weight">
+                                <span class="L-text ff-bold">{{weight}}</span>
+                                <button class="button-text plus" (click)="inc('weight')"></button>
+                            </div>
                         </div>
                         <p class='errorMsg'
                         *ngIf="firstFormSubmitted && (additionalDetailsForm.get('height').hasError('required') || additionalDetailsForm.get('weight').hasError('required'))">
-                        Height/Weight fields are required</p>
+                        Height/Weight fields are required
+                        </p>
+
+                        <!-- radio buttons -->
                     </div>
                 </div>
             </form>

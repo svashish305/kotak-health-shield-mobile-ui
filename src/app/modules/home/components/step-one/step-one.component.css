@@ -1,0 +1,21 @@
+.button-text.minus {
+    left: 16px;
+    top: 30px;
+}
+
+.button-text.plus {
+    /* right: 7px; */
+    right: 16px;
+    top: 30px;
+}
+
+.hw-input {
+    /* min-width: 150px !important; */
+    text-align: center !important;
+}
+
+.L-text {
+    position: absolute;
+    top: 40px;
+    right: 80px;
+}

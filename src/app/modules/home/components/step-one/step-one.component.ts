@@ -36,6 +36,8 @@ export class StepOneComponent implements OnInit {
     { label: 'Own Business', value: 'Own Business' }
   ];
   additionalDetailsForm: FormGroup;
+  height = '000';
+  weight = '00';
 
   constructor(private location: Location, private fb: FormBuilder) { }
 
@@ -51,13 +53,43 @@ export class StepOneComponent implements OnInit {
     });
 
     this.additionalDetailsForm = this.fb.group({
-      height: ['000', Validators.required],
-      weight: ['00', Validators.required],
+      height: [''],
+      weight: [''],
     });
   }
 
+  pad(num:number, size:number): string {
+    let s = num+"";
+    while (s.length < size) s = "0" + s;
+    return s;
+  }
+
+  dec(val) {
+    if(val === 'height') {
+      if(parseInt(this.height) > 0) {
+        this.height = this.pad(parseInt(this.height) - 1, 3);
+      }
+    } else if (val === 'weight') {
+      if(parseInt(this.weight) > 0) {
+        this.weight = this.pad(parseInt(this.weight) - 1, 2);
+      }
+    }
+  }
+
+  inc(val) {
+    if(val === 'height') {
+      this.height = this.pad(parseInt(this.height)+1, 3);
+    } else if (val === 'weight') {
+      this.weight = this.pad(parseInt(this.weight)+1, 2);
+    }
+  }
+
   navigateBack() {
-    this.location.back();
+    if(!this.firstFormSubmitted) {
+      this.location.back();
+    } else {
+      this.firstFormSubmitted = false;
+    }
   }
 
   navigate() {
