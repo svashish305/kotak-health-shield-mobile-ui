@@ -95,12 +95,6 @@
     right: 57px;
 }
 
-.caption {
-    position: absolute;
-    top: 50px;
-    left: 42px;
-}
-
 .years-input {
     width: 103px;
     position: absolute;
@@ -109,6 +103,12 @@
     margin-top: 0;
     border: solid 1px var(--med-gray-border);
     border-radius: 3px;
+}
+
+.caption {
+    position: absolute;
+    top: 50px;
+    left: 42px;
 }
 
 .amount-text {

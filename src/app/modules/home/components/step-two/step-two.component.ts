@@ -29,6 +29,8 @@ export class StepTwoComponent implements OnInit, AfterViewChecked {
   ]
   minDate = { year: 1920, month: 1, day: 1 };
   covidTested = false;
+  updatePlanTrigerred = false;
+  cardiacShieldDuration = 15;
 
   constructor(
     private fb: FormBuilder, 
@@ -104,7 +106,17 @@ export class StepTwoComponent implements OnInit, AfterViewChecked {
   }
 
   updatePlan() {
-    this.healthTabRef.select('3');
+    this.updatePlanTrigerred = true;
+  }
+
+  dec() {
+    if(this.cardiacShieldDuration > 0) {
+      this.cardiacShieldDuration -= 1;
+    }
+  }
+
+  inc() {
+    this.cardiacShieldDuration += 1;
   }
 
   navigateBack() {

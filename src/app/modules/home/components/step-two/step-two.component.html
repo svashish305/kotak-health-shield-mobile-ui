@@ -327,7 +327,7 @@
 </div>
 
 <ng-template #additionalFill>
-    <div class="container">
+    <div class="container" *ngIf="!updatePlanTrigerred">
         <span class="ff-bold sm-font alt-blacken">Personal health details</span>
         <div class="form-container">
             <form class="padding-1rem mt-1rem" [formGroup]="livoShieldForm">
@@ -425,6 +425,35 @@
                 </div>
             </form>
         </div>
+    </div>
+
+    <div *ngIf="updatePlanTrigerred" class="container">
+        <span class="ff-bold smd-font">Plan Update</span><br>
+        <form class="padding-1rem mt-1rem">
+            <div class="row">
+                <div class="col">
+                    <div class="card mb-1rem">
+                        <div class="card-body row">
+                            <div class="card-text col-6">
+                                <h6 class="card-title">
+                                    Cardiac Shield
+                                    <!-- <img class="info-icon" src="assets/images/info-icon.svg" alt="info"> -->
+                                </h6>
+                                <span class="subtitle gray-text ff-regular fs-12">4 out of 10 people face cardiac issues</span>
+                            </div>
+                            <div class="col-6 years-input-container">
+                                <button class="button-text minus" (click)="dec()"></button>
+                                <input readonly class="years-input" type="text">
+                                <span class="L-text ff-bold">{{cardiacShieldDuration}} L</span>
+                                <button class="button-text plus" (click)="inc()"></button>
+                                <span class="fs-12 caption">Just &#x20B9; <strong>7</strong> per day</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="fs-12 ff-regular">We’re sorry, we could not acquire approval for your <span class="blue">cancer shield</span> and <span class="blue">livo shield</span> insurance.</span>
+                </div>
+            </div>
+        </form>
     </div>
 </ng-template>
 
