@@ -39,6 +39,10 @@ hr {
     color: #5C5D73;
 }
 
+.covid-modal-body {
+    margin: 0 1rem;
+}
+
 .covid-text {
     position: absolute;
     left: -16px;

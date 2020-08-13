@@ -14,6 +14,7 @@ export class StepTwoComponent implements OnInit, AfterViewChecked {
   criticalIllnessForm: FormGroup;
   covidQAndAForm: FormGroup;
   personalHealthDetailsForm: FormGroup;
+  livoShieldForm: FormGroup;
   opened = false;
   closeResult: string;
   symptomState = [];
@@ -58,6 +59,13 @@ export class StepTwoComponent implements OnInit, AfterViewChecked {
       reasonOfQuarantine: ['Travel history'],
       covidPositive: ['No']
     });
+
+    this.livoShieldForm = this.fb.group({
+      livoHospitalized: ['No'],
+      bloodIssue: ['No'],
+      mri: ['No'],
+      surgery: ['No']
+    });
   }
 
   ngAfterViewChecked() {
@@ -89,6 +97,10 @@ export class StepTwoComponent implements OnInit, AfterViewChecked {
       this.opened = true;
       this.open(content);
     }
+  }
+
+  updatePlan() {
+    this.healthTabRef.select('3');
   }
 
   navigateBack() {
