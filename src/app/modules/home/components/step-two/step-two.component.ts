@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-step-two',
@@ -13,8 +14,10 @@ export class StepTwoComponent implements OnInit {
   criticalIllnessForm: FormGroup;
   covidQAndAForm: FormGroup;
   personalHealthDetailsForm: FormGroup;
+  opened = false;
+  closeResult: string;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.criticalIllnessForm = this.fb.group({
@@ -32,6 +35,26 @@ export class StepTwoComponent implements OnInit {
       quarantined: ['No'],
       covidPositive: ['No']
     });
+  }
+
+  open(content) {
+    this.opened = true;
+    this.modalService.open(content, {
+      ariaLabelledBy: 'modal-basic-title',
+      centered: true,
+      backdropClass: 'dark-backdrop'
+    }).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      // this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  openConditions(content) {
+    if (!this.opened) {
+      this.opened = true;
+      this.open(content);
+    }
   }
 
   navigateBack() {

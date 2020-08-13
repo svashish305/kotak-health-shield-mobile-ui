@@ -9,3 +9,15 @@ hr {
 .container {
     height: 80vh;
 }
+
+a {
+    color: var(--blue-theme-color) !important;
+}
+
+.modal-footer {
+    box-shadow: none;
+}
+
+.footer-btn {
+    width: -webkit-fill-available;
+}

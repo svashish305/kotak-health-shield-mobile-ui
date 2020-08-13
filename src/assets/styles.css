@@ -421,7 +421,8 @@ input.dropdown-toggle+span:after,
 }
 
 .modal-header .close img {
-  width: 12px;
+  /* width: 12px; */
+  width: 24px;
 }
 
 .successAppCreate .success {
@@ -777,9 +778,13 @@ ul.dashed>li:before {
 }
 
 .modal-header {
-  background-color: #ececec;
+  /* background-color: #ececec; */
   padding: 12px 1rem;
   border: 0;
+}
+
+.modal-title {
+  margin: 0 auto;
 }
 
 .modal-footer {

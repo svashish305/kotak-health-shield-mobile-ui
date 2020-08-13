@@ -114,7 +114,7 @@
                     </div>
 
                     <div class="block mt-24">
-                        <p>Have you experienced <u>any of the following symptoms</u> from <span class="ff-bold">last 3 months till date?</span></p>
+                        <p>Have you experienced <a (click)="open(symptomsModal)"><u>any of the following symptoms</u></a> from <span class="ff-bold">last 3 months till date?</span></p>
                         <div class="formField">
                             <label class="radioTick small">
                             <input type="radio" name='symptoms' value="Yes" formControlName='symptoms'>
@@ -130,6 +130,21 @@
                             </label>
                             <p class="errorMsg" *ngIf='symptoms == undefined && error'> * This field is required </p>
                         </div>
+
+                        <ng-template #symptomsModal let-modal>
+                            <div class="modal-header">
+                              <p class="modal-title ff-medium sm-font" id="modal-basic-title">Health Symptoms</p>
+                              <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                                <span aria-hidden="true"><img class="m-0" src="assets/images/close-24px.svg" alt=""></span>
+                              </button>
+                            </div>
+                            <div class="modal-body fs-14 px-2">
+                                <!-- slide toggles -->
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn button-primary footer-btn" (click)="modal.close()">SUBMIT</button>
+                            </div>
+                          </ng-template>
                     </div>
                       
                     <div class="block mt-24">
