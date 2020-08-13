@@ -76,8 +76,16 @@ html, body{
     margin-top: 1rem;
 }
 
+.mt-24 {
+    margin-top: 24px;
+}
+
 .mr-24 {
     margin-right: 24px;
+}
+
+.mb-48 {
+    margin-bottom: 48px;
 }
 
 .mb-1rem {
@@ -88,8 +96,8 @@ html, body{
     margin-bottom: 26px;
 }
 
-.mb-48 {
-    margin-bottom: 48px;
+.mb-24 {
+    margin-bottom: 24px;
 }
 
 /* common padding styles */

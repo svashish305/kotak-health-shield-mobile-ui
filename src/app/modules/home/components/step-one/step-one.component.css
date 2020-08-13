@@ -12,10 +12,15 @@
 .hw-input {
     /* min-width: 150px !important; */
     text-align: center !important;
+    border-color: var(--med-gray-border);
 }
 
 .L-text {
     position: absolute;
     top: 40px;
     right: 80px;
+}
+
+.container {
+    height: 80vh;
 }

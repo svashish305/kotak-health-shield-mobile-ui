@@ -89,7 +89,7 @@
                 <div class="row">
                     <div class="col">
                         <!-- additional form -->
-                        <div class="row">
+                        <div class="row mb-24">
                             <div class="col-6">
                                 <p class="fs-14 ff-regular"> Height (In cms) </p>
                                 <button class="button-text minus" (click)="dec('height')"></button>
@@ -114,7 +114,139 @@
                         Height/Weight fields are required
                         </p>
 
-                        <!-- radio buttons -->
+                        <div class="block">
+                            <p>Do you consume <span class="ff-bold">more than 10 cigarettes per day?</span></p>
+                            <div class="formField">
+                                <label class="radioTick small">
+                                <input type="radio" name='smoker' value="Yes" formControlName='smoker'>
+                                <div> Yes </div>
+                                <span class="tick"></span>
+                                </label>
+                                <label class="radioTick small">
+                                <input type="radio" name='smoker' value="No" formControlName='smoker'>
+                                <div>
+                                    No
+                                </div>
+                                <span class="tick"></span>
+                                </label>
+                                <p class="errorMsg" *ngIf='smoker == undefined && error'> * This field is required </p>
+                            </div>
+                        </div>
+
+                        <div class="block mt-24">
+                            <p>Do you chew <span class="ff-bold">more than 5 pouches of tobacco?</span></p>
+                            <div class="formField">
+                                <label class="radioTick small">
+                                <input type="radio" name='tobacco' value="Yes" formControlName='tobacco'>
+                                <div> Yes </div>
+                                <span class="tick"></span>
+                                </label>
+                                <label class="radioTick small">
+                                <input type="radio" name='tobacco' value="No" formControlName='tobacco'>
+                                <div>
+                                    No
+                                </div>
+                                <span class="tick"></span>
+                                </label>
+                                <p class="errorMsg" *ngIf='tobacco == undefined && error'> * This field is required </p>
+                            </div>
+                        </div>
+
+                        <div class="block mt-24">
+                            <p>Do you consume more than <span class="ff-bold">2 pegs of alcohol per day</span> in any form?</p>
+                            <div class="formField">
+                                <label class="radioTick small">
+                                <input type="radio" name='alcohol' value="Yes" formControlName='alcohol'>
+                                <div> Yes </div>
+                                <span class="tick"></span>
+                                </label>
+                                <label class="radioTick small">
+                                <input type="radio" name='alcohol' value="No" formControlName='alcohol'>
+                                <div>
+                                    No
+                                </div>
+                                <span class="tick"></span>
+                                </label>
+                                <p class="errorMsg" *ngIf='alcohol == undefined && error'> * This field is required </p>
+                            </div>
+                        </div>
+
+                        <div class="block mt-24">
+                            <p>Do you consume any <span class="ff-bold">narcotics (for medical/recreational purposes)?</span></p>
+                            <div class="formField">
+                                <label class="radioTick small">
+                                <input type="radio" name='narcotics' value="Yes" formControlName='narcotics'>
+                                <div> Yes </div>
+                                <span class="tick"></span>
+                                </label>
+                                <label class="radioTick small">
+                                <input type="radio" name='narcotics' value="No" formControlName='narcotics'>
+                                <div>
+                                    No
+                                </div>
+                                <span class="tick"></span>
+                                </label>
+                                <p class="errorMsg" *ngIf='narcotics == undefined && error'> * This field is required </p>
+                            </div>
+                        </div>
+
+                        <div class="block mt-24">
+                            <p>Were you <span class="ff-bold">hospitalised more than 10 consecutive days</span> in 4 years?</p>
+                            <div class="formField">
+                                <label class="radioTick small">
+                                <input type="radio" name='hospitalized' value="Yes" formControlName='hospitalized'>
+                                <div> Yes </div>
+                                <span class="tick"></span>
+                                </label>
+                                <label class="radioTick small">
+                                <input type="radio" name='hospitalized' value="No" formControlName='hospitalized'>
+                                <div>
+                                    No
+                                </div>
+                                <span class="tick"></span>
+                                </label>
+                                <p class="errorMsg" *ngIf='hospitalized == undefined && error'> * This field is required </p>
+                            </div>
+                        </div>
+
+                        <div class="block mt-24">
+                            <p>Have you ever suffered from or <span class="ff-bold">diagnosed with or treated for HIV/AIDS</span> infection?</p>
+                            <div class="formField">
+                                <label class="radioTick small">
+                                <input type="radio" name='hiv' value="Yes" formControlName='hiv'>
+                                <div> Yes </div>
+                                <span class="tick"></span>
+                                </label>
+                                <label class="radioTick small">
+                                <input type="radio" name='hiv' value="No" formControlName='hiv'>
+                                <div>
+                                    No
+                                </div>
+                                <span class="tick"></span>
+                                </label>
+                                <p class="errorMsg" *ngIf='hiv == undefined && error'> * This field is required </p>
+                            </div>
+                        </div>
+
+                        <div class="block mt-24">
+                            <p>Are any of your <span class="ff-bold">family members</span> suffering from / have suffered from / have died of heart disease, stroke, high blood pressure, diabetes mellitus, cancer, kidney disease, paralysis or any other hereditary / familial disorders, tuberculosis or any contagious diseases such as Hepatitis, AIDS / HIV etc. or any other diseases not stated above,<span class="ff-bold"> before 60 years of age?</span></p>
+                            <div class="formField">
+                                <label class="radioTick small">
+                                <input type="radio" name='familySuffered' value="Yes" formControlName='familySuffered'>
+                                <div> Yes </div>
+                                <span class="tick"></span>
+                                </label>
+                                <label class="radioTick small">
+                                <input type="radio" name='familySuffered' value="No" formControlName='familySuffered'>
+                                <div>
+                                    No
+                                </div>
+                                <span class="tick"></span>
+                                </label>
+                                <p class="errorMsg" *ngIf='familySuffered == undefined && error'> * This field is required </p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </form>

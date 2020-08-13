@@ -55,6 +55,13 @@ export class StepOneComponent implements OnInit {
     this.additionalDetailsForm = this.fb.group({
       height: [''],
       weight: [''],
+      smoker: ['No'],
+      tobacco: ['No'],
+      alcohol: ['No'],
+      narcotics: ['No'],
+      hospitalized: ['No'],
+      hiv: ['No'],
+      familySuffered: ['No']
     });
   }
 

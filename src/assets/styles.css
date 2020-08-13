@@ -1194,7 +1194,8 @@ p.fs15Ter {
 
 .radioTick.small,
 .checkbox.small {
-  margin-right: 16px;
+  /* margin-right: 16px; */
+  margin-right: 40px;
 }
 
 .modal-content {
