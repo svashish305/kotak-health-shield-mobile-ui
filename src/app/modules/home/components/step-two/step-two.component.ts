@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectorRef } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -18,16 +18,16 @@ export class StepTwoComponent implements OnInit {
   closeResult: string;
   symptomState = [];
   symptoms = [
-    {id: 1, title: 'Fever'},
-    {id: 2, title: 'Cough or sore throat'},
-    {id: 3, title: 'Shortness of breath/ Difficulty in breathing'},
-    {id: 4, title: 'Malaise (discomfort or uneasiness due to illness/ flu-like tiredness)'},
-    {id: 5, title: 'Rhinorrhoea (mucus discharge from the nose)'},
-    {id: 6, title: 'Gastro-intestinal symptoms (nausea/ vomiting/ diarrhoea)'},
-    {id: 7, title: 'None of the above'},
+    {id: 1, title: 'Fever', state: 'No'},
+    {id: 2, title: 'Cough or sore throat', state: 'No'},
+    {id: 3, title: 'Shortness of breath/ Difficulty in breathing', state: 'No'},
+    {id: 4, title: 'Malaise (discomfort or uneasiness due to illness/ flu-like tiredness)', state: 'No'},
+    {id: 5, title: 'Rhinorrhoea (mucus discharge from the nose)', state: 'No'},
+    {id: 6, title: 'Gastro-intestinal symptoms (nausea/ vomiting/ diarrhoea)', state: 'No'},
+    {id: 7, title: 'None of the above', state: 'No'},
   ]
 
-  constructor(private fb: FormBuilder, private modalService: NgbModal) { 
+  constructor(private fb: FormBuilder, private modalService: NgbModal, private chRef: ChangeDetectorRef) { 
     for(let i=0; i<7; i++) {
       this.symptomState[i] = false;
     }
@@ -49,6 +49,17 @@ export class StepTwoComponent implements OnInit {
       quarantined: ['No'],
       covidPositive: ['No']
     });
+  }
+
+  ngAfterViewChecked() {
+    if(this.symptomState[7]) {
+      for(let i=1; i<=6; i++) {
+        if(this.symptomState[i]) {
+          this.symptomState[i] = false;
+        }
+      }
+    }
+    this.chRef.detectChanges();
   }
 
   open(content) {

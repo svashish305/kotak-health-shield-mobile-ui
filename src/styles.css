@@ -51,6 +51,7 @@ html, body{
     font-size: 1rem;
     color: darkgray;
     right: 1rem;
+    width: 40px;
 }
 
 /* flex-center */
