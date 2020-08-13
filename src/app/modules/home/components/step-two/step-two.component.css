@@ -14,10 +14,23 @@ a {
     color: var(--blue-theme-color) !important;
 }
 
+.symptom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 24px 1rem;
+    width: 200px;
+}
+
+.custom-switch {
+    position: absolute;
+    right: 1rem;
+}
+
 .modal-footer {
     box-shadow: none;
 }
 
-.footer-btn {
+.modal-footer .footer-btn {
     width: -webkit-fill-available;
 }

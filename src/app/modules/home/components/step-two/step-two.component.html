@@ -139,7 +139,14 @@
                               </button>
                             </div>
                             <div class="modal-body fs-14 px-2">
-                                <!-- slide toggles -->
+                                <div class="symptom" *ngFor="let symptom of symptoms">
+                                    <span class="mt-8 mr-auto">{{symptom.title}}</span>
+                                    <div class="custom-control custom-switch zoom-one-half">
+                                        <input type="checkbox" class="custom-control-input m-0" [(ngModel)]="symptomState[symptom.id]"
+                                        [ngModelOptions]="{standalone: true}" [id]="'symptom' + symptom.id">
+                                        <label class="custom-control-label" [attr.for]="'symptom' + symptom.id">{{symptomState[symptom.id] ? 'Yes' : 'No'}}</label>
+                                    </div>
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn button-primary footer-btn" (click)="modal.close()">SUBMIT</button>

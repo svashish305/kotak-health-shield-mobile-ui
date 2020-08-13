@@ -16,8 +16,22 @@ export class StepTwoComponent implements OnInit {
   personalHealthDetailsForm: FormGroup;
   opened = false;
   closeResult: string;
+  symptomState = [];
+  symptoms = [
+    {id: 1, title: 'Fever'},
+    {id: 2, title: 'Cough or sore throat'},
+    {id: 3, title: 'Shortness of breath/ Difficulty in breathing'},
+    {id: 4, title: 'Malaise (discomfort or uneasiness due to illness/ flu-like tiredness)'},
+    {id: 5, title: 'Rhinorrhoea (mucus discharge from the nose)'},
+    {id: 6, title: 'Gastro-intestinal symptoms (nausea/ vomiting/ diarrhoea)'},
+    {id: 7, title: 'None of the above'},
+  ]
 
-  constructor(private fb: FormBuilder, private modalService: NgbModal) { }
+  constructor(private fb: FormBuilder, private modalService: NgbModal) { 
+    for(let i=0; i<7; i++) {
+      this.symptomState[i] = false;
+    }
+  }
 
   ngOnInit(): void {
     this.criticalIllnessForm = this.fb.group({

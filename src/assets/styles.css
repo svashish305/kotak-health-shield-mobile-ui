@@ -1630,7 +1630,9 @@ ul.country-list>li.divider {
 
   .modal-body {
     max-height: 60vh;
-    overflow: auto;
+    /* overflow: auto; */
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .customLoader ng-lottie div canvas {
