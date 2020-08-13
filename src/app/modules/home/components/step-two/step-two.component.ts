@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectorRef, AfterViewChecked } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -7,7 +7,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './step-two.component.html',
   styleUrls: ['./step-two.component.css']
 })
-export class StepTwoComponent implements OnInit {
+export class StepTwoComponent implements OnInit, AfterViewChecked {
   @Input() healthTabRef;
   firstFormSubmitted = false;
   formSubmitted = false;
@@ -26,6 +26,8 @@ export class StepTwoComponent implements OnInit {
     {id: 6, title: 'Gastro-intestinal symptoms (nausea/ vomiting/ diarrhoea)', state: 'No'},
     {id: 7, title: 'None of the above', state: 'No'},
   ]
+  minDate = { year: 1920, month: 1, day: 1 };
+  covidTested = false;
 
   constructor(private fb: FormBuilder, private modalService: NgbModal, private chRef: ChangeDetectorRef) { 
     for(let i=0; i<7; i++) {
@@ -45,8 +47,15 @@ export class StepTwoComponent implements OnInit {
       goodHealth: ['No'],
       symptoms: ['No'],
       travelledAbroad: ['No'],
+      countriesTravelled: ['Italy, France'],
+      citiesTravelled: ['Venice, Rome, Florence, Naples, Pa...'],
+      depDate: ['DD/MM/YYYY'],
+      arrDate: ['DD/MM/YYYY'],
+      purposeOfTravel: ['Vacation'],
       willTravel: ['No'],
       quarantined: ['No'],
+      quarantineDate: ['DD/MM/YYYY'],
+      reasonOfQuarantine: ['Travel history'],
       covidPositive: ['No']
     });
   }

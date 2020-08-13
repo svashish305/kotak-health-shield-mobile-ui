@@ -114,7 +114,7 @@
                     </div>
 
                     <div class="block mt-24">
-                        <p>Have you experienced <a (click)="open(symptomsModal)"><u>any of the following symptoms</u></a> from <span class="ff-bold">last 3 months till date?</span></p>
+                        <p>Have you experienced <a class="blue" (click)="open(symptomsModal)"><u>any of the following symptoms</u></a> from <span class="ff-bold">last 3 months till date?</span></p>
                         <div class="formField">
                             <label class="radioTick small">
                             <input type="radio" name='symptoms' value="Yes" formControlName='symptoms'>
@@ -138,7 +138,7 @@
                                 <span aria-hidden="true"><img class="m-0" src="assets/images/close-24px.svg" alt=""></span>
                               </button>
                             </div>
-                            <div class="modal-body fs-14 px-2">
+                            <div class="modal-body symptom-modal-body fs-14 px-2">
                                 <div class="symptom" *ngFor="let symptom of symptoms">
                                     <span class="mt-8 mr-auto">{{symptom.title}}</span>
                                     <div class="custom-control custom-switch zoom-one-half">
@@ -151,11 +151,11 @@
                             <div class="modal-footer">
                                 <button type="button" class="btn button-primary footer-btn" (click)="modal.close()">SUBMIT</button>
                             </div>
-                          </ng-template>
+                        </ng-template>
                     </div>
                       
                     <div class="block mt-24">
-                        <p>Have you or your family members <span class="ff-bold">travelled overseas in last 3 months</span></p>
+                        <a (click)="open(travelModal)"><p>Have you or your family members <span class="ff-bold">travelled overseas in last 3 months?</span></p></a>
                         <div class="formField">
                             <label class="radioTick small">
                             <input type="radio" name='travelledAbroad' value="Yes" formControlName='travelledAbroad'>
@@ -171,6 +171,59 @@
                             </label>
                             <p class="errorMsg" *ngIf='travelledAbroad == undefined && error'> * This field is required </p>
                         </div>
+
+                        <ng-template #travelModal let-modal>
+                            <div class="modal-header">
+                              <p class="modal-title ff-medium sm-font" id="modal-basic-title">Travel Details</p>
+                              <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                                <span aria-hidden="true"><img class="m-0" src="assets/images/close-24px.svg" alt=""></span>
+                              </button>
+                            </div>
+                            <div class="modal-body travel-modal-body fs-14 px-2">
+                                <div class="formField">
+                                    <input type="text" placeholder="Enter Countries" formControlName="countriesTravelled"
+                                      [ngClass]="{'errorInput': formSubmitted && covidQAndAForm.get('countriesTravelled').hasError('required') }">
+                                    <label class="input_label">Name of Countries travelled to</label>
+                                </div>
+                                <span class="hint-text">Use ',' as separators.</span>
+
+                                <div class="formField mt-26">
+                                    <input type="text" placeholder="Enter Cities" formControlName="citiesTravelled"
+                                      [ngClass]="{'errorInput': formSubmitted && covidQAndAForm.get('citiesTravelled').hasError('required') }">
+                                    <label class="input_label">Cities travelled to</label>
+                                </div>
+                                <span class="hint-text">Use ',' as separators.</span>
+
+                                <div class="formField calendar pt-20 mb-26">
+                                    <input [ngClass]="{'errorInput': formSubmitted && covidQAndAForm.get('depDate').hasError('dateVaidator') || formSubmitted && covidQAndAForm.get('depDate').hasError('required') }" class="m-0" readonly placeholder="DD/MM/YYYY" formControlName="depDate"
+                                        ngbDatepicker autocomplete="off" #datePicker="ngbDatepicker" (click)="datePicker.toggle()" [minDate]="minDate">
+                                    <span class="icon" (click)="datePicker.toggle()"></span>
+                                    <p class='errorMsg' *ngIf="formSubmitted && covidQAndAForm.get('depDate').hasError('required')">Date Of Departure field is required
+                                    </p>
+                                    <p class='errorMsg' *ngIf="formSubmitted && covidQAndAForm.get('depDate').hasError('dateVaidator')">Please enter a valid date</p>
+                                    <label class="input_label">Date Of Departure</label>
+                                </div>
+
+                                <div class="formField calendar pt-20 mb-26">
+                                    <input [ngClass]="{'errorInput': formSubmitted && covidQAndAForm.get('arrDate').hasError('dateVaidator') || formSubmitted && covidQAndAForm.get('arrDate').hasError('required') }" class="m-0" readonly placeholder="DD/MM/YYYY" formControlName="arrDate"
+                                        ngbDatepicker autocomplete="off" #datePicker="ngbDatepicker" (click)="datePicker.toggle()" [minDate]="minDate">
+                                    <span class="icon" (click)="datePicker.toggle()"></span>
+                                    <p class='errorMsg' *ngIf="formSubmitted && covidQAndAForm.get('arrDate').hasError('required')">Date Of Arrival field is required
+                                    </p>
+                                    <p class='errorMsg' *ngIf="formSubmitted && covidQAndAForm.get('arrDate').hasError('dateVaidator')">Please enter a valid date</p>
+                                    <label class="input_label">Date Of Arrival</label>
+                                </div>
+
+                                <div class="formField">
+                                    <input type="text" placeholder="Enter Purpose of Travel" formControlName="purposeOfTravel"
+                                      [ngClass]="{'errorInput': formSubmitted && covidQAndAForm.get('purposeOfTravel').hasError('required') }">
+                                    <label class="input_label">Purpose of travel</label>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn button-primary footer-btn" (click)="modal.close()">SUBMIT</button>
+                            </div>
+                        </ng-template>
                     </div>
 
                     <div class="block mt-24">
@@ -193,7 +246,7 @@
                     </div>
  
                     <div class="block mt-24">
-                        <p>In last 3 months, were you or your family members advised to be<span class="ff-bold">Quarantined/ isolated for (SARS-CoV-2/ COVID 19)?</span></p>
+                        <a (click)="open(covidModal)"><p>In last 3 months, were you or your family members advised to be<span class="ff-bold">Quarantined/ isolated for (SARS-CoV-2/ COVID 19)?</span></p></a>
                         <div class="formField">
                             <label class="radioTick small">
                             <input type="radio" name='quarantined' value="Yes" formControlName='quarantined'>
@@ -209,6 +262,44 @@
                             </label>
                             <p class="errorMsg" *ngIf='quarantined == undefined && error'> * This field is required </p>
                         </div>
+
+                        <ng-template #covidModal let-modal>
+                            <div class="modal-header">
+                              <p class="modal-title ff-medium sm-font" id="modal-basic-title">Quarantine Details</p>
+                              <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                                <span aria-hidden="true"><img class="m-0" src="assets/images/close-24px.svg" alt=""></span>
+                              </button>
+                            </div>
+                            <div class="modal-body travel-modal-body fs-14 px-2">
+                                <div class="formField calendar pt-20 mb-26">
+                                    <input [ngClass]="{'errorInput': formSubmitted && covidQAndAForm.get('quarantineDate').hasError('dateVaidator') || formSubmitted && covidQAndAForm.get('quarantineDate').hasError('required') }" class="m-0" readonly placeholder="DD/MM/YYYY" formControlName="quarantineDate"
+                                        ngbDatepicker autocomplete="off" #datePicker="ngbDatepicker" (click)="datePicker.toggle()" [minDate]="minDate">
+                                    <span class="icon" (click)="datePicker.toggle()"></span>
+                                    <p class='errorMsg' *ngIf="formSubmitted && covidQAndAForm.get('quarantineDate').hasError('required')">Date Of Quarantine field is required
+                                    </p>
+                                    <p class='errorMsg' *ngIf="formSubmitted && covidQAndAForm.get('quarantineDate').hasError('dateVaidator')">Please enter a valid date</p>
+                                    <label class="input_label">Date Of Quarantine</label>
+                                </div>
+
+                                <div class="formField">
+                                    <input type="text" placeholder="Enter Reason of Quarantine" formControlName="reasonOfQuarantine"
+                                      [ngClass]="{'errorInput': formSubmitted && covidQAndAForm.get('reasonOfQuarantine').hasError('required') }">
+                                    <label class="input_label">Details/ Reason of Quarantine</label>
+                                </div>
+
+                                <div class="formField mt-26 symptom">
+                                    <span class="covid-text mt-8 mr-auto">Have you taken SARS-CoV-2/ Covid-19 Test?</span>
+                                    <div class="custom-control custom-switch zoom-one-half covid-switch">
+                                        <input type="checkbox" class="custom-control-input m-0" [(ngModel)]="covidTested"
+                                        [ngModelOptions]="{standalone: true}" id="covidTestedId">
+                                        <label class="custom-control-label" for="covidTestedId">{{ covidTested ? 'Yes' : 'No'}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn button-primary footer-btn" (click)="modal.close()">SUBMIT</button>
+                            </div>
+                        </ng-template>
                     </div>
 
                     <div class="block mt-24">

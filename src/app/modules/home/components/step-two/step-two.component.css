@@ -10,8 +10,8 @@ hr {
     height: 80vh;
 }
 
-a {
-    color: var(--blue-theme-color) !important;
+.symptom-modal-body { 
+    overflow-y: hidden;
 }
 
 .symptom {
@@ -25,6 +25,28 @@ a {
 .custom-switch {
     position: absolute;
     right: 1rem;
+}
+
+.travel-modal-body {
+    margin: 0 1rem;
+    overflow-y: hidden;
+}
+
+.hint-text {
+    position: absolute;
+    top: 88px;
+    font-size: 12px;
+    color: #5C5D73;
+}
+
+.covid-text {
+    position: absolute;
+    left: -16px;
+}
+
+.covid-switch {
+    position: absolute;
+    right: -6rem !important;
 }
 
 .modal-footer {
