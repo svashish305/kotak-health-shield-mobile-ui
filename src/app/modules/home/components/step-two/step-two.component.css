@@ -1,0 +1,11 @@
+.align-right {
+    float: right;
+}
+
+hr {
+    background-color: var(--alt-light-gray-border);
+}
+
+.container {
+    height: 80vh;
+}
