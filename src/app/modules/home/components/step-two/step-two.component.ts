@@ -19,18 +19,22 @@ export class StepTwoComponent implements OnInit, AfterViewChecked {
   closeResult: string;
   symptomState = [];
   symptoms = [
-    {id: 1, title: 'Fever', state: 'No'},
-    {id: 2, title: 'Cough or sore throat', state: 'No'},
-    {id: 3, title: 'Shortness of breath/ Difficulty in breathing', state: 'No'},
-    {id: 4, title: 'Malaise (discomfort or uneasiness due to illness/ flu-like tiredness)', state: 'No'},
-    {id: 5, title: 'Rhinorrhoea (mucus discharge from the nose)', state: 'No'},
-    {id: 6, title: 'Gastro-intestinal symptoms (nausea/ vomiting/ diarrhoea)', state: 'No'},
-    {id: 7, title: 'None of the above', state: 'No'},
+    {id: 1, title: 'Fever'},
+    {id: 2, title: 'Cough or sore throat'},
+    {id: 3, title: 'Shortness of breath/ Difficulty in breathing'},
+    {id: 4, title: 'Malaise (discomfort or uneasiness due to illness/ flu-like tiredness)'},
+    {id: 5, title: 'Rhinorrhoea (mucus discharge from the nose)'},
+    {id: 6, title: 'Gastro-intestinal symptoms (nausea/ vomiting/ diarrhoea)'},
+    {id: 7, title: 'None of the above'},
   ]
   minDate = { year: 1920, month: 1, day: 1 };
   covidTested = false;
 
-  constructor(private fb: FormBuilder, private modalService: NgbModal, private chRef: ChangeDetectorRef) { 
+  constructor(
+    private fb: FormBuilder, 
+    private modalService: NgbModal, 
+    private chRef: ChangeDetectorRef
+  ) { 
     for(let i=0; i<7; i++) {
       this.symptomState[i] = false;
     }
