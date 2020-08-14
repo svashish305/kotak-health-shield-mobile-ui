@@ -1,0 +1,14 @@
+.aadhar-details-card {
+    background-color: var(--blue-bg-2);
+}
+
+.long-hyphen {
+    color: darkgray;
+    position: relative;
+    bottom: 6px;
+}
+
+.or-text {
+    color: var(--red-bg);
+    padding: 0 8px;
+}

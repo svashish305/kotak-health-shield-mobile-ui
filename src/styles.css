@@ -3,6 +3,7 @@
     --light-accent: #F5EAE6;
     --dark-accent: #FFCCB9;
     --blue-bg-1: #F4F6FA;
+    --blue-bg-2: #DDEEFF;
     --blue-theme-color: #003366;
     --alt-blue-text: #000137;
     --red-bg: #FF0000;
@@ -14,6 +15,7 @@
     --light-gray-border: #ccc;
     --alt-light-gray-border: #ECECEC;
     --med-gray-border: #9F9F9F;
+    --black-bg: #222;
 }
 
 html, body{
