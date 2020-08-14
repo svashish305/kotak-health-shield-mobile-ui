@@ -347,7 +347,7 @@ ngb-typeahead-window {
 
 .dropdown-toggle {
   border-radius: 3px;
-  border: solid 1px var(--gray-border-color);
+  border: solid 1px #CCCCCC;
   background-color: #ffffff;
   padding: 13px;
   line-height: 20px;
@@ -1535,7 +1535,8 @@ ol>li:before {
 .intl-tel-input.separate-dial-code input,
 .intl-tel-input.separate-dial-code.allow-dropdown input .intl-tel-input.allow-dropdown input {
   margin: 0;
-  padding-left: 16px !important;
+  padding-left: 15px !important;
+  /* padding-left: 16px !important; */
   border: none;
 }
 

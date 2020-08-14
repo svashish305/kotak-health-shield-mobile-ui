@@ -45,6 +45,19 @@
     text-align: center;
 }
 
+.age-text::placeholder {
+    color: #000;
+    opacity: 1; /* Firefox */
+}
+  
+.age-text:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #000;
+}
+  
+.age-text::-ms-input-placeholder { /* Microsoft Edge */
+   color: #000;
+}
+
 .card {
     border: solid 1px var(--light-gray-border);
     border-radius: 5px;
