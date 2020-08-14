@@ -38,6 +38,12 @@ html, body{
     transform-origin: 0 0;  /* Standard Property */
 }
 
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: var(--blue-theme-color) !important;
+    background-color: var(--blue-theme-color) !important;
+}
+
 .custom-control-input:focus ~ .custom-control-label::before {
     box-shadow: none !important;
 }
@@ -134,6 +140,10 @@ html, body{
 
 .mb-24 {
     margin-bottom: 24px;
+}
+
+.mb-0 {
+    margin-bottom: 0;
 }
 
 /* common padding styles */

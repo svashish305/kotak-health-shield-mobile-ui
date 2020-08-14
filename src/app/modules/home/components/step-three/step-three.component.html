@@ -1,6 +1,22 @@
-<div class="container">
-    <p>step-three works!</p>
+<div class="container" *ngIf="!firstFormSubmitted; else additionalFill">
+    <span class="ff-bold sm-font alt-blacken">Residence Details</span>
+    <div class="form-container">
+        <!-- aadhar details card -->
+
+        <!-- or enter details manually -->
+        <form class="padding-1rem mt-1rem" [formGroup]="residenceDetailsForm">
+            <div class="row">
+                <div class="col">
+
+                </div>
+            </div>
+        </form>
+    </div>
 </div>
+
+<ng-template #additionalFill>
+
+</ng-template>
 
 <app-footer>
     <ng-container ngProjectAs='[footer]'>

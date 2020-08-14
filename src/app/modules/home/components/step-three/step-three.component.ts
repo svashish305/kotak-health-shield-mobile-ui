@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-step-three',
@@ -7,11 +8,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class StepThreeComponent implements OnInit {
   @Input() healthTabRef;
+  firstFormSubmitted = false;
   formSubmitted = false;
-  
-  constructor() { }
+  residenceDetailsForm: FormGroup;
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.residenceDetailsForm = this.fb.group({
+      
+    });
   }
 
   navigateBack() {

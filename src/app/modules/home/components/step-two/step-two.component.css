@@ -10,10 +10,6 @@ hr {
     height: 80vh;
 }
 
-.symptom-modal-body { 
-    overflow-y: hidden;
-}
-
 .symptom {
     display: flex;
     flex-direction: row;
@@ -25,6 +21,23 @@ hr {
 .custom-switch {
     position: absolute;
     right: 1rem;
+}
+
+.symptom-details-card {
+    position: absolute;
+    bottom: -200px;
+    padding: 1rem;
+    width: 270px;
+    background-color: var(--blue-bg-1);
+    border: none !important;
+}
+
+.symptom-details-text {
+    width: 142px;
+}
+
+.symptom-details-switch {
+    right: 8px;
 }
 
 .travel-modal-body {
