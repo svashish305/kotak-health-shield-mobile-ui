@@ -33,12 +33,43 @@
                         <div class="col">
                             <span class="ff-regular fs-14">Current Address</span>
                             <input class="mt-0 mb-0" formControlName="addressLine1" placeholder="Address Line 1">
-                            <input class="mb-0" formControlName="addressLine2" placeholder="Address Line 2">
-                            <input class="mb-0" formControlName="landmark" placeholder="Landmark">
-                            <input class="mb-0" formControlName="pincode" placeholder="Pincode">
-                            <!-- city dd -->
-                            <!-- state dd -->
-                            <!-- same address check -->
+                            <input class="mt-1rem mb-0" formControlName="addressLine2" placeholder="Address Line 2">
+                            <input class="mt-1rem mb-0" formControlName="landmark" placeholder="Landmark">
+                            <input class="mt-1rem mb-0" formControlName="pincode" placeholder="Pincode">
+                            <div class="formField mt-1rem">
+                                <div ngbDropdown>
+                                    <input [ngClass]="{'errorInput': formSubmitted && residenceDetailsForm.get('city').hasError('required') }" class="dropdown-toggle mt-0 mb-1rem" readonly ngbDropdownToggle formControlName="city" placeholder="City" required><span ngbDropdownToggle></span>
+                                    <div ngbDropdownMenu>
+                                        <button ngbDropdownItem *ngFor="let city of cities" value="city.value" (click)="assignDropdownVal('city', city.label)">{{ city.label }}</button>
+                                    </div>
+                                </div>
+                                <p class='errorMsg city-err' *ngIf="formSubmitted && residenceDetailsForm.get('city').hasError('required')">City field is required
+                                </p>
+                            </div>
+                            <div class="formField">
+                                <div ngbDropdown>
+                                    <input [ngClass]="{'errorInput': formSubmitted && residenceDetailsForm.get('state').hasError('required') }" class="dropdown-toggle mt-0 mb-1rem" readonly ngbDropdownToggle formControlName="state" placeholder="State" required><span ngbDropdownToggle></span>
+                                    <div ngbDropdownMenu>
+                                        <button ngbDropdownItem *ngFor="let state of states" value="state.value" (click)="assignDropdownVal('state', state.label)">{{ state.label }}</button>
+                                    </div>
+                                </div>
+                                <p class='errorMsg state-err' *ngIf="formSubmitted && residenceDetailsForm.get('state').hasError('required')">State field is required
+                                </p>
+                            </div>
+                            <div>
+                                <label class="checkbox small">
+                                  <input type="checkbox" name='sameAddress' [(ngModel)]='sameAddress' [ngModelOptions]="{standalone: true}">
+                                  <div class="blue sec-color fs-14">
+                                      Your permanent address same as current address
+                                  </div>
+                                  <span class="tick"></span>
+                                </label>
+                                <p class='errorMsg' *ngIf="formSubmitted && !sameAddress">
+                                  * This field is required 
+                                </p>
+                            </div>
+
+
                         </div>
                     </div>
                 </form>

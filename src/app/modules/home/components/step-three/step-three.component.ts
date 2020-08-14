@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,6 +13,13 @@ export class StepThreeComponent implements OnInit {
   formSubmitted = false;
   residenceDetailsForm: FormGroup;
   isManualEntryCollapsed = false;
+  cities: [
+
+  ];
+  states: [
+
+  ];
+  sameAddress = false;
 
   constructor(
     private router: Router,
@@ -21,7 +28,12 @@ export class StepThreeComponent implements OnInit {
 
   ngOnInit(): void {
     this.residenceDetailsForm = this.fb.group({
-      
+      addressLine1: [''],
+      addressLine2: [''],
+      landmark: [''],
+      pincode: new FormControl('', [Validators.required, Validators.pattern('[0-9]{6}')]),
+      city: [''],
+      state: ['']
     });
   }
 

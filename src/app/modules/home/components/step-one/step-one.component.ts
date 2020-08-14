@@ -44,7 +44,7 @@ export class StepOneComponent implements OnInit {
   ngOnInit(): void {
     this.personalDetailsForm = this.fb.group({
       residentialStatus: ['Resident Individual', Validators.required],
-      currentPin: new FormControl('400 607', [Validators.required, Validators.minLength(6)]),
+      currentPin: new FormControl('400 607', [Validators.required, Validators.pattern('[0-9]{6}')]),
       mothersName: ['Sushmita', Validators.required],
       maritalStatus: ['Married', Validators.required],
       education: [`Bachelor's Degree`, Validators.required],

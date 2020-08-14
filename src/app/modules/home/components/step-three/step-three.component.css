@@ -1,3 +1,7 @@
+.container {
+    height: 80vh;
+}
+
 .aadhaar-details-card {
     background-color: var(--blue-bg-2);
     border: none;
