@@ -1,17 +1,25 @@
 <div class="container" *ngIf="!firstFormSubmitted; else additionalFill">
     <span class="ff-bold sm-font alt-blacken">Residence Details</span>
     <div class="form-container">
-        <!-- aadhar details card -->
-        <div class="card aadhar-details-card">
-            <img class="float-right" src="assets/images/pull-aadhaar-arrow.svg" alt="pull">
+        <div class="card aadhaar-details-card" (click)="enterAadhaarDetails()">
+            <div class="row">
+                <div class="col-10">
+                    <span class="ff-bold sm-font">Pull details from Aadhaar</span><br>
+                    <span class="ff-regular fs-12">This will also help you in your KYC verification</span>
+                </div>
+                <div class="col-2">
+                    <img class="aadhaar-pull-icon" src="assets/images/pull-aadhaar-arrow.svg" alt="pull">
+                </div>
+            </div>            
         </div>
 
-        <!-- or enter details manually -->
-        <span class="flex-center"><span class="long-hyphen">__</span> <span class="or-text">Or</span> <span class="long-hyphen">__</span></span>
+        <span class="mt-1rem flex-center"><span class="long-hyphen">__</span> <span class="or-text">Or</span> <span class="long-hyphen">__</span></span>
         <form class="padding-1rem mt-1rem" [formGroup]="residenceDetailsForm">
             <div class="row">
                 <div class="col">
+                    <div class="card manual-details-card">
 
+                    </div>
                 </div>
             </div>
         </form>

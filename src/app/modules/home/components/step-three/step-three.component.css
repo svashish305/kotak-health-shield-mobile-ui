@@ -1,5 +1,16 @@
-.aadhar-details-card {
+.aadhaar-details-card {
     background-color: var(--blue-bg-2);
+    border: none;
+    border-radius: 5px;
+    padding: 25px 1rem;
+}
+
+.aadhaar-pull-icon {
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    position: absolute;
+    right: 1rem;
 }
 
 .long-hyphen {
@@ -11,4 +22,10 @@
 .or-text {
     color: var(--red-bg);
     padding: 0 8px;
+}
+
+.manual-details-card {
+    border: none;
+    border-radius: 5px;
+    padding: 25px 1rem;
 }

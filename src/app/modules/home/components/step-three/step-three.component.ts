@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-step-three',
@@ -12,12 +13,19 @@ export class StepThreeComponent implements OnInit {
   formSubmitted = false;
   residenceDetailsForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(
+    private router: Router,
+    private fb: FormBuilder
+  ) { }
 
   ngOnInit(): void {
     this.residenceDetailsForm = this.fb.group({
       
     });
+  }
+
+  enterAadhaarDetails() {
+
   }
 
   navigateBack() {
