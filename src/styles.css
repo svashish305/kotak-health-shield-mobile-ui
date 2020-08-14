@@ -40,6 +40,10 @@ html, body{
     transform-origin: 0 0;  /* Standard Property */
 }
 
+.invert {
+    transform: rotate(180deg);
+}
+
 .custom-control-input:checked ~ .custom-control-label::before {
     color: #fff;
     border-color: var(--blue-theme-color) !important;

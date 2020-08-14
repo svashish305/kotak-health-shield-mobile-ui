@@ -14,12 +14,23 @@
         </div>
 
         <span class="mt-1rem flex-center"><span class="long-hyphen">__</span> <span class="or-text">Or</span> <span class="long-hyphen">__</span></span>
-        <form class="padding-1rem mt-1rem" [formGroup]="residenceDetailsForm">
-            <div class="row">
-                <div class="col">
-                    <div class="card manual-details-card">
-
+        <form class="mt-1rem" [formGroup]="residenceDetailsForm">
+            <div class="card manual-details-card">
+                <div class="row">
+                    <div class="col-10">
+                        <span class="ff-bold sm-font">Enter address manually</span><br>
+                        <span class="ff-regular fs-12">Fill the details manually</span>
                     </div>
+                    <div class="col-2">
+                        <a (click)="isManualEntryCollapsed = !isManualEntryCollapsed">
+                            <img class="collapser-icon" [ngClass]="{'invert': !isManualEntryCollapsed}" src="assets/images/chevron-down.svg" alt="pull">
+                        </a>
+                    </div>
+                </div>    
+                
+                <div [ngbCollapse]="!isManualEntryCollapsed">
+                    <!-- placeholder for manual details -->
+                    
                 </div>
             </div>
         </form>

@@ -12,6 +12,7 @@ export class StepThreeComponent implements OnInit {
   firstFormSubmitted = false;
   formSubmitted = false;
   residenceDetailsForm: FormGroup;
+  isManualEntryCollapsed = false;
 
   constructor(
     private router: Router,
