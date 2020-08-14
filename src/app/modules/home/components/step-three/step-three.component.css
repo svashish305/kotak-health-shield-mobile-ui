@@ -36,3 +36,7 @@
     position: absolute;
     right: 1.35rem;
 }
+
+.manual-form {
+    border: none;
+}
