@@ -147,7 +147,7 @@
                                         <label class="custom-control-label" [attr.for]="'symptom' + symptom.id">{{symptomState[symptom.id] ? 'Yes' : 'No'}}</label>
                                     </div>
 
-                                    <div *ngIf="symptomState[symptom.id]" class="card symptom-details-card">
+                                    <div *ngIf="symptom.id != symptoms.length && symptomState[symptom.id]" class="card symptom-details-card">
                                         <span class="mt-8 mr-auto fs-12 symptom-details-text">Did you consult any doctor for the same?</span>
                                         <div class="custom-control custom-switch symptom-details-switch zoom-one-half">
                                             <input type="checkbox" class="custom-control-input m-0" [(ngModel)]="symptomState[symptom.id]"
