@@ -97,7 +97,7 @@ export class StepThreeComponent implements OnInit {
 
     this.nomineeDetailsForm = this.fb.group({
       fullName: ['Dev Wadhwa', Validators.required],
-      relationship: ['Son', Validators.required],
+      relationship: ['', Validators.required],
       birthdate: ['', Validators.required],
     });
   }
@@ -107,7 +107,13 @@ export class StepThreeComponent implements OnInit {
   }
 
   navigateBack() {
-    this.healthTabRef.select('2');
+    if(!this.firstFormSubmitted && !this.secondFormSubmitted) {
+      this.healthTabRef.select('2');
+    } else if (this.firstFormSubmitted && !this.secondFormSubmitted) {
+      this.firstFormSubmitted = false;
+    } else {
+      this.secondFormSubmitted = false;
+    }
   }
 
   navigate() {
