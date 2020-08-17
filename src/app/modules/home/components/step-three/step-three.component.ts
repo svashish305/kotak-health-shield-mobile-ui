@@ -72,6 +72,7 @@ export class StepThreeComponent implements OnInit {
     { label: 'Husband', value: 'HU' }
   ];
   multipleNominees = false;
+  nomineeAdditionForm: FormGroup;
 
   constructor(
     private router: Router,
@@ -102,6 +103,13 @@ export class StepThreeComponent implements OnInit {
       birthdate: ['', Validators.required],
       sharePercentage: ['50']
     });
+
+    this.nomineeAdditionForm = this.fb.group({
+      fullName: ['Dev Wadhwa', Validators.required],
+      relationship: ['', Validators.required],
+      birthdate: ['', Validators.required],
+      sharePercentage: ['50']
+    }); 
   }
 
   enterAadhaarDetails() {

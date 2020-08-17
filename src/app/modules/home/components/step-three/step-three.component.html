@@ -264,7 +264,7 @@
             <form class="padding-1rem mt-1rem" [formGroup]="nomineeAdditionForm">
                 <div class="row">
                     <div class="col">
-                        <a (click)="addNominee()" *ngIf="!multipleNominees">
+                        <a *ngIf="!multipleNominees" (click)="addNominee()">
                             <span class="blue ff-regular fs-14px">+ Add Nominee</span>
                         </a>
 
