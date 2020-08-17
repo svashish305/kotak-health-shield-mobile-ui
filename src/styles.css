@@ -87,6 +87,10 @@ html, body{
     font-size: 12px !important;
 }
 
+.fs-13 {
+    font-size: 13px !important;
+}
+
 .fs-14px {
     font-size: 14px !important;
 }
@@ -171,6 +175,10 @@ html, body{
 
 .pt-20 {
     padding-top: 20px;
+}
+
+.pt-1rem {
+    padding-top: 1rem;
 }
 
 /* common header and footer styles */

@@ -1,0 +1,19 @@
+.info-icon {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 4rem;
+    left: 16rem;
+}
+
+hr {
+    color: var(--light-gray-border);
+}
+
+.otp-input {
+    margin: 20px 0 10px 0 !important;
+}
+
+.resend-otp-text {
+    color: var(--red-bg);
+}
