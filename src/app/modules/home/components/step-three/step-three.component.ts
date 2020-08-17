@@ -16,13 +16,61 @@ export class StepThreeComponent implements OnInit {
   otherDetailsForm: FormGroup;
   nomineeDetailsForm: FormGroup;
   isManualEntryCollapsed = false;
-  cities: [
-
-  ];
+  cities: ['Hyderabad', 'Bengaluru', 'Chennai', 'Mumbai'];
   states: [
-
+    'Andaman and Nicobar Islands',
+    'Andhra Pradesh',
+    'Arunachal Pradesh',
+    'Assam',
+    'Bihar',
+    'Chandigarh',
+    'Chhattisgarh',
+    'Dadra and Nagar Haveli',
+    'Daman and Diu',
+    'National Capital Territory of Delhi union territory',
+    'Goa',
+    'Gujarat',
+    'Haryana',
+    'Himachal Pradesh',
+    'Jammu and Kashmir',
+    'Jharkhand',
+    'Karnataka',
+    'Kerala',
+    'Ladakh',
+    'Lakshadweep',
+    'Madhya Pradesh',
+    'Maharashtra',
+    'Manipur',
+    'Meghalaya',
+    'Mizoram',
+    'Nagaland',
+    'Odisha',
+    'Puducherry',
+    'Punjab',
+    'Rajasthan',
+    'Sikkim',
+    'Tamil Nadu',
+    'Telangana',
+    'Tripura',
+    'Uttar Pradesh',
+    'Uttarakhand',
+    'West Bengal',
   ];
   sameAddress = false;
+  relationships = [
+    { label: 'Father', value: 'FA' },
+    { label: 'Son', value: 'SO' },
+    { label: 'Brother', value: 'BR' },
+    { label: 'Grandfather', value: 'GF' },
+    { label: 'Grand son', value: 'GS' },
+    { label: 'Daughter', value: 'DA' },
+    { label: 'Granddaughter', value: 'GD' },
+    { label: 'Grandmother', value: 'GM' },
+    { label: 'Sister', value: 'SI' },
+    { label: 'Wife', value: 'WI' },
+    { label: 'Mother', value: 'MO' },
+    { label: 'Husband', value: 'HU' }
+  ];
 
   constructor(
     private router: Router,
@@ -48,7 +96,9 @@ export class StepThreeComponent implements OnInit {
     });
 
     this.nomineeDetailsForm = this.fb.group({
-
+      fullName: ['Dev Wadhwa', Validators.required],
+      relationship: ['Son', Validators.required],
+      birthdate: ['', Validators.required],
     });
   }
 
