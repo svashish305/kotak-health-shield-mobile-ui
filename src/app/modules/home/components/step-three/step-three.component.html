@@ -220,7 +220,8 @@
             <form class="padding-1rem mt-1rem" [formGroup]="nomineeDetailsForm">
                 <div class="row">
                     <div class="col">
-                        <span class="ff-bold fs-14px">Nominee 1</span>
+                        <span class="ff-medium fs-14px">Nominee 1</span>
+                        <img *ngIf="multipleNominees" class="float-right" src="assets/images/expand-icon.svg" alt="delete">
                         <div class="formField">
                             <input type="text" placeholder="Enter your Full Name" formControlName="fullName"
                             [ngClass]="{'errorInput': formSubmitted && nomineeDetailsForm.get('fullName').hasError('required') }">
@@ -241,7 +242,7 @@
                             </p>
                         </div>
 
-                        <div class="formField calendar">
+                        <div class="formField calendar mb-24">
                             <span class="fs-14"> Date Of Birth </span>
                             <input [ngClass]="{'errorInput': formSubmitted && nomineeForm.get('birthdate').hasError('dateVaidator') || formSubmitted && nomineeForm.get('birthdate').hasError('required') }" class="m-0" readonly placeholder="DD/MM/YYYY" formControlName="birthdate"
                                 ngbDatepicker autocomplete="off" #datePicker="ngbDatepicker" (click)="datePicker.toggle()" (ngModelChange)='ageCalc()' [minDate]="minDate">
@@ -250,6 +251,12 @@
                             </p>
                             <p class='errorMsg' *ngIf="formSubmitted && nomineeForm.get('birthdate').hasError('dateVaidator')">Please enter a valid date</p>
                         </div>
+
+                        <div *ngIf="multipleNominees" class="formField">
+                            <input type="text" formControlName="sharePercentage" readonly class="share-percentage"
+                            [ngClass]="{'errorInput': formSubmitted && nomineeDetailsForm.get('sharePercentage').hasError('required') }">
+                            <label class="input_label">Share Percentage %</label>
+                        </div>
                     </div>
                 </div>
             </form>
@@ -257,7 +264,49 @@
             <form class="padding-1rem mt-1rem" [formGroup]="nomineeAdditionForm">
                 <div class="row">
                     <div class="col">
-                        <span class="ff-regular fs-14px">+ Add Nominee</span>
+                        <a (click)="addNominee()" *ngIf="!multipleNominees">
+                            <span class="blue ff-regular fs-14px">+ Add Nominee</span>
+                        </a>
+
+                        <div *ngIf="multipleNominees">
+                            <span class="ff-medium fs-14px">Nominee 2</span>
+                            <img *ngIf="multipleNominees" class="float-right" src="assets/images/expand-icon.svg" alt="delete">
+                            <div class="formField">
+                                <input type="text" placeholder="Enter your Full Name" formControlName="fullName"
+                                [ngClass]="{'errorInput': formSubmitted && nomineeDetailsForm.get('fullName').hasError('required') }">
+                                <label class="input_label">Full Name</label>
+                            </div>
+                            <p class='errorMsg' *ngIf="formSubmitted && nomineeDetailsForm.get('fullName').hasError('required')">
+                            Name field is required </p>
+    
+                            <span class="ff-regular fs-14">Relationship with you</span>
+                            <div class="formField relationship">
+                                <div ngbDropdown>
+                                    <input [ngClass]="{'errorInput': formSubmitted && nomineeDetailsForm.get('relationship').hasError('required') }" class="dropdown-toggle mt-0" readonly ngbDropdownToggle formControlName="relationship" placeholder="Select Relation" required><span ngbDropdownToggle></span>
+                                    <div ngbDropdownMenu>
+                                        <button ngbDropdownItem *ngFor="let relationship of relationships" value="relationship.value" (click)="assignDropdownVal('relationship', relationship.label)">{{ relationship.label }}</button>
+                                    </div>
+                                </div>
+                                <p class='errorMsg relationship-err' *ngIf="formSubmitted && nomineeDetailsForm.get('relationship').hasError('required')">Relationship field is required
+                                </p>
+                            </div>
+    
+                            <div class="formField calendar mb-24">
+                                <span class="fs-14"> Date Of Birth </span>
+                                <input [ngClass]="{'errorInput': formSubmitted && nomineeForm.get('birthdate').hasError('dateVaidator') || formSubmitted && nomineeForm.get('birthdate').hasError('required') }" class="m-0" readonly placeholder="DD/MM/YYYY" formControlName="birthdate"
+                                    ngbDatepicker autocomplete="off" #datePicker="ngbDatepicker" (click)="datePicker.toggle()" (ngModelChange)='ageCalc()' [minDate]="minDate">
+                                <span class="icon" (click)="datePicker.toggle()"></span>
+                                <p class='errorMsg' *ngIf="formSubmitted && nomineeForm.get('birthdate').hasError('required')">Date of birth field is required
+                                </p>
+                                <p class='errorMsg' *ngIf="formSubmitted && nomineeForm.get('birthdate').hasError('dateVaidator')">Please enter a valid date</p>
+                            </div>
+    
+                            <div *ngIf="multipleNominees" class="formField">
+                                <input type="text" formControlName="sharePercentage" readonly class="share-percentage"
+                                [ngClass]="{'errorInput': formSubmitted && nomineeDetailsForm.get('sharePercentage').hasError('required') }">
+                                <label class="input_label">Share Percentage %</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </form>

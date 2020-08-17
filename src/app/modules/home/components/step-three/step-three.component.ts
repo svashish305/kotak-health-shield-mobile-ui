@@ -71,6 +71,7 @@ export class StepThreeComponent implements OnInit {
     { label: 'Mother', value: 'MO' },
     { label: 'Husband', value: 'HU' }
   ];
+  multipleNominees = false;
 
   constructor(
     private router: Router,
@@ -99,11 +100,16 @@ export class StepThreeComponent implements OnInit {
       fullName: ['Dev Wadhwa', Validators.required],
       relationship: ['', Validators.required],
       birthdate: ['', Validators.required],
+      sharePercentage: ['50']
     });
   }
 
   enterAadhaarDetails() {
     this.router.navigate(['aadhaar-details']);
+  }
+
+  addNominee() {
+    this.multipleNominees = true;
   }
 
   navigateBack() {
