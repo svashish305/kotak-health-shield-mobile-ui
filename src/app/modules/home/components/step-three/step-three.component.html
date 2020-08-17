@@ -106,15 +106,127 @@
 </div>
 
 <ng-template #additionalFill>
-    <!-- other details -->
-    <div *ngIf="!secondFormSubmitted else finalFill">
-        other details
+    <div *ngIf="!secondFormSubmitted else finalFill" class="container">
+        <span class="ff-bold sm-font">Other Details</span>
+        <div class="form-container">
+            <form class="padding-1rem mt-1rem" [formGroup]="otherDetailsForm">
+                <div class="row">
+                    <div class="col">
+                        <div class="block">
+                            <p>Are you a citizen of any other country also <span class="ff-bold">(dual / multiple) ?</span></p>
+                            <div class="formField">
+                                <label class="radioTick small">
+                                <input type="radio" name='otherCitizen' value="Yes" formControlName='otherCitizen'>
+                                <div> Yes </div>
+                                <span class="tick"></span>
+                                </label>
+                                <label class="radioTick small">
+                                <input type="radio" name='otherCitizen' value="No" formControlName='otherCitizen'>
+                                <div>
+                                    No
+                                </div>
+                                <span class="tick"></span>
+                                </label>
+                                <p class="errorMsg" *ngIf='otherCitizen == undefined && error'> * This field is required </p>
+                            </div>
+                        </div>
+
+                        <div class="block mt-24">
+                            <p>Are you a resident <span class="ff-bold">(for tax purposes)</span> of any other country other than India?</p>
+                            <div class="formField">
+                                <label class="radioTick small">
+                                <input type="radio" name='otherTaxResident' value="Yes" formControlName='otherTaxResident'>
+                                <div> Yes </div>
+                                <span class="tick"></span>
+                                </label>
+                                <label class="radioTick small">
+                                <input type="radio" name='otherTaxResident' value="No" formControlName='otherTaxResident'>
+                                <div>
+                                    No
+                                </div>
+                                <span class="tick"></span>
+                                </label>
+                                <p class="errorMsg" *ngIf='otherTaxResident == undefined && error'> * This field is required </p>
+                            </div>
+                        </div>
+
+                        <div class="block mt-24">
+                            <p>Do you hold a <span class="ff-bold">green card of US or any similar card</span> for any other country?</p>
+                            <div class="formField">
+                                <label class="radioTick small">
+                                <input type="radio" name='greenCardHolder' value="Yes" formControlName='greenCardHolder'>
+                                <div> Yes </div>
+                                <span class="tick"></span>
+                                </label>
+                                <label class="radioTick small">
+                                <input type="radio" name='greenCardHolder' value="No" formControlName='greenCardHolder'>
+                                <div>
+                                    No
+                                </div>
+                                <span class="tick"></span>
+                                </label>
+                                <p class="errorMsg" *ngIf='greenCardHolder == undefined && error'> * This field is required </p>
+                            </div>
+                        </div>
+
+                        <div class="block mt-24">
+                            <p>Do you have any history of <span class="ff-bold">conviction under any criminal proceedings</span> in India or abroad?</p>
+                            <div class="formField">
+                                <label class="radioTick small">
+                                <input type="radio" name='criminalHistory' value="Yes" formControlName='criminalHistory'>
+                                <div> Yes </div>
+                                <span class="tick"></span>
+                                </label>
+                                <label class="radioTick small">
+                                <input type="radio" name='criminalHistory' value="No" formControlName='criminalHistory'>
+                                <div>
+                                    No
+                                </div>
+                                <span class="tick"></span>
+                                </label>
+                                <p class="errorMsg" *ngIf='criminalHistory == undefined && error'> * This field is required </p>
+                            </div>
+                        </div>
+
+                        <div class="block mt-24">
+                            <p>Are you a <span class="ff-bold">Politically Exposed Person</span> or a close relative of Politically Exposed Person?</p>
+                            <div class="formField">
+                                <label class="radioTick small">
+                                <input type="radio" name='politicallyExposed' value="Yes" formControlName='politicallyExposed'>
+                                <div> Yes </div>
+                                <span class="tick"></span>
+                                </label>
+                                <label class="radioTick small">
+                                <input type="radio" name='politicallyExposed' value="No" formControlName='politicallyExposed'>
+                                <div>
+                                    No
+                                </div>
+                                <span class="tick"></span>
+                                </label>
+                                <p class="errorMsg" *ngIf='politicallyExposed == undefined && error'> * This field is required </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </ng-template>
 
 <ng-template #finalFill>
-    <!-- nominee details -->
-    nominee details
+    <div class="container">
+        <span class="ff-bold sm-font">Nominee Details</span>
+        <div class="form-container">
+            <form class="padding-1rem mt-1rem" [formGroup]="nomineeDetailsForm">
+                <div class="row">
+                    <div class="col">
+                        <span class="ff-bold fs-14px">Nominee 1</span>
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </ng-template>
 
 <app-footer>

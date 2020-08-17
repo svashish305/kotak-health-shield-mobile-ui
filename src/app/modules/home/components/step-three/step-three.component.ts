@@ -13,6 +13,8 @@ export class StepThreeComponent implements OnInit {
   secondFormSubmitted = false;
   formSubmitted = false;
   residenceDetailsForm: FormGroup;
+  otherDetailsForm: FormGroup;
+  nomineeDetailsForm: FormGroup;
   isManualEntryCollapsed = false;
   cities: [
 
@@ -35,6 +37,18 @@ export class StepThreeComponent implements OnInit {
       pincode: new FormControl('', [Validators.required, Validators.pattern('[0-9]{6}')]),
       city: [''],
       state: ['']
+    });
+
+    this.otherDetailsForm = this.fb.group({
+      otherCitizen: ['No'],
+      otherTaxResident: ['No'],
+      greenCardHolder: ['No'],
+      criminalHistory: ['No'],
+      politicallyExposed: ['No']
+    });
+
+    this.nomineeDetailsForm = this.fb.group({
+
     });
   }
 
