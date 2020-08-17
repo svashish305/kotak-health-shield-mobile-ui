@@ -42,6 +42,14 @@
 <app-footer>
     <ng-container ngProjectAs='[footer]'>
         <button type="button" class="btn back-btn mt-12" (click)="navigateBack()"><img class="ftr-back-img" src="assets/images/back.svg" alt="back">Back</button>
-        <button type="button" class="btn footer-btn" (click)="navigate()">PROCEED</button>
+        <button type="button" class="btn footer-btn" (click)="open(paymentModal)">PROCEED</button>
     </ng-container>
 </app-footer>
+
+<ng-template #paymentModal let-modal>
+    <div class="modal-body px-2 mb-35">
+        <img class="verifying-img mx-auto d-block" src="assets/images/bank-verification-icon.svg" alt="verifying">
+        <figcaption class="figure-caption text-center verifying-text">Verifying your Bank A/C</figcaption>
+    </div>
+    <span class="ff-regular fs-14px mb-40 text-center credit-text">We’ll credit Rs.1.00 to verify your account</span>
+</ng-template>
