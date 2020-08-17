@@ -1,0 +1,31 @@
+.btn-group {
+    margin: 8px 0 26px 0;
+}
+
+.badge-btns {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    margin: 0 8px 0 0;
+    border: 1px solid var(--blue-theme-color);
+    border-radius: 55px !important;
+    font-size: 14px;
+    color: var(--blue-theme-color);
+    background-color: #fff;
+}
+
+.badge-btns:active {
+    color: #fff;
+    background-color: var(--blue-theme-color);
+}
+
+.active {
+    color: #fff;
+    background-color: var(--blue-theme-color);
+    outline: none !important;
+    box-shadow: none;
+}
+
+.ifsc-input {
+    margin-bottom: 10px;
+}

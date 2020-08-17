@@ -1,5 +1,42 @@
 <div class="container">
-    <p>step-four works!</p>
+    <div class="form-container">
+        <span class="ff-bold sm-font">Payout Details</span>  
+        <form class="mt-1rem padding-1rem" [formGroup]="paymentForm">
+            <div class="row">
+                <div class="col">
+                    <span class="ff-bold sm-font">Here’s where we will deposit your refunds and benefits of Health Shield</span>
+                    <div class="formField mt-26">
+                        <span class="ff-regular fs-14px">Select Account Type</span>
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn badge-btns active">
+                              <input type="radio" name="options" id="option1"> Savings A/C
+                            </label>
+                            <label class="btn badge-btns">
+                              <input type="radio" name="options" id="option2"> Current A/C
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="formField">
+                        <input type="text" placeholder="Enter Account No" formControlName="accountNo"
+                          [ngClass]="{'errorInput': formSubmitted && paymentForm.get('accountNo').hasError('required') }">
+                        <label class="input_label">Account Number</label>
+                    </div>
+                    <p class='errorMsg' *ngIf="formSubmitted && paymentForm.get('accountNo').hasError('required')">
+                    Account Number field is required </p>
+
+                    <div class="formField">
+                        <input type="text" placeholder="Enter Account No" formControlName="ifscCode" class="ifsc-input"
+                          [ngClass]="{'errorInput': formSubmitted && paymentForm.get('ifscCode').hasError('required') }">
+                        <label class="input_label">IFSC Code</label>
+                    </div>
+                    <p class='errorMsg' *ngIf="formSubmitted && paymentForm.get('ifscCode').hasError('required')">
+                    Account Number field is required </p>
+                    <span class="ff-medium">Kotak Bank, Worli Branch</span>
+                </div>
+            </div>
+        </form>      
+    </div>
 </div>
 
 <app-footer>

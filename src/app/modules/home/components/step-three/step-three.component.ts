@@ -187,7 +187,8 @@ export class StepThreeComponent implements OnInit {
         this.formSubmitted = false;
       } else {
         this.formSubmitted = true;
-        this.healthTabRef.select('4');
+        // this.healthTabRef.select('4');
+        this.router.navigate(['health-details'], { queryParams: { destTab: 4, aadhaarVerified: null } });
       }
     } else {
       this.aadhaarVerified = false;

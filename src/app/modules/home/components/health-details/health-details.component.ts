@@ -19,7 +19,7 @@ export class HealthDetailsComponent implements OnInit {
     this.route.queryParams.subscribe((params: any) => {
       this.destTab = +params['destTab'] || 0;
       if (this.destTab) {
-        this.healthTabRef.activeId = "3";
+        this.healthTabRef.activeId = this.destTab.toString();
       }
       this.aadhaarVerified = params['aadhaarVerified'];
     });
