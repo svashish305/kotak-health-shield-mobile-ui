@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-aadhaar-details',
@@ -7,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AadhaarDetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private location: Location) { }
 
   ngOnInit(): void {
   }
 
   navigateBack() {
-
+    this.location.back();
   }
 
   navigate() {

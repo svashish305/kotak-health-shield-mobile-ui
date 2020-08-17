@@ -105,8 +105,12 @@
     </div>
 </div>
 
-<ng-template #additionalFill>
+<ng-template #additionalFill *ngIf="!secondFormSubmitted else finalFill">
+    <!-- other details -->
+</ng-template>
 
+<ng-template #finalFill>
+    <!-- nominee details -->
 </ng-template>
 
 <app-footer>

@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class StepThreeComponent implements OnInit {
   @Input() healthTabRef;
   firstFormSubmitted = false;
+  secondFormSubmitted = false;
   formSubmitted = false;
   residenceDetailsForm: FormGroup;
   isManualEntryCollapsed = false;
@@ -46,8 +47,17 @@ export class StepThreeComponent implements OnInit {
   }
 
   navigate() {
-    this.formSubmitted = true;
-    this.healthTabRef.select('4');
+    if(!this.firstFormSubmitted) {
+      this.firstFormSubmitted = true;
+      this.secondFormSubmitted = false;
+      this.formSubmitted = false;
+    } else if (this.firstFormSubmitted && !this.secondFormSubmitted) {
+      this.secondFormSubmitted = true;
+      this.formSubmitted = false;
+    } else {
+      this.formSubmitted = true;
+      this.healthTabRef.select('4');
+    }
   }
 
 }
