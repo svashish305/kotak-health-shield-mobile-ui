@@ -49,3 +49,9 @@
     height: 48px;
     margin-bottom: 24px;
 }
+
+.appointee-card {
+    padding: 1rem;
+    background-color: var(--blue-bg-1);
+    border: none;
+}
