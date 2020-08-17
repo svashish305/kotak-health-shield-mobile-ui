@@ -38,7 +38,7 @@ export class StepThreeComponent implements OnInit {
   }
 
   enterAadhaarDetails() {
-    // this.router.navigate(['']);
+    this.router.navigate(['aadhaar-details']);
   }
 
   navigateBack() {
