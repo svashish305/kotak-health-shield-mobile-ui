@@ -17,8 +17,8 @@ export class StepThreeComponent implements OnInit {
   otherDetailsForm: FormGroup;
   nomineeDetailsForm: FormGroup;
   isManualEntryCollapsed = false;
-  cities: ['Hyderabad', 'Bengaluru', 'Chennai', 'Mumbai'];
-  states: [
+  cities = ['Hyderabad', 'Bengaluru', 'Chennai', 'Mumbai'];
+  states = [
     'Andaman and Nicobar Islands',
     'Andhra Pradesh',
     'Arunachal Pradesh',
@@ -163,26 +163,38 @@ export class StepThreeComponent implements OnInit {
   }
 
   navigateBack() {
-    if(!this.firstFormSubmitted && !this.secondFormSubmitted) {
-      this.healthTabRef.select('2');
-    } else if (this.firstFormSubmitted && !this.secondFormSubmitted) {
-      this.firstFormSubmitted = false;
+    if(!this.aadhaarVerified) {
+      if(!this.firstFormSubmitted && !this.secondFormSubmitted) {
+        this.healthTabRef.select('2');
+      } else if (this.firstFormSubmitted && !this.secondFormSubmitted) {
+        this.firstFormSubmitted = false;
+      } else {
+        this.secondFormSubmitted = false;
+      }
     } else {
-      this.secondFormSubmitted = false;
+      this.router.navigate(['aadhaar-details'], { queryParams: null });
     }
   }
 
   navigate() {
-    if(!this.firstFormSubmitted) {
+    if(!this.aadhaarVerified) {
+      if(!this.firstFormSubmitted) {
+        this.firstFormSubmitted = true;
+        this.secondFormSubmitted = false;
+        this.formSubmitted = false;
+      } else if (this.firstFormSubmitted && !this.secondFormSubmitted) {
+        this.secondFormSubmitted = true;
+        this.formSubmitted = false;
+      } else {
+        this.formSubmitted = true;
+        this.healthTabRef.select('4');
+      }
+    } else {
+      this.aadhaarVerified = false;
+      this.isManualEntryCollapsed = true;
       this.firstFormSubmitted = true;
       this.secondFormSubmitted = false;
       this.formSubmitted = false;
-    } else if (this.firstFormSubmitted && !this.secondFormSubmitted) {
-      this.secondFormSubmitted = true;
-      this.formSubmitted = false;
-    } else {
-      this.formSubmitted = true;
-      this.healthTabRef.select('4');
     }
   }
 

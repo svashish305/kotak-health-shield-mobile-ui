@@ -381,7 +381,7 @@
             </div>
         </div>
 
-        <div *ngIf="sameAadhaarAddress">
+        <div *ngIf="!sameAadhaarAddress">
             <span class="ff-bold sm-font">Enter Current Address</span>
             <form class="mt-1rem padding-1rem" [formGroup]="aadhaarCurrentAddresssForm">
                 <div class="row">
@@ -420,6 +420,6 @@
 <app-footer>
     <ng-container ngProjectAs='[footer]'>
         <button type="button" class="btn back-btn mt-12" (click)="navigateBack()"><img class="ftr-back-img" src="assets/images/back.svg" alt="back">Back</button>
-        <button type="button" class="btn footer-btn" (click)="navigate()" [disabled]="!isManualEntryCollapsed">PROCEED</button>
+        <button type="button" class="btn footer-btn" (click)="navigate()" [disabled]="!aadhaarVerified && !isManualEntryCollapsed">PROCEED</button>
     </ng-container>
 </app-footer>
