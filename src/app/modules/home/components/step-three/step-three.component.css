@@ -44,3 +44,8 @@
 .manual-form {
     border: none;
 }
+
+.relationship {
+    height: 48px;
+    margin-bottom: 24px;
+}
