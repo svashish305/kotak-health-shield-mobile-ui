@@ -71,6 +71,9 @@ export class StepThreeComponent implements OnInit {
     { label: 'Mother', value: 'MO' },
     { label: 'Husband', value: 'HU' }
   ];
+  showMinor = false;
+  minDate = { year: 1920, month: 1, day: 1 };
+  age = 0;
   showNominees = [];
   multipleNominees = false;
   nomineeCount = 1;
@@ -111,7 +114,7 @@ export class StepThreeComponent implements OnInit {
     });
 
     this.nomineeAdditionForm = this.fb.group({
-      fullName: ['Dev Wadhwa', Validators.required],
+      fullName: ['Rohan Wadhwa', Validators.required],
       relationship: ['', Validators.required],
       birthdate: ['', Validators.required],
       sharePercentage: ['50']
@@ -136,6 +139,15 @@ export class StepThreeComponent implements OnInit {
       this.nomineeCount -= 1;
     }
     this.showNominees[index] = false;
+  }
+
+  ageCalc() {
+    const birthdate = this.nomineeDetailsForm.get('birthdate').value;
+    const DOB = new Date(birthdate.year, birthdate.month, birthdate.day);
+    const timeDiff = Math.abs(Date.now() - DOB.getTime());
+    this.age = Math.floor((timeDiff / (1000 * 3600 * 24)) / 365.25);
+    this.showMinor = this.age < 18;
+    return this.age;
   }
 
   navigateBack() {
