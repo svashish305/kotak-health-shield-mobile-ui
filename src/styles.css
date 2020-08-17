@@ -164,6 +164,10 @@ html, body{
     margin-bottom: 24px;
 }
 
+.mb-12 {
+    margin-bottom: 12px;
+}
+
 .mb-0 {
     margin-bottom: 0;
 }

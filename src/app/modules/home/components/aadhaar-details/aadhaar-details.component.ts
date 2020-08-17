@@ -34,7 +34,7 @@ export class AadhaarDetailsComponent implements OnInit {
   }
 
   resendOtp() {
-    
+
   }
 
   navigateBack() {
@@ -42,6 +42,6 @@ export class AadhaarDetailsComponent implements OnInit {
   }
 
   navigate() {
-    
+    this.router.navigate(['health-details'], { queryParams: { destTab: '3', aadhaarVerified: true } });
   }
 }

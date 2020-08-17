@@ -55,3 +55,31 @@
     background-color: var(--blue-bg-1);
     border: none;
 }
+
+.aadhaar-fetched-card {
+    border: none;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.aadhaar-profile-photo {
+    width: 80px;
+    height: 80px;
+    margin: 0;
+}
+
+.figure-caption {
+    margin-top: 1rem;
+    color: #101010;
+}
+
+hr {
+    width: -webkit-fill-available;
+    color: #eee;
+}
+
+.address-edit-icon {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+}

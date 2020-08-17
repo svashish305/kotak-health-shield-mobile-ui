@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class StepThreeComponent implements OnInit {
   @Input() healthTabRef;
+  @Input() aadhaarVerified;
   firstFormSubmitted = false;
   secondFormSubmitted = false;
   formSubmitted = false;
@@ -78,6 +79,8 @@ export class StepThreeComponent implements OnInit {
   multipleNominees = false;
   nomineeCount = 1;
   nomineeAdditionForm: FormGroup;
+  sameAadhaarAddress = false;
+  aadhaarCurrentAddresssForm: FormGroup;
 
   constructor(
     private router: Router,
@@ -119,6 +122,15 @@ export class StepThreeComponent implements OnInit {
       birthdate: ['', Validators.required],
       sharePercentage: ['50']
     }); 
+
+    this.aadhaarCurrentAddresssForm = this.fb.group({
+      addressLine1: [''],
+      addressLine2: [''],
+      landmark: [''],
+      pincode: new FormControl('', [Validators.required, Validators.pattern('[0-9]{6}')]),
+      city: [''],
+      state: ['']
+    });
   }
 
   enterAadhaarDetails() {
