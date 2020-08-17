@@ -1,0 +1,16 @@
+.discount-card {
+    border: none;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: #fff;
+}
+
+.discount-icon {
+    width: 14px;
+    height: 14px;
+    margin: 0 6px 0 0;
+}
+
+.discount-text {
+    color: #000;
+}

@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Location } from '@angular/common';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-step-four',
@@ -19,6 +20,7 @@ export class StepFourComponent implements OnInit {
     private fb: FormBuilder, 
     private location: Location, 
     private modalService: NgbModal, 
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -57,7 +59,8 @@ export class StepFourComponent implements OnInit {
 
   navigate() {
     this.formSubmitted = true;
-    this.healthTabRef.select('5');
+    // this.healthTabRef.select('5');
+    this.router.navigate(['health-details'], { queryParams: { destTab: 5 } });
   }
 
 }

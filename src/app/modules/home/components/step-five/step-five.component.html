@@ -1,5 +1,48 @@
 <div class="container">
-    <p>step-five works!</p>
+    <div class="form-container">
+        <span class="ff-bold sm-font">Discounts & Benefits</span>
+        <div class="card discount-card mt-1rem">
+            <div>
+                <img class="discount-icon" src="assets/images/get-discount-icon.svg" alt="discount-icon">
+                <span class="ff-medium sm-font">Get 5% Discount</span>
+            </div>
+            <div class="mt-8">
+                <label class="checkbox small">
+                  <input type="checkbox" name='discountAvailed' [(ngModel)]='discountAvailed' [ngModelOptions]="{standalone: true}">
+                  <div class="discount-text fs-14px">
+                    Get a 5% discount if you have an existing relationship with Kotak
+                  </div>
+                  <span class="tick"></span>
+                </label>
+                <p class='errorMsg' *ngIf="formSubmitted && !discountAvailed">
+                  * This field is required 
+                </p>
+            </div>
+
+            <div *ngIf="discountAvailed">
+                <div class="mt-1rem">
+                    <span class="ff-bold">Relationship Type</span>
+                    <div class="formField">
+                        <div ngbDropdown>
+                            <input class="dropdown-toggle mt-0 mb-1rem" readonly ngbDropdownToggle formControlName="relationshipType" placeholder="Select Relationship Type" required><span ngbDropdownToggle></span>
+                            <div ngbDropdownMenu>
+                                <button ngbDropdownItem *ngFor="let relType of relationshipTypes" value="relType.value" (click)="assignDropdownVal('relType', relType.label)">{{ relType.label }}</button>
+                            </div>
+                        </div>
+                    </div>                                                                                                                                                                                                                                                                                                                                                                              
+                </div>
+
+                <div class="formField">       
+                    <span class="ff-bold">Employee Number</span> 
+                    <input class="mt-0 mb-0" type="text" placeholder="Enter Employee Number" formControlName="empNo">
+                </div>                                                                                                          
+            </div>                                                                                                                                                                          
+        </div>
+
+        <!-- addon benefits -->
+        <div class="card">
+        </div>
+    </div>                                                              
 </div>
 
 <app-footer>

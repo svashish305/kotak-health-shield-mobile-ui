@@ -8,6 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class StepFiveComponent implements OnInit {
   @Input() healthTabRef;
   formSubmitted = false;
+  discountAvailed = false;
+  relationshipTypes = [
+    {select: 'Kotak Group Employee', value: 'KGE'}
+  ];
   
   constructor() { }
 
