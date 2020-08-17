@@ -1,4 +1,4 @@
-<div class="container" *ngIf="!firstFormSubmitted; else additionalFill">
+<div class="container" *ngIf="!firstFormSubmitted && !secondFormSubmitted; else additionalFill">
     <span class="ff-bold sm-font alt-blacken">Residence Details</span>
     <div class="form-container">
         <div class="card aadhaar-details-card" (click)="enterAadhaarDetails()">
@@ -105,17 +105,21 @@
     </div>
 </div>
 
-<ng-template #additionalFill *ngIf="!secondFormSubmitted else finalFill">
+<ng-template #additionalFill>
     <!-- other details -->
+    <div *ngIf="!secondFormSubmitted else finalFill">
+        other details
+    </div>
 </ng-template>
 
 <ng-template #finalFill>
     <!-- nominee details -->
+    nominee details
 </ng-template>
 
 <app-footer>
     <ng-container ngProjectAs='[footer]'>
         <button type="button" class="btn back-btn mt-12" (click)="navigateBack()"><img class="ftr-back-img" src="assets/images/back.svg" alt="back">Back</button>
-        <button type="button" class="btn footer-btn" (click)="navigate()">PROCEED</button>
+        <button type="button" class="btn footer-btn" (click)="navigate()" [disabled]="!isManualEntryCollapsed">PROCEED</button>
     </ng-container>
 </app-footer>
