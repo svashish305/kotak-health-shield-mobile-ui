@@ -71,7 +71,9 @@ export class StepThreeComponent implements OnInit {
     { label: 'Mother', value: 'MO' },
     { label: 'Husband', value: 'HU' }
   ];
+  showNominees = [];
   multipleNominees = false;
+  nomineeCount = 1;
   nomineeAdditionForm: FormGroup;
 
   constructor(
@@ -97,6 +99,10 @@ export class StepThreeComponent implements OnInit {
       politicallyExposed: ['No']
     });
 
+    for(let i=1; i<=5; i++) {
+      this.showNominees[i] = true;
+    }
+
     this.nomineeDetailsForm = this.fb.group({
       fullName: ['Dev Wadhwa', Validators.required],
       relationship: ['', Validators.required],
@@ -118,6 +124,18 @@ export class StepThreeComponent implements OnInit {
 
   addNominee() {
     this.multipleNominees = true;
+    this.nomineeCount += 1;
+  }
+
+  getNomineeState(index) {
+    return this.showNominees[index];
+  }
+
+  deleteNomineeCard(index) {
+    if(this.nomineeCount  > 2) {
+      this.nomineeCount -= 1;
+    }
+    this.showNominees[index] = false;
   }
 
   navigateBack() {
