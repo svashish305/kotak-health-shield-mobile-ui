@@ -20,6 +20,7 @@ import { StepFiveComponent } from './components/step-five/step-five.component';
 import { HeaderComponent } from 'src/app/shared/header/header.component';
 import { AadhaarDetailsComponent } from './components/aadhaar-details/aadhaar-details.component';
 import { ReviewDetailsComponent } from './components/review-details/review-details.component';
+import { PaymentDetailsComponent } from './components/payment-details/payment-details.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ReviewDetailsComponent } from './components/review-details/review-detai
     StepFiveComponent,
     AadhaarDetailsComponent,
     ReviewDetailsComponent,
+    PaymentDetailsComponent,
   ],
   imports: [
     CommonModule,

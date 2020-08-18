@@ -60,6 +60,7 @@ export class ReviewDetailsComponent implements OnInit {
 
   navigate() {
     this.formSubmitted = true;
+    this.router.navigate(['payment-details']);
   }
 
 }
