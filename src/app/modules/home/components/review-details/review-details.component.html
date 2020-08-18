@@ -1,1 +1,237 @@
-<p>review-details works!</p>
+<app-header>
+    <ng-container ngProjectAs='[header]'>
+        <div class="my-2 my-sm-0">
+            <a class="navbar-item">
+                <span class="fs-12 navbar-item-blue-text">Quote ID: 134723455</span>
+            </a>
+        </div>
+    </ng-container>
+</app-header>
+
+<div class="container">
+    <div class="form-container">
+        <span class="ff-bold sm-font">Review your Details</span>
+        <form class="mt-1rem padding-1rem" [formGroup]="reviewForm">
+            <!-- policy details -->
+            <div>
+                <span class="ff-bold sm-font">Policy Details</span>
+                <div class="float-right">
+                    <img class="edit-icon" src="assets/images/edit-2.svg" alt="edit">
+                    <span class="ff-regular fs-12 gray-text">Edit</span> 
+                </div>
+                <div class="row mt-26">
+                    <div class="col-6">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Coverage</span><br>
+                            <span class="ff-medium">Self</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Policy term</span><br>
+                            <span class="ff-medium">40 years</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-26">
+                    <div class="col">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Plan</span><br>
+                            <span class="ff-medium">Cancer/Cardiac/Neuro</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-26">
+                    <div class="col">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Optional Benefits</span><br>
+                            <span class="ff-medium">Income Benefit/Waiver of Premium</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-26">
+                    <div class="col-6">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Premium Term</span><br>
+                            <span class="ff-medium">20 years</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Premium Frequency</span><br>
+                            <span class="ff-medium">Yearly</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-26">
+                    <div class="col-6">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Basic Sum Assured</span><br>
+                            <span class="ff-medium">₹ 50,00,000</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Total Premium</span><br>
+                            <span class="ff-medium">₹ 28,848</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>       
+            <!-- personal details -->
+            <div>
+                <span class="ff-bold sm-font">Personal Details</span>
+                <div class="float-right">
+                    <img class="edit-icon" src="assets/images/edit-2.svg" alt="edit">
+                    <span class="ff-regular fs-12 gray-text">Edit</span> 
+                </div>
+                <div class="row mt-26">
+                    <div class="col-6">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Your Name</span><br>
+                            <span class="ff-medium">Mahesh Jagtap</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">My Date of Birth</span><br>
+                            <span class="ff-medium">12/07/1970</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-26">
+                    <div class="col-6">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Gender</span><br>
+                            <span class="ff-medium">Male</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Marital Status</span><br>
+                            <span class="ff-medium">Married</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-26">
+                    <div class="col-6">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Occupation</span><br>
+                            <span class="ff-medium">Salaried</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Annual income</span><br>
+                            <span class="ff-medium">25 Lakhs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-26">
+                    <div class="col-6">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Pan Card number</span><br>
+                            <span class="ff-medium">AWPRGH9378</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Nationality</span><br>
+                            <span class="ff-medium">Indian</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-26">
+                    <div class="col">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Mobile number</span><br>
+                            <span class="ff-medium">9820982017</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-26">
+                    <div class="col">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Email address</span><br>
+                            <span class="ff-medium">mahesh@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+            <hr>
+            <!-- communication details -->
+            <div>
+                <span class="ff-bold sm-font">Communication Details</span>
+                <div class="float-right">
+                    <img class="edit-icon" src="assets/images/edit-2.svg" alt="edit">
+                    <span class="ff-regular fs-12 gray-text">Edit</span> 
+                </div>
+                <div class="row mt-26">
+                    <div class="col">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Current Address</span><br>
+                            <span class="ff-medium">404, Azelia, Prestige Residency Waghbil Naka, Ghodbunder Rd, Kavesar, Thane, Maharashtra 400615</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-26">
+                    <div class="col">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Permanent Address</span><br>
+                            <span class="ff-medium">4, ABC, Prestige Residency, Ghodbunder Rd, Majiwada, Thane, Maharashtra 400615</span>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <hr>
+            <!-- nominee details -->
+            <div>
+                <span class="ff-bold sm-font">Nominee Details</span>
+                <div class="float-right">
+                    <img class="edit-icon" src="assets/images/edit-2.svg" alt="edit">
+                    <span class="ff-regular fs-12 gray-text">Edit</span> 
+                </div>
+                <div class="row mt-26">
+                    <div class="col-6">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Nominee Name</span><br>
+                            <span class="ff-medium">Dev</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Nominee DOB</span><br>
+                            <span class="ff-medium">22/07/1994</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-26">
+                    <div class="col-6">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Relationship</span><br>
+                            <span class="ff-medium">Son</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <span class="ff-regular fs-14px gray-label">Nominee Share</span><br>
+                            <span class="ff-medium">70%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <form class="mt-1rem padding-1rem">
+            <span class="ff-bold">Before proceeding, make sure you agree to the following</span>
+            <!-- checkboxes and modal -->
+        </form>
+    </div>
+</div>
+
+<app-footer>
+    <ng-container ngProjectAs='[footer]'>
+        <button type="button" class="btn back-btn mt-12" (click)="navigateBack()"><img class="ftr-back-img" src="assets/images/back.svg" alt="back">Back</button>
+        <button type="button" class="btn footer-btn" (click)="navigate()">PROCEED</button>
+    </ng-container>
+</app-footer>

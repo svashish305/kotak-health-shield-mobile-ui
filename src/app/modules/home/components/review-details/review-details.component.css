@@ -1,0 +1,14 @@
+.edit-icon {
+    width: 20px;
+    height: 16px;
+    margin-right: 2px;
+}
+
+.gray-text {
+    color: var(--alt-gray-text);
+}
+
+.gray-label {
+    color: var(--alt-gray-text-2);
+    margin-bottom: 7px;
+}
