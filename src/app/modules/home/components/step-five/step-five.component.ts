@@ -20,11 +20,7 @@ export class StepFiveComponent implements OnInit {
     { label: '₹ 3,000', value: 3000 },
   ];
   selectedHAmount = '₹ 3,000';
-  benefits = [
-    { title: 'Waiver of premium', desc: 'All future premiums waived off if suffering from any condition defined below.', annualCost: '₹ 358' },
-    { title: 'Income benefit', desc: 'Get an in @1% of sum ass p.m for a year in case of xyz', annualCost: '₹ 413' }
-  ];
-  addRemoveText = '+ Add';
+  addRemoveTexts = ['+ Add', '+ Add', '+ Add', '+ Add'];
   annualValues = ["Annually", "Monthly"];
   annual = this.annualValues[0];
   totalAmount = "₹ 28,587";
@@ -57,11 +53,11 @@ export class StepFiveComponent implements OnInit {
     this.pacAmount += 1;
   }
 
-  toggleBenefitBtnText() {
-    if(this.addRemoveText === '+ Add') {
-      this.addRemoveText = 'Remove';
-    } else if (this.addRemoveText === 'Remove') {
-      this.addRemoveText = '+ Add';
+  toggleBenefitBtnText(index) {
+    if(this.addRemoveTexts[index] === '+ Add') {
+      this.addRemoveTexts[index] = 'Remove';
+    } else if (this.addRemoveTexts[index] === 'Remove') {
+      this.addRemoveTexts[index] = '+ Add';
     }
   }
 

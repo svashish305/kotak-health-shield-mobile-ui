@@ -54,7 +54,7 @@
                 </div>
                 <div class="col-3 p-0">
                     <span class="ff-medium blue">₹ 581</span> <span class="fs-12 ff-regular gray-text"> / year</span><br>
-                    <button class="btn btn-sm benefit-btn" (click)="toggleBenefitBtnText()"><span class="ff-regular fs-14px">{{addRemoveText}}</span></button>
+                    <button class="btn btn-sm benefit-btn" (click)="toggleBenefitBtnText(0)"><span class="ff-regular fs-14px">{{addRemoveTexts[0]}}</span></button>
                 </div>
             </div>
             <hr>
@@ -71,10 +71,31 @@
                 </div>
                 <div class="col-3 p-0">
                     <span class="ff-medium blue">₹ 581</span> <span class="fs-12 ff-regular gray-text"> / year</span><br>
-                    <button class="btn btn-sm benefit-btn" (click)="toggleBenefitBtnText()"><span class="ff-regular fs-14px">{{addRemoveText}}</span></button>
+                    <button class="btn btn-sm benefit-btn" (click)="toggleBenefitBtnText(1)"><span class="ff-regular fs-14px">{{addRemoveTexts[1]}}</span></button>
                 </div>
             </div>
             <hr>
+            <div class="row">
+                <div class="col-9">
+                    <span class="ff-bold blacken">Waiver of premium</span><img class="info-icon" src="assets/images/info-icon.svg" alt="info"> <br>
+                    <p class="fs-12 ff-regular gray-text">All future premiums waived off if suffering from any condition defined below.</p><br>
+                </div>
+                <div class="col-3 p-0">
+                    <span class="ff-medium blue">₹ 358</span> <span class="fs-12 ff-regular gray-text"> / year</span><br>
+                    <button class="btn btn-sm benefit-btn" (click)="toggleBenefitBtnText(2)"><span class="ff-regular fs-14px">{{addRemoveTexts[2]}}</span></button>
+                </div>
+            </div>
+            <hr class="mt-0">
+            <div class="row">
+                <div class="col-9">
+                    <span class="ff-bold blacken">Income benefit</span><img class="info-icon" src="assets/images/info-icon.svg" alt="info"> <br>
+                    <p class="fs-12 ff-regular gray-text">Get an in @1% of sum ass p.m for a year in case of xyz</p><br>
+                </div>
+                <div class="col-3 p-0">
+                    <span class="ff-medium blue">₹ 413</span> <span class="fs-12 ff-regular gray-text"> / year</span><br>
+                    <button class="btn btn-sm benefit-btn" (click)="toggleBenefitBtnText(3)"><span class="ff-regular fs-14px">{{addRemoveTexts[3]}}</span></button>
+                </div>
+            </div>
         </div>
     </div>                                                              
 </div>
