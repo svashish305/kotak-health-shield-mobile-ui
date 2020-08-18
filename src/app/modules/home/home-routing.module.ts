@@ -7,6 +7,7 @@ import { HealthDetailsComponent } from './components/health-details/health-detai
 import { AadhaarDetailsComponent } from './components/aadhaar-details/aadhaar-details.component';
 import { ReviewDetailsComponent } from './components/review-details/review-details.component';
 import { PaymentDetailsComponent } from './components/payment-details/payment-details.component';
+import { UploadDetailsComponent } from './components/upload-details/upload-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/landing', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'aadhaar-details', component: AadhaarDetailsComponent },
   { path: 'review-details', component: ReviewDetailsComponent },
   { path: 'payment-details', component: PaymentDetailsComponent },
+  { path: 'upload-details', component: UploadDetailsComponent },
   { path: '**', redirectTo: '/landing' },
 ];
 

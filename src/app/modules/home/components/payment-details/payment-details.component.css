@@ -1,0 +1,38 @@
+.premium-card {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--blue-bg-2);
+    padding: 17.5px;
+}
+
+.payment-mode-card {
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 24px 16px;
+}
+
+.checkbox-content {
+    background-color: var(--blue-bg-1);
+}
+
+hr {
+    color: lightgray;
+}
+
+form {
+    border: none;
+}
+
+.modal-body {
+    padding: 3rem 1rem;
+}
+
+.pay-success-icon {
+    width: 52px;
+    height: 47px;
+}
+
+.gray-text {
+    color: var(--alt-gray-text-3);
+}

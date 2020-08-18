@@ -21,6 +21,7 @@ import { HeaderComponent } from 'src/app/shared/header/header.component';
 import { AadhaarDetailsComponent } from './components/aadhaar-details/aadhaar-details.component';
 import { ReviewDetailsComponent } from './components/review-details/review-details.component';
 import { PaymentDetailsComponent } from './components/payment-details/payment-details.component';
+import { UploadDetailsComponent } from './components/upload-details/upload-details.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { PaymentDetailsComponent } from './components/payment-details/payment-de
     AadhaarDetailsComponent,
     ReviewDetailsComponent,
     PaymentDetailsComponent,
+    UploadDetailsComponent,
   ],
   imports: [
     CommonModule,
