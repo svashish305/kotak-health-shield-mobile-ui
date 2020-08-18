@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-step-five',
@@ -9,13 +10,18 @@ export class StepFiveComponent implements OnInit {
   @Input() healthTabRef;
   formSubmitted = false;
   discountAvailed = false;
+  discountForm: FormGroup;
   relationshipTypes = [
     {select: 'Kotak Group Employee', value: 'KGE'}
   ];
   
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.discountForm = this.fb.group({
+      relationshipType: [''],
+      empNo: ['']
+    });
   }
 
   navigateBack() {
