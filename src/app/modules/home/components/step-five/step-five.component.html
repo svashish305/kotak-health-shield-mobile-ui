@@ -50,7 +50,14 @@
 
 <app-footer>
     <ng-container ngProjectAs='[footer]'>
-        <button type="button" class="btn back-btn mt-12" (click)="navigateBack()"><img class="ftr-back-img" src="assets/images/back.svg" alt="back">Back</button>
+        <span class="amount-text ff-bold">{{totalAmount}}</span>
+        <div ngbDropdown class="d-inline-block">
+            <button class="button-text ff-bold text-left" ngbDropdownToggle class="ftr-dd-btn"><span class="fs-14 ff-regular">{{annual}}</span></button>
+            <div ngbDropdownMenu>
+                <button ngbDropdownItem *ngFor="let val of annualValues" (click)="changeAnnual(val)">{{ val }}</button>
+            </div>
+        </div>
+        <span class="amount-subtitle ff-regular fs-10">Inclusive of tax</span>
         <button type="button" class="btn footer-btn" (click)="navigate()">PROCEED</button>
     </ng-container>
 </app-footer>

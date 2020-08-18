@@ -18,3 +18,29 @@
 .discount-form {
     border: none;
 }
+
+.added-benefits-card {
+
+}
+
+.amount-text {
+    color: var(--blue-theme-color);
+    position: absolute;
+    top: 19px;
+    left: 1rem;
+}
+
+.amount-subtitle {
+    color: var(--alt-gray-text-1);
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+}
+
+.ftr-dd-btn {
+    position: absolute;
+    left: 80px;
+    bottom: -2.25rem;
+    outline: none;
+    border: none;
+}

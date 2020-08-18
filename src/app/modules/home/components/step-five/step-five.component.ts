@@ -14,6 +14,9 @@ export class StepFiveComponent implements OnInit {
   relationshipTypes = [
     {select: 'Kotak Group Employee', value: 'KGE'}
   ];
+  annualValues = ["Annually", "Monthly"];
+  annual = this.annualValues[0];
+  totalAmount = "₹ 28,587";
   
   constructor(private fb: FormBuilder) { }
 
@@ -22,6 +25,15 @@ export class StepFiveComponent implements OnInit {
       relationshipType: [''],
       empNo: ['']
     });
+  }
+
+  changeAnnual(val: string) {
+    this.annual = val;
+    if (val === "Annually") {
+      this.totalAmount = "₹ 28,587";
+    } else if (val === "Monthly") {
+      this.totalAmount = "₹ 2,000";
+    }
   }
 
   navigateBack() {
