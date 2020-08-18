@@ -177,6 +177,10 @@ html, body{
     margin-bottom: 24px;
 }
 
+.mb-20 {
+    margin-bottom: 20px;
+}
+
 .mb-12 {
     margin-bottom: 12px;
 }
@@ -196,6 +200,10 @@ html, body{
 
 .pt-1rem {
     padding-top: 1rem;
+}
+
+.pb-1rem {
+    padding-bottom: 1rem;
 }
 
 /* common header and footer styles */

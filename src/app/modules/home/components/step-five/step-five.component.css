@@ -40,6 +40,35 @@
     color: var(--alt-gray-text-1);
 }
 
+.minus-btn {
+    padding: 16px;
+    position: absolute;
+    top: 46px;
+    left: 16px;
+}
+
+.pac-amount-input {
+    width: 100px;
+    height: 35px;
+    border: 1px solid var(--med-gray-border);
+    border-radius: 3px;
+    position: absolute;
+    top: 44px;
+}
+
+.L-text {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.plus-btn {
+    padding: 16px;
+    position: absolute;
+    top: 46px;
+    left: 82px;
+}
+
 .benefit-btn {
     background-color: #fff;
     min-width: 68px;
@@ -49,7 +78,7 @@
 }
 
 hr {
-    margin-top: 1rem;
+    margin-top: 26px;
     color: var(--light-gray-border);
 }
 

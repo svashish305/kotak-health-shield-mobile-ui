@@ -46,12 +46,26 @@
             <div class="row mt-20">
                 <div class="col-9">
                     <span class="ff-bold blacken">Personal accident cover</span><img class="info-icon" src="assets/images/info-icon.svg" alt="info"> <br>
-                    <span class="fs-12 ff-regular gray-text">Avail a cash benefit in case of accident</span><br>
-                    <!-- +/- button -->
+                    <p class="fs-12 ff-regular gray-text">Avail a cash benefit in case of accident</p><br>
+                    <button class="button-text minus minus-btn" (click)="dec()"></button>
+                    <input readonly class="mt-0 mb-1rem pac-amount-input" type="text">
+                    <span class="L-text ff-bold">{{pacAmount}} L</span>
+                    <button class="button-text plus plus-btn" (click)="inc()"></button>
                 </div>
                 <div class="col-3 p-0">
                     <span class="ff-medium blue">₹ 581</span> <span class="fs-12 ff-regular gray-text"> / year</span><br>
-                    <!-- badge-btn -->
+                    <button class="btn btn-sm benefit-btn" (click)="toggleBenefitBtnText()"><span class="ff-regular fs-14px">{{addRemoveText}}</span></button>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-9">
+                    <span class="ff-bold blacken">Hospital cash benefit</span><img class="info-icon" src="assets/images/info-icon.svg" alt="info"> <br>
+                    <p class="fs-12 ff-regular gray-text">Avail a cash benefit upon hospitalisation</p><br>
+                    <!-- dropdown -->
+                </div>
+                <div class="col-3 p-0">
+                    <span class="ff-medium blue">₹ 581</span> <span class="fs-12 ff-regular gray-text"> / year</span><br>
                     <button class="btn btn-sm benefit-btn" (click)="toggleBenefitBtnText()"><span class="ff-regular fs-14px">{{addRemoveText}}</span></button>
                 </div>
             </div>
