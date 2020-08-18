@@ -15,6 +15,11 @@ export class StepFiveComponent implements OnInit {
     {select: 'Kotak Group Employee', value: 'KGE'}
   ];
   pacAmount = 10;
+  hAmounts = [
+    { label: '₹ 2,000', value: 2000 },
+    { label: '₹ 3,000', value: 3000 },
+  ];
+  selectedHAmount = '₹ 3,000';
   benefits = [
     { title: 'Waiver of premium', desc: 'All future premiums waived off if suffering from any condition defined below.', annualCost: '₹ 358' },
     { title: 'Income benefit', desc: 'Get an in @1% of sum ass p.m for a year in case of xyz', annualCost: '₹ 413' }
@@ -58,6 +63,10 @@ export class StepFiveComponent implements OnInit {
     } else if (this.addRemoveText === 'Remove') {
       this.addRemoveText = '+ Add';
     }
+  }
+
+  assignDropdownVal(amount) {
+    this.selectedHAmount = amount;
   }
 
   navigateBack() {

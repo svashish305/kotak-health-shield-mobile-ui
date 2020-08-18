@@ -62,13 +62,19 @@
                 <div class="col-9">
                     <span class="ff-bold blacken">Hospital cash benefit</span><img class="info-icon" src="assets/images/info-icon.svg" alt="info"> <br>
                     <p class="fs-12 ff-regular gray-text">Avail a cash benefit upon hospitalisation</p><br>
-                    <!-- dropdown -->
+                    <div ngbDropdown class="h-dd">
+                        <input class="dropdown-toggle h-dd-input mt-0" readonly ngbDropdownToggle [(ngModel)]="selectedHAmount" required><span class="h-dd-span" ngbDropdownToggle></span>
+                        <div ngbDropdownMenu>
+                            <button ngbDropdownItem *ngFor="let amount of hAmounts" value="amount.value" (click)="assignDropdownVal(amount.label)">{{ amount.label }}</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-3 p-0">
                     <span class="ff-medium blue">₹ 581</span> <span class="fs-12 ff-regular gray-text"> / year</span><br>
                     <button class="btn btn-sm benefit-btn" (click)="toggleBenefitBtnText()"><span class="ff-regular fs-14px">{{addRemoveText}}</span></button>
                 </div>
             </div>
+            <hr>
         </div>
     </div>                                                              
 </div>

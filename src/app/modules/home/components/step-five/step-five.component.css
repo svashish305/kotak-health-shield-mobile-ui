@@ -82,6 +82,27 @@ hr {
     color: var(--light-gray-border);
 }
 
+.h-dd {
+    position: absolute;
+    top: 42px;
+    width: 100px;
+    height: 35px;
+}
+
+.h-dd-input {
+    font-family: RobotoBold !important;
+    font-size: 14px !important;
+    margin: 0;
+    padding: 6.5px;
+    border: 1px solid var(--med-gray-border);
+}
+
+.h-dd-span {
+    position: absolute;
+    top: -5px;
+    left: 6px;
+}
+
 .amount-text {
     color: var(--blue-theme-color);
     position: absolute;
