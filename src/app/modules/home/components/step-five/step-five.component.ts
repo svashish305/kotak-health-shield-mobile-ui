@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-step-five',
@@ -25,7 +26,7 @@ export class StepFiveComponent implements OnInit {
   annual = this.annualValues[0];
   totalAmount = "₹ 28,587";
   
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
     this.discountForm = this.fb.group({
@@ -65,13 +66,9 @@ export class StepFiveComponent implements OnInit {
     this.selectedHAmount = amount;
   }
 
-  navigateBack() {
-    this.healthTabRef.select('4');
-  }
-
   navigate() {
     this.formSubmitted = true;
-    // navigate next screen
+    this.router.navigate(['review-details'], { queryParams: null } );
   }
 
 }
