@@ -12,3 +12,13 @@
     color: var(--alt-gray-text-2);
     margin-bottom: 7px;
 }
+
+.modal-footer-btn {
+    position: relative;
+    right: -8rem;
+    color: #fff !important;
+    background-color: var(--red-bg) !important;
+    width: 8.875rem;
+    height: 2.75rem;
+    border-radius: 1.875rem !important;
+}

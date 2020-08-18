@@ -224,7 +224,56 @@
         </form>
         <form class="mt-1rem padding-1rem">
             <span class="ff-bold">Before proceeding, make sure you agree to the following</span>
-            <!-- checkboxes and modal -->
+            <div class="mt-24">
+                <label class="checkbox small">
+                  <input type="checkbox" name='proposalFormAccepted' [(ngModel)]='proposalFormAccepted' [ngModelOptions]="{standalone: true}" (change)="openConditions($event, proposalModal)">
+                  <div class="blue fs-13">
+                    I have read and understood the terms and conditions of Proposal Form
+                  </div>
+                  <span class="tick"></span>
+                </label>
+                <p class='errorMsg' *ngIf="formSubmitted && !proposalFormAccepted">
+                  * This field is required </p>
+            </div> 
+            <div class="mt-1rem">
+                <label class="checkbox small">
+                  <input type="checkbox" name='fatcaFormAccepted' [(ngModel)]='fatcaFormAccepted' [ngModelOptions]="{standalone: true}">
+                  <div class="blue fs-13">
+                    I have read and understood the terms and conditions of FATCA Form
+                  </div>
+                  <span class="tick"></span>
+                </label>
+                <p class='errorMsg' *ngIf="formSubmitted && !fatcaFormAccepted">
+                  * This field is required </p>
+            </div> 
+            <div class="mt-1rem">
+                <label class="checkbox small">
+                  <input type="checkbox" name='covidDecAccepted' [(ngModel)]='covidDecAccepted' [ngModelOptions]="{standalone: true}">
+                  <div class="blue fs-13">
+                    Covid-19 Declaration
+                  </div>
+                  <span class="tick"></span>
+                </label>
+                <p class='errorMsg' *ngIf="formSubmitted && !covidDecAccepted">
+                  * This field is required </p>
+            </div> 
+
+            <ng-template #proposalModal let-modal>
+                <div class="modal-header">
+                    <p class="modal-title ff-medium sm-font" id="modal-basic-title">Declaration by the Proposer, Life assured & Spouse</p>
+                    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                      <span aria-hidden="true"><img class="m-0" src="assets/images/close-24px.svg" alt=""></span>
+                    </button>
+                </div>
+                <div class="modal-body fs-14 px-2">
+                    <span class="ff-regular fs-14px">
+                        I/We declare that I/we have answered the questions in the Proposal Form after having fully understood the nature of the questions and the importance of disclosing all information while answering such questions. I/We also hereby declare that the answers given by me/us to all the questions in the proposal form are true and complete in every respect and that I/We have not withheld any material information or suppressed any fact. I/We undertake to notify the Insurer of any change in the state of health of the Life Assured or as to his/her occupation or any decisions about his/her existing policies or proposals subsequent to the signing of this proposal form and before the acceptance of the risk by the Insurer. I/We hereby consent to the Insurer seeking information and any reports from any doctor(s) including hospital - who at any time may have attended to me/us concerning anything, which affects my/our physical or mental health. I/We understand that the information provided by me will form the basis of the insurance policy, is subject to the Board approved underwriting policy of the insurer and that the policy will come into force only after full payment of the premium chargeable
+                    </span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn button-primary modal-footer-btn" (click)="modal.close()">OK</button>
+                </div>
+            </ng-template>
         </form>
     </div>
 </div>
