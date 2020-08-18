@@ -14,6 +14,10 @@ export class StepFiveComponent implements OnInit {
   relationshipTypes = [
     {select: 'Kotak Group Employee', value: 'KGE'}
   ];
+  benefits = [
+    { title: 'Waiver of premium', desc: 'All future premiums waived off if suffering from any condition defined below.', annualCost: '₹ 358' },
+    { title: 'Income benefit', desc: 'Get an in @1% of sum ass p.m for a year in case of xyz', annualCost: '₹ 413' }
+  ];
   annualValues = ["Annually", "Monthly"];
   annual = this.annualValues[0];
   totalAmount = "₹ 28,587";

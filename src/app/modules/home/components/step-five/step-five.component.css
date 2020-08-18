@@ -20,7 +20,29 @@
 }
 
 .added-benefits-card {
+    border: none;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: #fff;
+}
 
+.blacken {
+    color: var(--alt-black-bg);
+}
+
+.info-icon {
+    width: 14px;
+    height: 14px;
+    margin: 0 0 2px 4px;       
+}
+
+.gray-text {
+    color: var(--alt-gray-text-1);
+}
+
+hr {
+    margin-top: 1rem;
+    color: var(--light-gray-border);
 }
 
 .amount-text {
