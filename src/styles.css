@@ -77,6 +77,11 @@ html, body{
     align-items: center;
 }
 
+/* text-center */
+.text-center {
+    text-align: center;
+}
+
 /* common color styles */
 .alt-blacken {
     color: #222;
@@ -128,6 +133,10 @@ html, body{
     margin-top: 1rem;
 }
 
+.mt-2rem {
+    margin-top: 2rem;
+}
+
 .mt-24 {
     margin-top: 24px;
 }
@@ -156,6 +165,10 @@ html, body{
     margin-bottom: 48px;
 }
 
+.mb-42 {
+    margin-bottom: 42px;
+}
+
 .mb-40 {
     margin-bottom: 40px;
 }
@@ -182,6 +195,10 @@ html, body{
 
 .mb-12 {
     margin-bottom: 12px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
 }
 
 .mb-8 {
