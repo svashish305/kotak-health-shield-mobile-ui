@@ -222,7 +222,7 @@
                     <div class="row">
                         <div class="col">
                             <span class="ff-medium fs-14px">Nominee 1</span>
-                            <a (click)="deleteNomineeCard(1)"><img *ngIf="multipleNominees" class="float-right" src="assets/images/expand-icon.svg" alt="delete"></a>
+                            <a (click)="deleteNomineeCard(1)"><img *ngIf="multipleNominees" class="float-right" src="assets/images/collapse-icon.svg" alt="delete"></a>
                             <div class="formField">
                                 <input type="text" placeholder="Enter your Full Name" formControlName="fullName"
                                 [ngClass]="{'errorInput': formSubmitted && nomineeDetailsForm.get('fullName').hasError('required') }">
@@ -266,7 +266,7 @@
                     <div class="row">
                         <div class="col">
                             <span class="ff-medium fs-14px">Nominee {{nomineeCount}}</span>
-                            <a (click)="deleteNomineeCard(nomineeCount)"><img *ngIf="multipleNominees" class="float-right" src="assets/images/expand-icon.svg" alt="delete"></a>
+                            <a (click)="deleteNomineeCard(nomineeCount)"><img *ngIf="multipleNominees" class="float-right" src="assets/images/collapse-icon.svg" alt="delete"></a>
                             <div class="formField">
                                 <input type="text" placeholder="Enter your Full Name" formControlName="fullName"
                                 [ngClass]="{'errorInput': formSubmitted && nomineeDetailsForm.get('fullName').hasError('required') }">

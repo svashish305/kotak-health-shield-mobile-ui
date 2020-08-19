@@ -6,10 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./upload-details.component.css']
 })
 export class UploadDetailsComponent implements OnInit {
+  addressProofs = [
+    {label: 'Voter ID Card', value: 'voter-id-card'},
+    {label: 'Driving License', value: 'dl'},
+  ];
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  navigateBack() {
+
+  }
+
+  navigate() {
+
   }
 
 }
