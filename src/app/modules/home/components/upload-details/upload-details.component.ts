@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-upload-details',
@@ -11,17 +13,17 @@ export class UploadDetailsComponent implements OnInit {
     {label: 'Driving License', value: 'dl'},
   ];
 
-  constructor() { }
+  constructor(private location: Location, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   navigateBack() {
-
+    this.location.back();
   }
 
   navigate() {
-
+    this.router.navigate(['congrats-page']);
   }
 
 }

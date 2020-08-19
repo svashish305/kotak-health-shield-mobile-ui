@@ -22,6 +22,7 @@ import { AadhaarDetailsComponent } from './components/aadhaar-details/aadhaar-de
 import { ReviewDetailsComponent } from './components/review-details/review-details.component';
 import { PaymentDetailsComponent } from './components/payment-details/payment-details.component';
 import { UploadDetailsComponent } from './components/upload-details/upload-details.component';
+import { CongratsPageComponent } from './components/congrats-page/congrats-page.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { UploadDetailsComponent } from './components/upload-details/upload-detai
     ReviewDetailsComponent,
     PaymentDetailsComponent,
     UploadDetailsComponent,
+    CongratsPageComponent,
   ],
   imports: [
     CommonModule,

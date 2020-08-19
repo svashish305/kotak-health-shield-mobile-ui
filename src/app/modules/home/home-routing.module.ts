@@ -8,6 +8,7 @@ import { AadhaarDetailsComponent } from './components/aadhaar-details/aadhaar-de
 import { ReviewDetailsComponent } from './components/review-details/review-details.component';
 import { PaymentDetailsComponent } from './components/payment-details/payment-details.component';
 import { UploadDetailsComponent } from './components/upload-details/upload-details.component';
+import { CongratsPageComponent } from './components/congrats-page/congrats-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/landing', pathMatch: 'full' },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'review-details', component: ReviewDetailsComponent },
   { path: 'payment-details', component: PaymentDetailsComponent },
   { path: 'upload-details', component: UploadDetailsComponent },
+  { path: 'congrats-page', component: CongratsPageComponent },
   { path: '**', redirectTo: '/landing' },
 ];
 
