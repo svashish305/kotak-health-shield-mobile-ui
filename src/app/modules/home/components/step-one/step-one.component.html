@@ -4,6 +4,16 @@
         <form class="padding-1rem mt-1rem" [formGroup]="personalDetailsForm">
             <div class="row">
                 <div class="col">
+                    <div *ngIf="!profilePicUploaded" class="card profile-pic-card flex-center mb-24" (click)="profilePicUploaded = true">
+                        <img class="profile-upload-bg" src="assets/images/camera.svg">
+                        <img class="profile-upload-fg" src="assets/images/upload.svg">
+                        <span class="text-center ff-medium fs-14px black-text">Upload Selfie</span>
+                    </div>
+                    <div *ngIf="profilePicUploaded" class="card profile-pic-uploaded-card mb-24">
+                        <img class="edit-profile-pic-icon m-0" src="assets/images/edit.svg" alt="edit">
+                        <img class="rounded-circle mx-auto d-block profile-img" src="assets/images/aadhaar-self.png" alt="profile-pic">
+                    </div>
+
                     <span class="ff-regular fs-14">Residential Status</span>
                     <div class="formField">
                         <div ngbDropdown>
@@ -229,7 +239,7 @@
                         </div>
 
                         <div class="block mt-24">
-                            <p>Are any of your <span class="ff-bold">family members</span> suffering from / have suffered from / have died of heart disease, stroke, high blood pressure, diabetes mellitus, cancer, kidney disease, paralysis or any other hereditary / familial disorders, tuberculosis or any contagious diseases such as Hepatitis, AIDS / HIV etc. or any other diseases not stated above,<span class="ff-bold"> before 60 years of age?</span></p>
+                            <a (click)="open(diseasesModal)"><p>Are any of your <span class="ff-bold">family members</span> suffering from / have suffered from <a class="regular-a-tag">any of these diseases</a> or any other diseases not stated, <span class="ff-bold"> before 60 years of age?</span></p></a>
                             <div class="formField">
                                 <label class="radioTick small">
                                 <input type="radio" name='familySuffered' value="Yes" formControlName='familySuffered'>
@@ -251,6 +261,38 @@
                 </div>
             </form>
         </div>
+    </div>
+</ng-template>
+
+<ng-template #diseasesModal let-modal>
+    <div class="modal-header">
+        <p class="modal-title ff-medium sm-font" id="modal-basic-title">List Of Diseases</p>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true"><img class="m-0" src="assets/images/close-24px.svg" alt=""></span>
+        </button>
+    </div>
+    <div class="modal-body disease-modal-body fs-14 px-2">
+        <div *ngFor="let disease of diseaseList" class="mb-24">
+            <span>{{disease.name}}</span><br>
+        </div>
+        <div class="formField">
+            <label class="radioTick small">
+            <input type="radio" name='familySuffered' value="Yes">
+            <div> Yes </div>
+            <span class="tick"></span>
+            </label>
+            <label class="radioTick small">
+            <input type="radio" name='familySuffered' value="No">
+            <div>
+                No
+            </div>
+            <span class="tick"></span>
+            </label>
+            <p class="errorMsg" *ngIf='familySuffered == undefined && error'> * This field is required </p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn button-primary footer-btn disease-modal-footer-btn" (click)="modal.close()">SUBMIT</button>
     </div>
 </ng-template>
 

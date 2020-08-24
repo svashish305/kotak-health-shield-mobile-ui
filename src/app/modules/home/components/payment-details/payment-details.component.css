@@ -36,3 +36,7 @@ form {
 .gray-text {
     color: var(--alt-gray-text-3);
 }
+
+.gray-text-2 {
+    color: var(--alt-gray-text-2);
+}

@@ -310,3 +310,12 @@ form {
     border-radius: 5px;
     background-color: #fff;
 }
+
+.black-text {
+    color: #000 !important;
+}
+
+.regular-a-tag {
+    text-decoration: underline !important;
+    color: var(--blue-theme-color);
+}

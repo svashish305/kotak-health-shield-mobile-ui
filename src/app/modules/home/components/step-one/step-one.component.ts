@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Location } from '@angular/common';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-step-one',
@@ -12,11 +13,22 @@ export class StepOneComponent implements OnInit {
   firstFormSubmitted = false;
   formSubmitted = false;
   personalDetailsForm: FormGroup;
+  profilePicUploaded = false;
   resiStatuses = [
     { label: 'Resident Individual', value: 'Resident Individual' },
     { label: 'Non-Ordinarily Resident', value: 'Non-Ordinarily Resident' },
     { label: 'Non-Resident', value: 'Non-Resident' },
   ];
+  diseaseList = [
+    { id: 1, name: 'Heart Disease' },
+    { id: 2, name: 'Stroke' },
+    { id: 3, name: 'High Blood Pressure' },
+    { id: 4, name: 'Diabetes Mellitus' },
+    { id: 5, name: 'Cancer' },
+    { id: 6, name: 'Kidney Disease' },
+    { id: 7, name: 'Paralysis or any other hereditary / familial disorders' },
+    { id: 8, name: 'Tuberculosis or any contagious diseases such as Hepatitis, AIDS / HIV' }
+  ]
   maritalStatuses = [
     { label: 'Unmarried', value: 'Unmarried' },
     { label: 'Married', value: 'Married' },
@@ -38,8 +50,10 @@ export class StepOneComponent implements OnInit {
   additionalDetailsForm: FormGroup;
   height = '000';
   weight = '00';
+  opened = false;
+  closeResult: string;
 
-  constructor(private location: Location, private fb: FormBuilder) { }
+  constructor(private location: Location, private fb: FormBuilder, private modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.personalDetailsForm = this.fb.group({
@@ -88,6 +102,26 @@ export class StepOneComponent implements OnInit {
       this.height = this.pad(parseInt(this.height)+1, 3);
     } else if (val === 'weight') {
       this.weight = this.pad(parseInt(this.weight)+1, 2);
+    }
+  }
+
+  open(content) {
+    this.opened = true;
+    this.modalService.open(content, {
+      ariaLabelledBy: 'modal-basic-title',
+      centered: true,
+      backdropClass: 'dark-backdrop'
+    }).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      // this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  openConditions(content) {
+    if (!this.opened) {
+      this.opened = true;
+      this.open(content);
     }
   }
 

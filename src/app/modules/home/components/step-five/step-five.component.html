@@ -25,9 +25,9 @@
                         <span class="ff-bold">Relationship Type</span>
                         <div class="formField">
                             <div ngbDropdown>
-                                <input class="dropdown-toggle mt-0 mb-1rem" readonly ngbDropdownToggle formControlName="relationshipType" placeholder="Select Relationship Type" required><span ngbDropdownToggle></span>
+                                <input class="dropdown-toggle mt-0 mb-1rem" readonly ngbDropdownToggle formControlName="relationshipType" placeholder="Select Relationship Type" [(ngModel)]="selectedRelType" required><span ngbDropdownToggle></span>
                                 <div ngbDropdownMenu>
-                                    <button ngbDropdownItem *ngFor="let relType of relationshipTypes" value="relType.value" (click)="assignDropdownVal('relType', relType.label)">{{ relType.label }}</button>
+                                    <button ngbDropdownItem *ngFor="let relType of relationshipTypes" value="relType.value" (click)="assignRelDropdownVal(relType.label)">{{ relType.label }}</button>
                                 </div>
                             </div>
                         </div>                                                                                                                                                                                                                                                                                                                                                                              
@@ -35,7 +35,7 @@
     
                     <div class="formField">       
                         <span class="ff-bold">Employee Number</span> 
-                        <input class="mt-0 mb-0" type="text" placeholder="Enter Employee Number" formControlName="empNo">
+                        <input class="mt-0 mb-0" type="text" placeholder="Enter Employee Number" formControlName="empNo" value="KMB0923477758">
                     </div>      
                 </form>                                                                                   
             </div>                                                                                                                                                                          

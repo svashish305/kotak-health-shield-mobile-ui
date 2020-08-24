@@ -13,13 +13,14 @@ export class StepFiveComponent implements OnInit {
   discountAvailed = false;
   discountForm: FormGroup;
   relationshipTypes = [
-    {select: 'Kotak Group Employee', value: 'KGE'}
+    {label: 'Kotak Group Employee', value: 'KGE'}
   ];
   pacAmount = 10;
   hAmounts = [
     { label: '₹ 2,000', value: 2000 },
     { label: '₹ 3,000', value: 3000 },
   ];
+  selectedRelType = ''
   selectedHAmount = '₹ 3,000';
   addRemoveTexts = ['+ Add', '+ Add', '+ Add', '+ Add'];
   annualValues = ["Annually", "Monthly"];
@@ -60,6 +61,10 @@ export class StepFiveComponent implements OnInit {
     } else if (this.addRemoveTexts[index] === 'Remove') {
       this.addRemoveTexts[index] = '+ Add';
     }
+  }
+
+  assignRelDropdownVal(relType) {
+    this.selectedRelType = relType;
   }
 
   assignDropdownVal(amount) {
