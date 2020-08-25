@@ -11,18 +11,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DetailsTwoComponent } from './components/details-two/details-two.component';
-import { StepOneComponent } from './components/step-one/step-one.component';
-import { HealthDetailsComponent } from './components/health-details/health-details.component';
-import { StepTwoComponent } from './components/step-two/step-two.component';
-import { StepThreeComponent } from './components/step-three/step-three.component';
-import { StepFourComponent } from './components/step-four/step-four.component';
-import { StepFiveComponent } from './components/step-five/step-five.component';
 import { HeaderComponent } from 'src/app/shared/header/header.component';
-import { AadhaarDetailsComponent } from './components/aadhaar-details/aadhaar-details.component';
-import { ReviewDetailsComponent } from './components/review-details/review-details.component';
-import { PaymentDetailsComponent } from './components/payment-details/payment-details.component';
-import { UploadDetailsComponent } from './components/upload-details/upload-details.component';
-import { CongratsPageComponent } from './components/congrats-page/congrats-page.component';
 
 @NgModule({
   declarations: [
@@ -31,17 +20,6 @@ import { CongratsPageComponent } from './components/congrats-page/congrats-page.
     LandingPageComponent,
     DetailsComponent,
     DetailsTwoComponent,
-    HealthDetailsComponent,
-    StepOneComponent,
-    StepTwoComponent,
-    StepThreeComponent,
-    StepFourComponent,
-    StepFiveComponent,
-    AadhaarDetailsComponent,
-    ReviewDetailsComponent,
-    PaymentDetailsComponent,
-    UploadDetailsComponent,
-    CongratsPageComponent,
   ],
   imports: [
     CommonModule,
