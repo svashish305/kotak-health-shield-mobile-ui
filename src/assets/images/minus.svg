@@ -1,12 +1,3 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="1.167" viewBox="0 0 14 1.167">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #0271e0;
-      }
-    </style>
-  </defs>
-  <g id="Group_290" data-name="Group 290" transform="translate(-150 -507.417)">
-    <path id="Path_45" data-name="Path 45" class="cls-1" d="M14,972.779v1.167H28v-1.167Z" transform="translate(136 -465.362)"/>
-  </g>
+  <path id="Path_45" data-name="Path 45" d="M14,972.779v1.167H28v-1.167Z" transform="translate(-14 -972.779)" fill="#036"/>
 </svg>
