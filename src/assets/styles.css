@@ -1336,13 +1336,15 @@ a {
 .button-text.minus,
 .button-text.plus {
   background-size: 14px;
-  padding: 22px 20px;
+  /* padding: 22px 20px; */
+  padding: 1rem;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
   z-index: 1;
   background-color: #fff;
-  top: 2px;
+  /* top: 2px; */
+  top: 8px;
 }
 
 input[type=number]::-webkit-inner-spin-button,

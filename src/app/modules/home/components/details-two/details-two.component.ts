@@ -148,11 +148,11 @@ export class DetailsTwoComponent implements OnInit {
   }
 
   goToStepOne() {
-    if(!this.spouse) {
-      this.router.navigate(['health-details']);
-    } else {
-      this.router.navigate(['health-details/spouse']);
-    }
+    // if(!this.spouse) {
+    //   this.router.navigate(['health-details']);
+    // } else {
+    //   this.router.navigate(['health-details/spouse']);
+    // }
   }
 
 }

@@ -28,7 +28,7 @@
     border-radius: 55px !important;
     font-size: 14px;
     color: var(--blue-theme-color);
-    background-color: #fff;
+    background-color: var(--blue-bg-1);
 }
 
 .badge-btns:active {
