@@ -32,7 +32,7 @@ export class DetailsTwoComponent implements OnInit {
       id: 1,
       title: 'Cancer Shield',
       desc: 'Average cost of cancer can go upto 20 lacs',
-      duration: 0,
+      duration: 10,
       perDayCharge: 5
     },
     {
