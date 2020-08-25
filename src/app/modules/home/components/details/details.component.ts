@@ -18,7 +18,8 @@ export class DetailsComponent implements OnInit {
   minDate = { year: 1920, month: 1, day: 1 };
   age = 0;
   incomes = [
-    { label: '1-5', value: '1-5' },
+    { label: '0-2', value: '0-2' },
+    { label: '3-5', value: '3-5' },
     { label: '5-10', value: '5-10' },
     { label: '10-15', value: '10-15' },
     { label: '15-20', value: '15-20' },

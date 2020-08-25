@@ -21,7 +21,8 @@ export class DetailsTwoComponent implements OnInit {
   showMinor = false;
   age = 0;
   incomes = [
-    { label: '1-5', value: '1-5' },
+    { label: '0-2', value: '0-2' },
+    { label: '3-5', value: '3-5' },
     { label: '5-10', value: '5-10' },
     { label: '10-15', value: '10-15' },
     { label: '15-20', value: '15-20' },
@@ -84,8 +85,14 @@ export class DetailsTwoComponent implements OnInit {
 
   dec(shieldId) {
     let index = this.shields.findIndex(s => s.id == shieldId);
-    if(this.shields[index].duration > 0) {
-      this.shields[index].duration -= 1;
+    if(shieldId == 1) {
+      if(this.shields[index].duration > 10) {
+        this.shields[index].duration -= 1;
+      }  
+    } else {
+      if(this.shields[index].duration > 0) {
+        this.shields[index].duration -= 1;
+      }
     }
   }
 
