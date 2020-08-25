@@ -21,6 +21,14 @@ const routes: Routes = [
   { path: 'payment-details', component: PaymentDetailsComponent },
   { path: 'upload-details', component: UploadDetailsComponent },
   { path: 'congrats-page', component: CongratsPageComponent },
+
+  { path: 'details-two/spouse', component: DetailsTwoComponent, },
+  { path: 'health-details/spouse', component: HealthDetailsComponent, },
+  { path: 'aadhaar-details/spouse', component: AadhaarDetailsComponent },
+  { path: 'review-details/spouse', component: ReviewDetailsComponent },
+  { path: 'payment-details/spouse', component: PaymentDetailsComponent },
+  { path: 'upload-details/spouse', component: UploadDetailsComponent },
+  { path: 'congrats-page/spouse', component: CongratsPageComponent },
   { path: '**', redirectTo: '/landing' },
 ];
 

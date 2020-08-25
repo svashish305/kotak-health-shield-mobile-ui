@@ -12,11 +12,11 @@
     <div class="form-container">
         <span class="ff-bold smd-font">Choose a plan</span><br>
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn badge-btns active">
+            <label class="btn badge-btns" [ngClass]="{'active': !spouse}" (click)="selfOnly()">
               <input type="radio" name="options" id="option1"> For Me
             </label>
-            <label class="btn badge-btns">
-              <input type="radio" name="options" id="option2"> Me & Spouse
+            <label class="btn badge-btns" [ngClass]="{'active': spouse}" (click)="open(spouseDetailsModal)">
+                <input type="radio" name="options" id="option2"> Me & Spouse
             </label>
         </div>
 
@@ -72,6 +72,56 @@
         </form>
     </div>
 </div>
+
+<ng-template #spouseDetailsModal let-modal>
+    <div class="modal-header">
+        <p class="modal-title ff-medium sm-font" id="modal-basic-title">Spouse Details</p>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true"><img class="m-0" src="assets/images/close-24px.svg" alt=""></span>
+        </button>
+    </div>
+    <div class="modal-body disease-modal-body fs-14 px-2">
+        <form class="padding-1rem mt-1rem" [formGroup]="spouseDetailsForm">
+            <div class="row">
+                <div class="col">
+                    <div class="formField">
+                        <input type="text" placeholder="Enter your Name" formControlName="name"
+                          [ngClass]="{'errorInput': formSubmitted && spouseDetailsForm.get('name').hasError('required') }">
+                        <label class="input_label">Name</label>
+                    </div>
+                    <p class='errorMsg' *ngIf="formSubmitted && spouseDetailsForm.get('name').hasError('required')">
+                    Name field is required </p>
+
+                    <div class="formField calendar pt-20" [ngClass]="{'mb-48': ageCalc(), 'mb-26': !ageCalc()}">
+                        <input [ngClass]="{'errorInput': formSubmitted && spouseDetailsForm.get('birthdate').hasError('dateVaidator') || formSubmitted && spouseDetailsForm.get('birthdate').hasError('required') }" class="m-0" readonly placeholder="16/09/1979" formControlName="birthdate"
+                            ngbDatepicker autocomplete="off" #datePicker="ngbDatepicker" (click)="datePicker.toggle()" (ngModelChange)='ageCalc()' [minDate]="minDate">
+                        <span class="icon" (click)="datePicker.toggle()"></span>
+                        <p class='errorMsg' *ngIf="formSubmitted && spouseDetailsForm.get('birthdate').hasError('required')">Date Of Birth field is required
+                        </p>
+                        <p class='errorMsg' *ngIf="formSubmitted && spouseDetailsForm.get('birthdate').hasError('dateVaidator')">Please enter a valid date</p>
+                        <label class="input_label">Spouse Date Of Birth</label>
+                    </div>
+                    <span *ngIf="ageCalc()" class="ff-medium fs-14 age"> {{ageCalc()}} years </span>
+
+                    <span class="ff-regular fs-14">Annual Income <span class="gray-text ff-italic">(in lacs)</span></span>
+                    <div class="formField">
+                        <div ngbDropdown>
+                            <input [ngClass]="{'errorInput': formSubmitted && spouseDetailsForm.get('income').hasError('required') }" class="dropdown-toggle mt-0" readonly ngbDropdownToggle formControlName="income" placeholder="Select range" required><span ngbDropdownToggle></span>
+                            <div ngbDropdownMenu>
+                                <button ngbDropdownItem *ngFor="let inc of incomes" value="inc.value" (click)="assignDropdownVal('income', inc.label)">{{ inc.label }}</button>
+                            </div>
+                        </div>
+                        <p class='errorMsg income-err' *ngIf="formSubmitted && spouseDetailsForm.get('income').hasError('required')">Annual income field is required
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn button-primary footer-btn spouse-modal-footer-btn" (click)="modal.close(); selectSpouse()">SUBMIT</button>
+    </div>
+</ng-template>
 
 <app-footer>
     <ng-container ngProjectAs='[footer]'>

@@ -30,6 +30,10 @@
     box-shadow: none;
 }
 
+.spouse-modal-footer-btn {
+    width: -webkit-fill-available !important;
+}
+
 .policy-bg {
     padding: 1rem;
     background-color: var(--blue-bg-1);
